@@ -5,9 +5,6 @@ function Contact() {
     <article className="flex flex-col min-h-screen col-span-2 items-center p-5">
       <section className="flex flex-col items-center mt-20 font-titlefont text-2xl gap-5 text-slate-600">
         <h2 className="text-5xl text-center uppercase text-black">Contact</h2>
-        <h3 className="font-semibold font-namefont">
-          Lorem ipsum dolor sit amet
-        </h3>
         <form class="w-full max-w-lg">
           <div class="flex flex-wrap -mx-3 mb-6">
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">

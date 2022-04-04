@@ -26,6 +26,14 @@ function SideMenu() {
           className="hover:text-blue-600 smooth-transition text-xl"
           to="/blog"
           onClick={ResetLocation}
+          style={({ isActive }) =>
+            isActive
+              ? {
+                  textDecoration: "none",
+                  color: "rgb(37, 99, 235)",
+                }
+              : {}
+          }
         >
           Blog
         </NavLink>
@@ -33,6 +41,14 @@ function SideMenu() {
           className="hover:text-blue-600 smooth-transition text-xl"
           to="/about"
           onClick={ResetLocation}
+          style={({ isActive }) =>
+            isActive
+              ? {
+                  textDecoration: "none",
+                  color: "rgb(37, 99, 235)",
+                }
+              : {}
+          }
         >
           About
         </NavLink>
@@ -40,28 +56,45 @@ function SideMenu() {
           className="hover:text-blue-600 smooth-transition text-xl"
           to="/contact"
           onClick={ResetLocation}
+          style={({ isActive }) =>
+            isActive
+              ? {
+                  textDecoration: "none",
+                  color: "rgb(37, 99, 235)",
+                }
+              : {}
+          }
         >
           Contact
         </NavLink>
         <section className="flex flex-row gap-3">
-          <a href="https://www.facebook.com/" target="_blank"
-            rel="noopener noreferrer">
+          <a
+            href="https://www.facebook.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img
               className="w-6 h-6	max-w-full"
               src={Facebook}
               alt="Facebook icon"
             ></img>
           </a>
-          <a href="https://www.instagram.com/" target="_blank"
-            rel="noopener noreferrer">
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img
               className="w-6 h-6	max-w-full"
               src={Instagram}
               alt="Instagram icon"
             ></img>
           </a>
-          <a href="https://twitter.com/" target="_blank"
-            rel="noopener noreferrer">
+          <a
+            href="https://twitter.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img
               className="w-6 h-6	max-w-full"
               src={Twitter}
