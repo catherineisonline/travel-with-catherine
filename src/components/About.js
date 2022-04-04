@@ -1,19 +1,79 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import ImgOne from "../images/gallery-one/image-29.jpeg";
+import ImgTwo from "../images/gallery-one/image-59.jpeg";
+import ImgThree from "../images/gallery-one/image-79.jpeg";
+import ImgFour from "../images/gallery-one/image-99.jpeg";
 
 function About() {
   return (
-    <div className="flex flex-col min-h-screen col-span-1 items-center">
-      <div className="flex flex-col items-center fixed mt-60 font-titlefont text-2xl gap-5 text-slate-600">
-        <h1 className="text-4xl text-center uppercase text-black">
-          Travel with<br></br>{" "}
-          <span className="font-semibold font-namefont">Catherine</span>
-        </h1>
-        <NavLink to="/travel-with-catherine">Gallery</NavLink>
-        <NavLink to="/about">About</NavLink>
-        <NavLink to="/contact">Contact</NavLink>
-      </div>
-    </div>
+    <article className="flex flex-col min-h-screen col-span-2 items-center p-5">
+      <section className="flex flex-col items-center mt-20 font-titlefont text-2xl gap-5 text-slate-600">
+        <h2 className="text-5xl text-center uppercase text-black">About</h2>
+        <h3 className="font-semibold font-namefont">
+          Lorem ipsum dolor sit amet
+        </h3>
+        <p className="text-lg w-9/12">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+          ultrices odio ac dui bibendum semper. Nunc id massa justo. Maecenas
+          interdum rutrum justo, et vehicula urna dignissim nec. Suspendisse
+          quis ante non lorem dapibus dapibus et vel lectus. Donec sed dui sed
+          mi volutpat ultricies eget vitae nunc. Aenean vestibulum quam vel
+          euismod auctor. Sed tempus tellus a ex sodales mollis. Fusce erat leo,
+          hendrerit id augue ut, interdum lacinia leo. Fusce pellentesque ex
+          lectus, sit amet elementum libero dignissim sed. Pellentesque posuere
+          eros a orci volutpat egestas. Fusce eleifend sem vitae mi scelerisque
+          ultricies. Quisque a diam purus. Sed sit amet massa augue. Donec
+          tristique quis leo eu rutrum. Praesent consectetur luctus lorem ac
+          congue. Nam fermentum, lacus id fermentum placerat, ex magna mattis
+          velit, sit amet eleifend massa purus sed arcu. Donec pulvinar, nisl
+          non rhoncus facilisis, enim neque posuere felis, a mollis augue nisl
+          id est. Nunc pulvinar, felis ac tempus pretium, enim magna vestibulum
+          odio, ultricies molestie diam eros sed quam. Vestibulum non blandit
+          ipsum. Fusce condimentum orci quis ante rutrum malesuada. Vestibulum
+          ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+          curae; Vestibulum sit amet ipsum sit amet eros suscipit lobortis.
+          Vivamus quis massa et arcu commodo porttitor. Aliquam semper odio ac
+          varius faucibus. Nam at libero in libero suscipit maximus. Phasellus
+          at pharetra quam. Donec id placerat lorem, in blandit diam. Nunc
+          cursus massa nec nisi tempor, in ullamcorper urna tristique. Maecenas
+          risus ligula, semper non magna eget, malesuada varius dolor.
+        </p>
+      </section>
+      <section className="flex flex-row gap-1 p-8">
+        <section>
+          <img
+            className="max-w-full w-56 h-52 object-cover	"
+            src={ImgOne}
+            alt=""
+          ></img>
+          <p className="font-bold">Gudauri, Kazbegi</p>
+        </section>
+        <section>
+          <img
+            className="max-w-full w-56 h-52 object-cover	"
+            src={ImgTwo}
+            alt=""
+          ></img>
+          <p className="font-bold">Sighnaghi, Kakheti</p>
+        </section>
+        <section>
+          <img
+            className="max-w-full w-56 h-52 object-cover	"
+            src={ImgThree}
+            alt=""
+          ></img>
+          <p className="font-bold">Stepantsminda, Kazbegi</p>
+        </section>
+        <section>
+          <img
+            className="max-w-full w-56 h-52 object-cover	"
+            src={ImgFour}
+            alt=""
+          ></img>
+          <p className="font-bold">Batumi, Adjara</p>
+        </section>
+      </section>
+    </article>
   );
 }
 

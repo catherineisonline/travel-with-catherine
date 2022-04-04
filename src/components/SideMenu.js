@@ -24,6 +24,13 @@ function SideMenu() {
         </NavLink>
         <NavLink
           className="hover:text-blue-600 smooth-transition text-xl"
+          to="/blog"
+          onClick={ResetLocation}
+        >
+          Blog
+        </NavLink>
+        <NavLink
+          className="hover:text-blue-600 smooth-transition text-xl"
           to="/about"
           onClick={ResetLocation}
         >
@@ -62,6 +69,7 @@ function SideMenu() {
             ></img>
           </a>
         </section>
+        <p className="text-sm">&copy; 2022 by Catherine</p>
       </div>
     </div>
   );

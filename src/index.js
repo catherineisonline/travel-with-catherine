@@ -5,6 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 //Components
 import MainPage from "./components/MainPage";
 import SideMenu from "./components/SideMenu";
+import Blog from "./components/Blog";
 import About from "./components/About";
 import Contact from "./components/Contact";
 //Styles
@@ -18,6 +19,7 @@ root.render(
       <SideMenu />
       <Routes>
         <Route path="/travel-with-catherine" element={<MainPage />} />
+        <Route path="/blog" element={<Blog />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
