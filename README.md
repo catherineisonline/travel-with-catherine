@@ -1,21 +1,22 @@
-
 <img src="https://github.com/catherineisonline/travel-with-catherine/blob/main/public/project-preview.png?raw=true"></img>
 
 # About
+
 Travel with Catherine, a simple photography portfolio to show off some of my photography and code! Another great project to practice react and Tailwind.
 
+# Goals
 
+I had several ideas for a project - to make Instagram profile clone and photography portfolio website. I decided to mix both of them and mixed my Instagram content and photogrtaphy portfolio together. My main goal was to make my second project with React, practice it and also use Tailwind. I have worked a little bit with Tailwind before and decided to give it a try one more time. After understanding CSS even better, Tailwind now seems so more easy.
 
-
-### Getting Started with Create React App
+#### Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### Available Scripts
+#### Available Scripts
 
 In the project directory, you can run:
 
-#### `npm start`
+##### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -23,12 +24,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-#### `npm test`
+##### `npm test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-#### `npm run build`
+##### `npm run build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -38,7 +39,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-#### `npm run eject`
+##### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
@@ -48,10 +49,12 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+#### Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
+# Copyright
 
+Feel free to use the project, it's open for everyone. However please do provide a copyright for the pictures or replace them with other pictures.
