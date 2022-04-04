@@ -21,7 +21,7 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build -r https://github.com/catherineisonline/travel-with-catherine",
     "test": "craco test",
     "eject": "react-scripts eject"
   },
