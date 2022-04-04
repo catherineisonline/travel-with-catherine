@@ -4,12 +4,32 @@ import { NavLink } from "react-router-dom";
 import Facebook from "../images/facebook-icon.png";
 import Instagram from "../images/instagram-icon.png";
 import Twitter from "../images/twitter-icon.png";
+import Burger from "../images/burger-menu.png";
+//Functions
 const ResetLocation = () => window.scrollTo(0, 0);
+
+function ToggleMenu() {
+  const HiddenMenu = document.querySelector(".main-menu");
+  HiddenMenu.classList.toggle("show-menu");
+}
+
+function RemoveMenu() {
+  const HiddenMenu = document.querySelector(".main-menu");
+  HiddenMenu.classList.remove("show-menu");
+}
 
 function SideMenu() {
   return (
-    <div className="flex flex-col min-h-screen col-span-1 items-center">
-      <div className="flex flex-col items-center fixed mt-60 font-titlefont text-2xl gap-5 text-slate-600">
+    <article className="flex flex-col min-h-screen col-span-1 items-center">
+      <section className="sm:hidden">
+        <img
+          className="burger-icon w-max fixed cursor-pointer"
+          onClick={ToggleMenu}
+          src={Burger}
+          alt=""
+        ></img>
+      </section>
+      <section className="main-menu flex-col items-center fixed mt-60 font-titlefont text-2xl gap-5 text-slate-600 hidden sm:flex">
         <h1 className="sm:text-xl md:text-3xl text-center uppercase text-black">
           Travel with<br></br>
           <span className="font-semibold font-namefont">Catherine</span>
@@ -17,14 +37,20 @@ function SideMenu() {
         <NavLink
           className="hover:text-blue-600 smooth-transition text-xl"
           to="/travel-with-catherine"
-          onClick={ResetLocation}
+          onClick={() => {
+            ResetLocation();
+            RemoveMenu();
+          }}
         >
           Gallery
         </NavLink>
         <NavLink
           className="hover:text-blue-600 smooth-transition text-xl"
           to="/blog"
-          onClick={ResetLocation}
+          onClick={() => {
+            ResetLocation();
+            RemoveMenu();
+          }}
           style={({ isActive }) =>
             isActive
               ? {
@@ -39,7 +65,10 @@ function SideMenu() {
         <NavLink
           className="hover:text-blue-600 smooth-transition text-xl"
           to="/about"
-          onClick={ResetLocation}
+          onClick={() => {
+            ResetLocation();
+            RemoveMenu();
+          }}
           style={({ isActive }) =>
             isActive
               ? {
@@ -54,7 +83,10 @@ function SideMenu() {
         <NavLink
           className="hover:text-blue-600 smooth-transition text-xl"
           to="/contact"
-          onClick={ResetLocation}
+          onClick={() => {
+            ResetLocation();
+            RemoveMenu();
+          }}
           style={({ isActive }) =>
             isActive
               ? {
@@ -102,8 +134,8 @@ function SideMenu() {
           </a>
         </section>
         <p className="text-sm">&copy; 2022 by Catherine</p>
-      </div>
-    </div>
+      </section>
+    </article>
   );
 }
 

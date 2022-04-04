@@ -108,6 +108,26 @@ import ImgHundredSeven from "../images/gallery-one/image-107.jpeg";
 import ImgHundredEight from "../images/gallery-one/image-108.jpeg";
 import ImgHundredNine from "../images/gallery-one/image-109.jpeg";
 import ImgHundredTen from "../images/gallery-one/image-110.jpeg";
+import ImgHundredEleven from "../images/gallery-one/image-111.jpeg";
+import ImgHundredTwelve from "../images/gallery-one/image-112.jpeg";
+import ImgHundredThirteen from "../images/gallery-one/image-113.jpeg";
+import ImgHundredFourteen from "../images/gallery-one/image-114.jpeg";
+import ImgHundredFifteen from "../images/gallery-one/image-115.jpeg";
+import ImgHundredSixteen from "../images/gallery-one/image-116.jpeg";
+import ImgHundredSeventeen from "../images/gallery-one/image-117.jpeg";
+import ImgHundredEighteen from "../images/gallery-one/image-118.jpeg";
+import ImgHundredNineteen from "../images/gallery-one/image-119.jpeg";
+import ImgHundredTwenty from "../images/gallery-one/image-120.jpeg";
+import ImgHundredTwentyOne from "../images/gallery-one/image-121.jpeg";
+import ImgHundredTwentyTwo from "../images/gallery-one/image-122.jpeg";
+import ImgHundredTwentyThree from "../images/gallery-one/image-123.jpeg";
+import ImgHundredTwentyFour from "../images/gallery-one/image-124.jpeg";
+import ImgHundredTwentyFive from "../images/gallery-one/image-125.jpeg";
+import ImgHundredTwentySix from "../images/gallery-one/image-126.jpeg";
+import ImgHundredTwentySeven from "../images/gallery-one/image-127.jpeg";
+import ImgHundredTwentyEight from "../images/gallery-one/image-128.jpeg";
+import ImgHundredTwentyNine from "../images/gallery-one/image-129.jpeg";
+import ImgHundredThirty from "../images/gallery-one/image-130.jpeg";
 
 const GalleryOne = [
   { id: 1, src: ImgOne },
@@ -220,5 +240,25 @@ const GalleryOne = [
   { id: 108, src: ImgHundredEight },
   { id: 109, src: ImgHundredNine },
   { id: 110, src: ImgHundredTen },
+  { id: 111, src: ImgHundredEleven },
+  { id: 112, src: ImgHundredTwelve },
+  { id: 113, src: ImgHundredThirteen },
+  { id: 114, src: ImgHundredFourteen },
+  { id: 115, src: ImgHundredFifteen },
+  { id: 116, src: ImgHundredSixteen },
+  { id: 117, src: ImgHundredSeventeen },
+  { id: 118, src: ImgHundredEighteen },
+  { id: 119, src: ImgHundredNineteen },
+  { id: 120, src: ImgHundredTwenty },
+  { id: 121, src: ImgHundredTwentyOne },
+  { id: 122, src: ImgHundredTwentyTwo },
+  { id: 123, src: ImgHundredTwentyThree },
+  { id: 124, src: ImgHundredTwentyFour },
+  { id: 125, src: ImgHundredTwentyFive },
+  { id: 126, src: ImgHundredTwentySix },
+  { id: 127, src: ImgHundredTwentySeven },
+  { id: 128, src: ImgHundredTwentyEight },
+  { id: 129, src: ImgHundredTwentyNine },
+  { id: 130, src: ImgHundredThirty },
 ];
 export default GalleryOne;

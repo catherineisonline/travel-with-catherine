@@ -5,10 +5,9 @@ import BlogPosts from "./BlogPosts";
 function Blog() {
   return (
     <section className="col-span-2 min-h-screen scrollbar-hide mt-28">
-      {/* <h3 className="text-5xl text-center uppercase text-black">Blog</h3> */}
 
       <section className="grid sm:grid-cols-1 md:grid-cols-2  gap-1 mx-auto  justify-items-stretch overflow-hidden  w-10/12">
-        {BlogPosts.map((post, index) => (
+        {BlogPosts.reverse().map((post, index) => (
           <section className="grid grid-cols-1 gap-1 mt-20">
             <img
               key={index}
