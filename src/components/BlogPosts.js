@@ -322,5 +322,287 @@ const BlogPosts = [
     snippet:
       "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
   },
+  {
+    id: 41,
+    src: ImgOne,
+    title: "How To Photograph Stunning Autumn Color",
+    snippet:
+      "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
+  },
+  {
+    id: 42,
+    src: ImgTwo,
+    title: "8 Stunning Locations Photographers Must Visit",
+    snippet:
+      "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
+  },
+  {
+    id: 43,
+    src: ImgThree,
+    title: "8 Stunning Locations Photographers Must Visit",
+    snippet:
+      "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
+  },
+  {
+    id: 44,
+    src: ImgFour,
+    title: "My Ten Favorite Photography Quotes",
+    snippet:
+      "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
+  },
+  {
+    id: 45,
+    src: ImgFive,
+    title: "Essential Composition: Frames",
+    snippet:
+      "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
+  },
+  {
+    id: 46,
+    src: ImgSix,
+    title: "NFTs and Photography",
+    snippet:
+      "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
+  },
+  {
+    id: 47,
+    src: ImgSeven,
+    title: "5 Pro Tips For Wildlife Photography",
+    snippet:
+      "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
+  },
+  {
+    id: 48,
+    src: ImgEight,
+    title: "Essential Composition: Visual Patterns",
+    snippet:
+      "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
+  },
+  {
+    id: 49,
+    src: ImgNine,
+    title: "6 Insightful Photography Tips for Beginners",
+    snippet:
+      "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
+  },
+  {
+    id: 50,
+    src: ImgTen,
+    title: "Behind The Lens: Cradle of Life",
+    snippet:
+      "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
+  },
+  {
+    id: 51,
+    src: ImgEleven,
+    title:
+      "Photography at Home: Staying Creative and Exploring New Perspectives",
+    snippet:
+      "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
+  },
+  {
+    id: 52,
+    src: ImgTwelve,
+    title: "Behind The Lens: Take Me Home",
+    snippet:
+      "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
+  },
+  {
+    id: 53,
+    src: ImgThirteen,
+    title: "Essential Photography: Embrace Backlight",
+    snippet:
+      "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
+  },
+  {
+    id: 54,
+    src: ImgFourteen,
+    title: "Introducing the Canon EOS R5",
+    snippet:
+      "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
+  },
+  {
+    id: 55,
+    src: ImgFifteen,
+    title: "Best Compact Cameras Of 2022!",
+    snippet:
+      "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
+  },
+  {
+    id: 56,
+    src: ImgSixteen,
+    title: "Photo Equipment: What’s In The Bag?",
+    snippet:
+      "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
+  },
+  {
+    id: 57,
+    src: ImgSeventeen,
+    title: "Breakthrough Photography Filters",
+    snippet:
+      "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
+  },
+  {
+    id: 58,
+    src: ImgEighteen,
+    title: "Is Vero Better Than Instagram For Photographers?",
+    snippet:
+      "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
+  },
+  {
+    id: 59,
+    src: ImgNineteen,
+    title: "Photography And The Creative Process",
+    snippet:
+      "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
+  },
+  {
+    id: 60,
+    src: ImgTwenty,
+    title: "How To Calculate Long Exposures",
+    snippet:
+      "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
+  },
+  {
+    id: 61,
+    src: ImgTwentyOne,
+    title: "How To Photograph Stunning Autumn Color",
+    snippet:
+      "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
+  },
+  {
+    id: 62,
+    src: ImgTwentyTwo,
+    title: "8 Stunning Locations Photographers Must Visit",
+    snippet:
+      "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
+  },
+  {
+    id: 63,
+    src: ImgTwentyThree,
+    title: "8 Stunning Locations Photographers Must Visit",
+    snippet:
+      "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
+  },
+  {
+    id: 64,
+    src: ImgTwentyFour,
+    title: "My Ten Favorite Photography Quotes",
+    snippet:
+      "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
+  },
+  {
+    id: 65,
+    src: ImgTwentyFive,
+    title: "Essential Composition: Frames",
+    snippet:
+      "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
+  },
+  {
+    id: 66,
+    src: ImgTwentySix,
+    title: "NFTs and Photography",
+    snippet:
+      "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
+  },
+  {
+    id: 67,
+    src: ImgTwentySeven,
+    title: "5 Pro Tips For Wildlife Photography",
+    snippet:
+      "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
+  },
+  {
+    id: 68,
+    src: ImgTwentyEight,
+    title: "Essential Composition: Visual Patterns",
+    snippet:
+      "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
+  },
+  {
+    id: 69,
+    src: ImgTwentyNine,
+    title: "6 Insightful Photography Tips for Beginners",
+    snippet:
+      "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
+  },
+  {
+    id: 70,
+    src: ImgThirty,
+    title: "Behind The Lens: Cradle of Life",
+    snippet:
+      "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
+  },
+  {
+    id: 71,
+    src: ImgThirtyOne,
+    title:
+      "Photography at Home: Staying Creative and Exploring New Perspectives",
+    snippet:
+      "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
+  },
+  {
+    id: 72,
+    src: ImgThirtyTwo,
+    title: "Behind The Lens: Take Me Home",
+    snippet:
+      "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
+  },
+  {
+    id: 73,
+    src: ImgThirtyThree,
+    title: "Essential Photography: Embrace Backlight",
+    snippet:
+      "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
+  },
+  {
+    id: 74,
+    src: ImgThirtyFour,
+    title: "Introducing the Canon EOS R5",
+    snippet:
+      "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
+  },
+  {
+    id: 75,
+    src: ImgThirtyFive,
+    title: "Best Compact Cameras Of 2022!",
+    snippet:
+      "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
+  },
+  {
+    id: 76,
+    src: ImgThirtySix,
+    title: "Photo Equipment: What’s In The Bag?",
+    snippet:
+      "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
+  },
+  {
+    id: 77,
+    src: ImgThirtySeven,
+    title: "Breakthrough Photography Filters",
+    snippet:
+      "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
+  },
+  {
+    id: 78,
+    src: ImgThirtyEight,
+    title: "Is Vero Better Than Instagram For Photographers?",
+    snippet:
+      "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
+  },
+  {
+    id: 79,
+    src: ImgThirtyNine,
+    title: "Photography And The Creative Process",
+    snippet:
+      "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
+  },
+  {
+    id: 80,
+    src: ImgFourty,
+    title: "How To Calculate Long Exposures",
+    snippet:
+      "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
+  },
 ];
 export default BlogPosts;
