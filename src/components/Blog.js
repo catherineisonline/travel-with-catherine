@@ -4,18 +4,25 @@ import BlogPosts from "./BlogPosts";
 
 function Blog() {
   return (
-    <div className="col-span-2 min-h-screen scrollbar-hide">
-      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3  xl:grid-cols-4 gap-1 mx-auto justify-items-center overflow-hidden">
-        {BlogPosts.map((img, index) => (
-          <img
-            key={index}
-            src={img.src}
-            alt=""
-            className=" h-full w-full block object-cover cursor-pointer hover:scale-125 hover:border-2 smooth-transition"
-          ></img>
+    <section className="col-span-2 min-h-screen scrollbar-hide mt-28">
+      {/* <h3 className="text-5xl text-center uppercase text-black">Blog</h3> */}
+
+      <section className="grid sm:grid-cols-1 md:grid-cols-2  gap-1 mx-auto  justify-items-stretch overflow-hidden  w-10/12">
+        {BlogPosts.map((post, index) => (
+          <section className="grid grid-cols-1 gap-1 mt-20">
+            <img
+              key={index}
+              src={post.src}
+              alt=""
+              className="w-full h-80 block object-cover cursor-pointer smooth-transition hover:opacity-80 smooth-transition"
+
+            ></img>
+            <h2 className="text-2xl uppercase text-black">{post.title}</h2>
+            <p className="text-md">{post.snippet}</p>
+          </section>
         ))}
-      </div>
-    </div>
+      </section>
+    </section>
   );
 }
 

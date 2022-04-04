@@ -36,7 +36,7 @@ function About() {
           risus ligula, semper non magna eget, malesuada varius dolor.
         </p>
       </section>
-      <section className="flex flex-row gap-1 p-8">
+      <section className="flex sm:flex-col md:flex-row gap-1 p-8 ">
         <section>
           <img
             className="max-w-full w-56 h-52 object-cover	"

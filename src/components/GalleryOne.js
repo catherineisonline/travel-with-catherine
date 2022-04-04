@@ -48,6 +48,66 @@ import ImgFourtySeven from "../images/gallery-one/image-47.jpeg";
 import ImgFourtyEight from "../images/gallery-one/image-48.jpeg";
 import ImgFourtyNine from "../images/gallery-one/image-49.jpeg";
 import ImgFifty from "../images/gallery-one/image-50.jpeg";
+import ImgFiftyOne from "../images/gallery-one/image-51.jpeg";
+import ImgFiftyTwo from "../images/gallery-one/image-52.jpeg";
+import ImgFiftyThree from "../images/gallery-one/image-53.jpeg";
+import ImgFiftyFour from "../images/gallery-one/image-54.jpeg";
+import ImgFiftyFive from "../images/gallery-one/image-55.jpeg";
+import ImgFiftySix from "../images/gallery-one/image-56.jpeg";
+import ImgFiftySeven from "../images/gallery-one/image-57.jpeg";
+import ImgFiftyEight from "../images/gallery-one/image-58.jpeg";
+import ImgFiftyNine from "../images/gallery-one/image-59.jpeg";
+import ImgSixty from "../images/gallery-one/image-60.jpeg";
+import ImgSixtyOne from "../images/gallery-one/image-61.jpeg";
+import ImgSixtyTwo from "../images/gallery-one/image-62.jpeg";
+import ImgSixtyThree from "../images/gallery-one/image-63.jpeg";
+import ImgSixtyFour from "../images/gallery-one/image-64.jpeg";
+import ImgSixtyFive from "../images/gallery-one/image-65.jpeg";
+import ImgSixtySix from "../images/gallery-one/image-66.jpeg";
+import ImgSixtySeven from "../images/gallery-one/image-67.jpeg";
+import ImgSixtyEight from "../images/gallery-one/image-68.jpeg";
+import ImgSixtyNine from "../images/gallery-one/image-69.jpeg";
+import ImgSeventy from "../images/gallery-one/image-70.jpeg";
+import ImgSeventyOne from "../images/gallery-one/image-71.jpeg";
+import ImgSeventyTwo from "../images/gallery-one/image-72.jpeg";
+import ImgSeventyThree from "../images/gallery-one/image-73.jpeg";
+import ImgSeventyFour from "../images/gallery-one/image-74.jpeg";
+import ImgSeventyFive from "../images/gallery-one/image-75.jpeg";
+import ImgSeventySix from "../images/gallery-one/image-76.jpeg";
+import ImgSeventySeven from "../images/gallery-one/image-77.jpeg";
+import ImgSeventyEight from "../images/gallery-one/image-78.jpeg";
+import ImgSeventyNine from "../images/gallery-one/image-79.jpeg";
+import ImgEighty from "../images/gallery-one/image-80.jpeg";
+import ImgEightyOne from "../images/gallery-one/image-81.jpeg";
+import ImgEightyTwo from "../images/gallery-one/image-82.jpeg";
+import ImgEightyThree from "../images/gallery-one/image-83.jpeg";
+import ImgEightyFour from "../images/gallery-one/image-84.jpeg";
+import ImgEightyFive from "../images/gallery-one/image-85.jpeg";
+import ImgEightySix from "../images/gallery-one/image-86.jpeg";
+import ImgEightySeven from "../images/gallery-one/image-87.jpeg";
+import ImgEightyEight from "../images/gallery-one/image-88.jpeg";
+import ImgEightyNine from "../images/gallery-one/image-89.jpeg";
+import ImgNinety from "../images/gallery-one/image-90.jpeg";
+import ImgNinetyOne from "../images/gallery-one/image-91.jpeg";
+import ImgNinetyTwo from "../images/gallery-one/image-92.jpeg";
+import ImgNinetyThree from "../images/gallery-one/image-93.jpeg";
+import ImgNinetyFour from "../images/gallery-one/image-94.jpeg";
+import ImgNinetyFive from "../images/gallery-one/image-95.jpeg";
+import ImgNinetySix from "../images/gallery-one/image-96.jpeg";
+import ImgNinetySeven from "../images/gallery-one/image-97.jpeg";
+import ImgNinetyEight from "../images/gallery-one/image-98.jpeg";
+import ImgNinetyNine from "../images/gallery-one/image-99.jpeg";
+import ImgHundred from "../images/gallery-one/image-100.jpeg";
+import ImgHundredOne from "../images/gallery-one/image-101.jpeg";
+import ImgHundredTwo from "../images/gallery-one/image-102.jpeg";
+import ImgHundredThree from "../images/gallery-one/image-103.jpeg";
+import ImgHundredFour from "../images/gallery-one/image-104.jpeg";
+import ImgHundredFive from "../images/gallery-one/image-105.jpeg";
+import ImgHundredSix from "../images/gallery-one/image-106.jpeg";
+import ImgHundredSeven from "../images/gallery-one/image-107.jpeg";
+import ImgHundredEight from "../images/gallery-one/image-108.jpeg";
+import ImgHundredNine from "../images/gallery-one/image-109.jpeg";
+import ImgHundredTen from "../images/gallery-one/image-110.jpeg";
 
 const GalleryOne = [
   { id: 1, src: ImgOne },
@@ -100,55 +160,65 @@ const GalleryOne = [
   { id: 48, src: ImgFourtyEight },
   { id: 49, src: ImgFourtyNine },
   { id: 50, src: ImgFifty },
-  { id: 51, src: ImgFifty },
-  { id: 52, src: ImgFifty },
-  { id: 53, src: ImgFifty },
-  { id: 54, src: ImgFifty },
-  { id: 55, src: ImgFifty },
-  { id: 56, src: ImgFifty },
-  { id: 57, src: ImgFifty },
-  { id: 58, src: ImgFifty },
-  { id: 59, src: ImgFifty },
-  { id: 60, src: ImgFifty },
-  { id: 61, src: ImgFifty },
-  { id: 62, src: ImgFifty },
-  { id: 63, src: ImgFifty },
-  { id: 64, src: ImgFifty },
-  { id: 65, src: ImgFifty },
-  { id: 66, src: ImgFifty },
-  { id: 67, src: ImgFifty },
-  { id: 68, src: ImgFifty },
-  { id: 69, src: ImgFifty },
-  { id: 70, src: ImgFifty },
-  { id: 71, src: ImgFifty },
-  { id: 72, src: ImgFifty },
-  { id: 73, src: ImgFifty },
-  { id: 74, src: ImgFifty },
-  { id: 75, src: ImgFifty },
-  { id: 76, src: ImgFifty },
-  { id: 77, src: ImgFifty },
-  { id: 78, src: ImgFifty },
-  { id: 79, src: ImgFifty },
-  { id: 80, src: ImgFifty },
-  { id: 81, src: ImgFifty },
-  { id: 82, src: ImgFifty },
-  { id: 83, src: ImgFifty },
-  { id: 84, src: ImgFifty },
-  { id: 85, src: ImgFifty },
-  { id: 86, src: ImgFifty },
-  { id: 87, src: ImgFifty },
-  { id: 88, src: ImgFifty },
-  { id: 89, src: ImgFifty },
-  { id: 90, src: ImgFifty },
-  { id: 91, src: ImgFifty },
-  { id: 92, src: ImgFifty },
-  { id: 93, src: ImgFifty },
-  { id: 94, src: ImgFifty },
-  { id: 95, src: ImgFifty },
-  { id: 96, src: ImgFifty },
-  { id: 97, src: ImgFifty },
-  { id: 98, src: ImgFifty },
-  { id: 99, src: ImgFifty },
-  { id: 100, src: ImgFifty },
+  { id: 51, src: ImgFiftyOne },
+  { id: 52, src: ImgFiftyTwo },
+  { id: 53, src: ImgFiftyThree },
+  { id: 54, src: ImgFiftyFour },
+  { id: 55, src: ImgFiftyFive },
+  { id: 56, src: ImgFiftySix },
+  { id: 57, src: ImgFiftySeven },
+  { id: 58, src: ImgFiftyEight },
+  { id: 59, src: ImgFiftyNine },
+  { id: 60, src: ImgSixty },
+  { id: 61, src: ImgSixtyOne },
+  { id: 62, src: ImgSixtyTwo },
+  { id: 63, src: ImgSixtyThree },
+  { id: 64, src: ImgSixtyFour },
+  { id: 65, src: ImgSixtyFive },
+  { id: 66, src: ImgSixtySix },
+  { id: 67, src: ImgSixtySeven },
+  { id: 68, src: ImgSixtyEight },
+  { id: 69, src: ImgSixtyNine },
+  { id: 70, src: ImgSeventy },
+  { id: 71, src: ImgSeventyOne },
+  { id: 72, src: ImgSeventyTwo },
+  { id: 73, src: ImgSeventyThree },
+  { id: 74, src: ImgSeventyFour },
+  { id: 75, src: ImgSeventyFive },
+  { id: 76, src: ImgSeventySix },
+  { id: 77, src: ImgSeventySeven },
+  { id: 78, src: ImgSeventyEight },
+  { id: 79, src: ImgSeventyNine },
+  { id: 80, src: ImgEighty },
+  { id: 81, src: ImgEightyOne },
+  { id: 82, src: ImgEightyTwo },
+  { id: 83, src: ImgEightyThree },
+  { id: 84, src: ImgEightyFour },
+  { id: 85, src: ImgEightyFive },
+  { id: 86, src: ImgEightySix },
+  { id: 87, src: ImgEightySeven },
+  { id: 88, src: ImgEightyEight },
+  { id: 89, src: ImgEightyNine },
+  { id: 90, src: ImgNinety },
+  { id: 91, src: ImgNinetyOne },
+  { id: 92, src: ImgNinetyTwo },
+  { id: 93, src: ImgNinetyThree },
+  { id: 94, src: ImgNinetyFour },
+  { id: 95, src: ImgNinetyFive },
+  { id: 96, src: ImgNinetySix },
+  { id: 97, src: ImgNinetySeven },
+  { id: 98, src: ImgNinetyEight },
+  { id: 99, src: ImgNinetyNine },
+  { id: 100, src: ImgHundred },
+  { id: 101, src: ImgHundredOne },
+  { id: 102, src: ImgHundredTwo },
+  { id: 103, src: ImgHundredThree },
+  { id: 104, src: ImgHundredFour },
+  { id: 105, src: ImgHundredFive },
+  { id: 106, src: ImgHundredSix },
+  { id: 107, src: ImgHundredSeven },
+  { id: 108, src: ImgHundredEight },
+  { id: 109, src: ImgHundredNine },
+  { id: 110, src: ImgHundredTen },
 ];
 export default GalleryOne;

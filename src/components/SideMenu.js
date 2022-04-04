@@ -1,6 +1,5 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { Link } from "react-router-dom";
 //Images
 import Facebook from "../images/facebook-icon.png";
 import Instagram from "../images/instagram-icon.png";
@@ -11,7 +10,7 @@ function SideMenu() {
   return (
     <div className="flex flex-col min-h-screen col-span-1 items-center">
       <div className="flex flex-col items-center fixed mt-60 font-titlefont text-2xl gap-5 text-slate-600">
-        <h1 className="text-3xl text-center uppercase text-black">
+        <h1 className="sm:text-xl md:text-3xl text-center uppercase text-black">
           Travel with<br></br>
           <span className="font-semibold font-namefont">Catherine</span>
         </h1>
