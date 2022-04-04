@@ -9,7 +9,7 @@ function About() {
     <article className="flex flex-col min-h-screen col-span-2 items-center p-5">
       <section className="flex flex-col items-center mt-20 font-titlefont text-2xl gap-5 text-slate-600">
         <h2 className="text-5xl text-center uppercase text-black">About</h2>
-        <p className="text-lg w-9/12">
+        <p className="text-base w-full sm:text-lg sm:w-9/12">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
           ultrices odio ac dui bibendum semper. Nunc id massa justo. Maecenas
           interdum rutrum justo, et vehicula urna dignissim nec. Suspendisse
@@ -36,7 +36,7 @@ function About() {
           risus ligula, semper non magna eget, malesuada varius dolor.
         </p>
       </section>
-      <section className="flex sm:flex-col md:flex-row gap-1 p-8 ">
+      <section className="flex flex-col sm:flex-row gap-1 p-8 ">
         <section>
           <img
             className="max-w-full w-56 h-52 object-cover	"
