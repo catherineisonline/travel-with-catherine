@@ -31,4 +31,12 @@
     padding: 1rem;
     overflow-x: hidden;
   }
+
+  ul.pagination {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 2rem;
+  }
 }
