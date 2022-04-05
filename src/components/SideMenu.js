@@ -133,7 +133,14 @@ function SideMenu() {
             ></img>
           </a>
         </section>
-        <p className="text-sm">&copy; 2022 by Catherine</p>
+        <a
+          className="text-sm"
+          href="https://github.com/catherineisonline/travel-with-catherine"
+          target="_blank"
+          rel="noreferrer"
+        >
+          &copy; 2022 by Catherine
+        </a>
       </section>
     </article>
   );
