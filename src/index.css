@@ -23,13 +23,14 @@
 
   .show-menu {
     display: flex;
-    position: absolute !important;
+    position: fixed !important;
     margin-top: 0;
     width: 70%;
     background-color: white;
     transform: translate(70%, 0);
     padding: 1rem;
     overflow-x: hidden;
+    z-index: 2;
   }
 
   ul.pagination {
