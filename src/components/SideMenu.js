@@ -20,8 +20,8 @@ function RemoveMenu() {
 
 function SideMenu() {
   return (
-    <article className="flex flex-col min-h-screen col-span-1 items-center">
-      <section className="sm:hidden">
+    <article className="sm:relative flex flex-col min-h-screen col-span-1 items-center absolute">
+      <section className="sm:hidden z-50">
         <img
           className="burger-icon w-max fixed cursor-pointer"
           onClick={ToggleMenu}
