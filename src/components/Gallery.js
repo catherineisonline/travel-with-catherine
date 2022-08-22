@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react";
 import GalleryOne from "./GalleryOne";
 
-const Images = ({ RenderedImages }) => {
+const Images = ({ imagesToShow }) => {
   return (
     <section className="image-list grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3  xl:grid-cols-4 gap-1 mx-auto justify-items-center overflow-hidden w-full ">
-      {RenderedImages.map((img) => (
+      {imagesToShow.map((img, index) => (
         <img
-          src={img.src}
+          key={index}
+          src={img.srcMobile}
+          srcSet={`${img.srcMobile} 300w, ${img.src} 900w`}
+          sizes="(min-width: 660px) 300px, 100vw"
           alt=""
           className=" h-full w-full block object-cover cursor-pointer hover:scale-125 hover:border-2 smooth-transition"
         ></img>
@@ -20,23 +23,33 @@ const MainPage = () => {
   const ImageStorage = [];
   const [imagesToShow, setImagesToShow] = useState([]);
   const [count, setCount] = useState(1);
+
   const loopThroughImages = (count) => {
-    for (
-      // let i = count * imagesPerPage - imagesPerPage;
-      let i = 0;
-      i < imagesPerPage * count;
-      i++
-    ) {
+    for (let i = 0; i < imagesPerPage * count; i++) {
       if (GalleryOne[i] !== undefined) {
         ImageStorage.push(GalleryOne[i]);
       }
     }
+    const randomStr = Math.random().toString(32).slice(2) + Date.now();
+    window.usePreloadImagesData = window.usePreloadImagesData ?? {};
+    window.usePreloadImagesData[randomStr] = [];
+    for (const src of ImageStorage) {
+      const img = new Image();
+      img.src = src;
+      window.usePreloadImagesData[randomStr].push(img);
+    }
+
     setImagesToShow(ImageStorage);
   };
   useEffect(() => {
     setCount((prevCount) => prevCount + 1);
     loopThroughImages(count);
+
+    // return () => {
+    //   delete window.usePreloadImagesData?.[randomStr];
+    // };
   }, []);
+
   const showMore = () => {
     setCount((prevCount) => prevCount + 1);
     loopThroughImages(count);
@@ -44,7 +57,7 @@ const MainPage = () => {
 
   return (
     <article className="col-span-2 min-h-screen scrollbar-hide">
-      <Images RenderedImages={imagesToShow} />
+      <Images imagesToShow={imagesToShow} />
       <section className="flex flex-col items-center w-full">
         <button
           onClick={showMore}

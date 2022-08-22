@@ -5,7 +5,6 @@ module.exports = {
     extend: {},
     fontFamily: {
       mainfont: ["Barlow", "sans-serif"],
-      titlefont: ["Kanit", "cursive"],
       namefont: ["Philosopher", "cursive"],
     },
   },

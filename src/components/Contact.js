@@ -3,7 +3,7 @@ import React from "react";
 function Contact() {
   return (
     <article className="flex flex-col min-h-screen col-span-2 items-center p-5">
-      <section className="flex flex-col items-center mt-20 font-titlefont text-2xl gap-5 text-slate-600">
+      <section className="flex flex-col items-center mt-20  text-2xl gap-5 text-slate-600">
         <h2 className="text-5xl text-center uppercase text-black">Contact</h2>
         <form class="w-full max-w-lg">
           <div class="flex flex-wrap -mx-3 mb-6">
@@ -18,9 +18,6 @@ function Contact() {
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                 type="text"
               ></input>
-              {/* <p class="text-red-500 text-xs italic">
-                Please fill out this field.
-              </p> */}
             </div>
             <div class="w-full md:w-1/2 px-3">
               <label

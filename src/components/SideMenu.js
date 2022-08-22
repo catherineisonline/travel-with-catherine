@@ -23,14 +23,14 @@ function SideMenu() {
     <article className="sm:relative flex flex-col min-h-screen col-span-1 items-center absolute">
       <section className="sm:hidden z-50">
         <img
-          className="burger-icon w-max fixed cursor-pointer"
+          className="burger-icon w-10 fixed cursor-pointer"
           onClick={ToggleMenu}
           src={Burger}
           alt=""
         ></img>
       </section>
-      <section className="main-menu flex-col items-center fixed mt-60 font-titlefont text-2xl gap-5 text-slate-600 hidden sm:flex">
-        <h1 className="sm:text-xl md:text-3xl text-center uppercase text-black">
+      <section className="main-menu flex-col items-center fixed mt-60 text-2xl gap-5 text-slate-600 hidden sm:flex">
+        <h1 className="sm:text-xl md:text-3xl text-center uppercase text-black font-light">
           Travel with<br></br>
           <span className="font-semibold font-namefont">Catherine</span>
         </h1>
