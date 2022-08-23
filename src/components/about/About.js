@@ -1,8 +1,8 @@
 import React from "react";
-import ImgOne from "../images/gallery-one/image-29.jpeg";
-import ImgTwo from "../images/gallery-one/image-59.jpeg";
-import ImgThree from "../images/gallery-one/image-79.jpeg";
-import ImgFour from "../images/gallery-one/image-99.jpeg";
+import ImgOne from "../../images/gallery-one/image-29.jpeg";
+import ImgTwo from "../../images/gallery-one/image-59.jpeg";
+import ImgThree from "../../images/gallery-one/image-79.jpeg";
+import ImgFour from "../../images/gallery-one/image-99.jpeg";
 
 function About() {
   return (

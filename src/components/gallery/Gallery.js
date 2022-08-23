@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import GalleryOne from "./GalleryOne";
+import GalleryOne from "../../data/GalleryOne";
 
 const Images = ({ imagesToShow }) => {
   return (

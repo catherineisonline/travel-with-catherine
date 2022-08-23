@@ -1,10 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 //Images
-import Facebook from "../images/facebook-icon.png";
-import Instagram from "../images/instagram-icon.png";
-import Twitter from "../images/twitter-icon.png";
-import Burger from "../images/burger-menu.png";
+
+import Burger from "../../images/burger-menu.png";
+import Socials from "./Socials";
 //Functions
 const ResetLocation = () => window.scrollTo(0, 0);
 
@@ -20,16 +19,14 @@ function RemoveMenu() {
 
 function SideMenu() {
   return (
-    <article className="sm:relative flex flex-col min-h-screen col-span-1 items-center absolute">
-      <section className="sm:hidden z-50">
-        <img
-          className="burger-icon w-10 fixed cursor-pointer"
-          onClick={ToggleMenu}
-          src={Burger}
-          alt=""
-        ></img>
-      </section>
-      <section className="main-menu flex-col items-center fixed mt-60 text-2xl gap-5 text-slate-600 hidden sm:flex">
+    <header className="sm:relative flex flex-col min-h-screen col-span-1 items-center absolute">
+      <img
+        className="burger-icon w-10 fixed cursor-pointer sm:hidden z-50 ml-6"
+        onClick={ToggleMenu}
+        src={Burger}
+        alt=""
+      ></img>
+      <nav className="main-menu flex-col items-center fixed mt-60 text-2xl gap-5 text-slate-600 hidden sm:flex">
         <h1 className="sm:text-xl md:text-3xl text-center uppercase text-black font-light">
           Travel with<br></br>
           <span className="font-semibold font-namefont">Catherine</span>
@@ -98,41 +95,7 @@ function SideMenu() {
         >
           Contact
         </NavLink>
-        <section className="flex flex-row gap-3">
-          <a
-            href="https://www.facebook.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              className="w-6 h-6	max-w-full"
-              src={Facebook}
-              alt="Facebook icon"
-            ></img>
-          </a>
-          <a
-            href="https://www.instagram.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              className="w-6 h-6	max-w-full"
-              src={Instagram}
-              alt="Instagram icon"
-            ></img>
-          </a>
-          <a
-            href="https://twitter.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              className="w-6 h-6	max-w-full"
-              src={Twitter}
-              alt="Twitter icon"
-            ></img>
-          </a>
-        </section>
+        <Socials />
         <a
           className="text-sm"
           href="https://github.com/catherineisonline/travel-with-catherine"
@@ -141,8 +104,8 @@ function SideMenu() {
         >
           &copy; 2022 by Catherine
         </a>
-      </section>
-    </article>
+      </nav>
+    </header>
   );
 }
 
