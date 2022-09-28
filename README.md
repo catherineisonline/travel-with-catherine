@@ -1,15 +1,14 @@
-
-<img src="https://github.com/catherineisonline/travel-with-catherine/blob/main/public/project-preview.png?raw=true"></img>
+<img src="https://github.com/catherineisonline/travel-with-catherine/blob/main/public/projectPreview.png?raw=true"></img>
 
 # About
-Travel with Catherine, a simple photography portfolio to show off some of my photography and code! 
+
+Travel with Catherine, a simple photography portfolio to show off some of my photography and code!
 
 ## Built with
 
 - Tailwind
 - React
 - Mobile first design
-
 
 ### Getting Started with Create React App
 
@@ -57,4 +56,3 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
