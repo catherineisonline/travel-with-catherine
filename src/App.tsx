@@ -1,7 +1,5 @@
 import { FC } from "react";
-import * as React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
 //Components
 import Gallery from "./components/gallery/Gallery";
 import SideMenu from "./components/sideMenu/SideMenu";

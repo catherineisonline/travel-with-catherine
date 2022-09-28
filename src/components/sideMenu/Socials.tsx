@@ -1,36 +1,39 @@
-import Facebook from "../../images/facebook-icon.png";
-import Instagram from "../../images/instagram-icon.png";
-import Twitter from "../../images/twitter-icon.png";
+// import Facebook from "../../images/facebook-icon.png";
+// import Instagram from "../../images/instagram-icon.png";
+// import Twitter from "../../images/twitter-icon.png";
+import Github from "../../images/socials/github.svg";
+import Linkedin from "../../images/socials/linkedin.svg";
+import Portfolio from "../../images/socials/portfolio.png";
 const Socials = () => {
   return (
     <section className="flex flex-row gap-3">
       <a
-        href="https://www.facebook.com/"
+        href="https://github.com/catherineisonline/travel-with-catherine"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img className="w-6 h-6	max-w-full" src={Github} alt="Github icon"></img>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/catherinemitagvaria/"
         target="_blank"
         rel="noopener noreferrer"
       >
         <img
           className="w-6 h-6	max-w-full"
-          src={Facebook}
-          alt="Facebook icon"
+          src={Linkedin}
+          alt="Linkedin icon"
         ></img>
       </a>
       <a
-        href="https://www.instagram.com/"
+        href="https://ekaterine-mitagvaria.vercel.app/"
         target="_blank"
         rel="noopener noreferrer"
       >
         <img
           className="w-6 h-6	max-w-full"
-          src={Instagram}
-          alt="Instagram icon"
-        ></img>
-      </a>
-      <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
-        <img
-          className="w-6 h-6	max-w-full"
-          src={Twitter}
-          alt="Twitter icon"
+          src={Portfolio}
+          alt="Portfolio icon"
         ></img>
       </a>
     </section>
