@@ -1,4 +1,4 @@
-import {FC} from "react";
+import { FC } from "react";
 import * as React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -11,20 +11,18 @@ import Contact from "./components/contact/Contact";
 //Styles
 import "./index.css";
 
+const App: FC = () => {
+  return (
+    <Router>
+      <SideMenu />
+      <Routes>
+        <Route path="/travel-with-catherine" element={<Gallery />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
+  );
+};
 
-const App : FC = () => {
-    return(
-        <Router>
-        <SideMenu />
-        <Routes>
-          <Route path="/travel-with-catherine" element={<Gallery />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </Router>
-    )
-}
-
-
-export default  App;
+export default App;
