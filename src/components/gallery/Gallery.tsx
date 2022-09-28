@@ -20,8 +20,8 @@ const Gallery = () => {
     loopThroughImages(count);
   };
   useEffect(() => {
-    loopThroughImages(1);
-  }, []);
+    loopThroughImages(count);
+  }, [count]);
 
   return (
     <article className="col-span-2 min-h-screen scrollbar-hide">
