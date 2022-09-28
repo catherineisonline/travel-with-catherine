@@ -1,6 +1,3 @@
-// import Facebook from "../../images/facebook-icon.png";
-// import Instagram from "../../images/instagram-icon.png";
-// import Twitter from "../../images/twitter-icon.png";
 import Github from "../../images/socials/github.svg";
 import Linkedin from "../../images/socials/linkedin.svg";
 import Portfolio from "../../images/socials/portfolio.png";
