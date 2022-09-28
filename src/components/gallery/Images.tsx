@@ -9,7 +9,7 @@ export type imagesToShow = {
 
 const Images = ({ imagesToShow }: ImagesProp) => {
   return (
-    <section className="image-list grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3  xl:grid-cols-4 gap-1 mx-auto justify-items-center overflow-hidden w-full ">
+    <section className="image-list grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-1 mx-auto justify-items-center overflow-hidden w-full ">
       {imagesToShow.map((img, index) => (
         <img
           key={index}
