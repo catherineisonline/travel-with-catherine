@@ -3,7 +3,7 @@ import * as React from "react";
 interface PostsToShowProps {
   postsToShow: postsToShow[];
 }
-type postsToShow = {
+export type postsToShow = {
   id: number;
   src: string;
   title: string;

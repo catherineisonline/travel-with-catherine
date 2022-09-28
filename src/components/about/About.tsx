@@ -4,7 +4,7 @@ import ImgTwo from "../../images/gallery-one/image-59.jpeg";
 import ImgThree from "../../images/gallery-one/image-79.jpeg";
 import ImgFour from "../../images/gallery-one/image-99.jpeg";
 
-function About() {
+const About = () => {
   return (
     <article className="flex flex-col min-h-screen col-span-2 items-center p-5">
       <section className="flex flex-col items-center mt-20 text-2xl gap-5 text-slate-600">
@@ -72,6 +72,6 @@ function About() {
       </section>
     </article>
   );
-}
+};
 
 export default About;

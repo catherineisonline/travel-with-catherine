@@ -38,8 +38,13 @@ import ImgThirtySeven from "../images/gallery-one/image-37.jpeg";
 import ImgThirtyEight from "../images/gallery-one/image-38.jpeg";
 import ImgThirtyNine from "../images/gallery-one/image-39.jpeg";
 import ImgFourty from "../images/gallery-one/image-40.jpeg";
-
-const BlogPosts = [
+// type BlogPost = {
+//   id: number,
+// src: string,
+// title: string,
+// snippet: string
+// }
+const BlogPostsData = [
   {
     id: 1,
     src: ImgOne,
@@ -605,4 +610,4 @@ const BlogPosts = [
       "Fusce blandit in nisl vitae posuere. Ut posuere suscipit sagittis. Integer molestie pellentesque sem, sit amet luctus quam bibenduma.",
   },
 ];
-export default BlogPosts;
+export default BlogPostsData;

@@ -1,31 +1,31 @@
 import { useState, useEffect } from "react";
-import BlogPostsData from "../../data/BlogPostsData";
-import BlogPosts, { postsToShow } from "./BlogPosts";
+import GalleryOne from "../../data/GalleryOne";
+import { imagesToShow } from "./Images";
+import Images from "./Images";
 
-const Blog = () => {
-  const [postsStorage, setPostsStorage] = useState<postsToShow[]>([]);
+const Gallery = () => {
+  const [imageStorage, setImageStrorage] = useState<imagesToShow[]>([]);
   const [count, setCount] = useState<number>(1);
 
-  const loopThroughPosts = (count: number) => {
-    for (let i: number = 0; i < 10 * count; i++) {
-      setPostsStorage((prevArr: postsToShow[]) => [
+  const loopThroughImages = (count: number = 1) => {
+    for (let i = 0; i < 10 * count; i++) {
+      setImageStrorage((prevArr: imagesToShow[]) => [
         ...prevArr,
-        BlogPostsData[i],
+        GalleryOne[i],
       ]);
     }
   };
   const showMore = () => {
     setCount((prevCount) => prevCount + 1);
-    loopThroughPosts(count);
+    loopThroughImages(count);
   };
-
   useEffect(() => {
-    loopThroughPosts(1);
+    loopThroughImages(1);
   }, []);
 
   return (
-    <section className="col-span-2 min-h-screen scrollbar-hide mt-28">
-      <BlogPosts postsToShow={postsStorage} />
+    <article className="col-span-2 min-h-screen scrollbar-hide">
+      <Images imagesToShow={imageStorage} />
       <section className="flex flex-col items-center w-full">
         <button
           onClick={showMore}
@@ -34,8 +34,8 @@ const Blog = () => {
           Load More
         </button>
       </section>
-    </section>
+    </article>
   );
 };
 
-export default Blog;
+export default Gallery;
