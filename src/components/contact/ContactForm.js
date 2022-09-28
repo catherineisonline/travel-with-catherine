@@ -1,11 +1,11 @@
 const ContactForm = () => {
   return (
-    <form class="w-full max-w-lg">
-      <div class="flex flex-wrap -mx-3 mb-6">
-        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+    <form className="w-full max-w-lg">
+      <div className="flex flex-wrap -mx-3 mb-6">
+        <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
           <label
             className="block uppercase tracking-wide text-gray-700 text-xs  mb-2"
-            for="grid-first-name"
+            htmlFor="grid-first-name"
           >
             First Name
           </label>
@@ -14,10 +14,10 @@ const ContactForm = () => {
             type="text"
           ></input>
         </div>
-        <div class="w-full md:w-1/2 px-3">
+        <div className="w-full md:w-1/2 px-3">
           <label
-            class="block uppercase tracking-wide text-gray-700 text-xs mb-2"
-            for="grid-last-name"
+            className="block uppercase tracking-wide text-gray-700 text-xs mb-2"
+            htmlFor="grid-last-name"
           >
             Last Name
           </label>
@@ -29,10 +29,10 @@ const ContactForm = () => {
         </div>
       </div>
       <div className="flex flex-wrap -mx-3 mb-6">
-        <div class="w-full px-3">
+        <div className="w-full px-3">
           <label
             className="block uppercase tracking-wide text-gray-700 text-xs mb-2"
-            for="grid-password"
+            htmlFor="grid-password"
           >
             E-mail
           </label>
@@ -47,7 +47,7 @@ const ContactForm = () => {
         <div className="w-full px-3">
           <label
             className="block uppercase tracking-wide text-gray-700 text-xs  mb-2"
-            for="grid-password"
+            htmlFor="grid-password"
           >
             Message
           </label>
@@ -57,8 +57,8 @@ const ContactForm = () => {
           ></textarea>
         </div>
       </div>
-      <div class="md:flex md:items-center">
-        <div class="md:w-1/3">
+      <div className="md:flex md:items-center">
+        <div className="md:w-1/3">
           <button
             className="shadow bg-blue-600 hover:bg-blue-400 smooth-transition focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
             type="button"

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^5.9.0",
     "@headlessui/react": "^1.5.0",
     "@heroicons/react": "^1.0.6",
     "@tanem/react-nprogress": "^5.0.11",
@@ -10,19 +11,18 @@
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
     "gh-pages": "^3.2.3",
-    "jquery": "^3.6.0",
     "postcss-flexbugs-fixes": "^5.0.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-js-pagination": "^3.0.3",
+    "react-js-pagination": "^3.0.2",
     "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.0",
+    "react-scripts": "^5.0.1",
     "tailwind-scrollbar-hide": "^1.1.7",
     "web-vitals": "^2.1.4"
   },
   "homepage": "/travel-with-catherine",
   "scripts": {
-    "start": "craco start",
+    "start": "craco start && postcss src/index.css -o public/index.css",
     "build": "craco build",
     "deploy": "gh-pages -d build -r https://github.com/catherineisonline/travel-with-catherine",
     "test": "craco test",
@@ -48,7 +48,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.8.8",
-    "postcss": "^8.1.9",
+    "postcss": "^8.4.16",
     "postcss-loader": "^4.1.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
   }
