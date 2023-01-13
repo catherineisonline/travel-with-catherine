@@ -1,8 +1,8 @@
-import React from "react";
-import ImgOne from "../../images/gallery-one/image-29.jpeg";
-import ImgTwo from "../../images/gallery-one/image-59.jpeg";
-import ImgThree from "../../images/gallery-one/image-79.jpeg";
-import ImgFour from "../../images/gallery-one/image-99.jpeg";
+import React from 'react'
+import ImgOne from '../../images/gallery-one/image-29.jpeg'
+import ImgTwo from '../../images/gallery-one/image-59.jpeg'
+import ImgThree from '../../images/gallery-one/image-79.jpeg'
+import ImgFour from '../../images/gallery-one/image-99.jpeg'
 
 const About = () => {
   return (
@@ -10,30 +10,25 @@ const About = () => {
       <section className="flex flex-col items-center mt-20 text-2xl gap-5 text-slate-600">
         <h2 className="text-5xl text-center uppercase text-black">About</h2>
         <p className="text-base w-full sm:text-lg sm:w-9/12">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-          ultrices odio ac dui bibendum semper. Nunc id massa justo. Maecenas
-          interdum rutrum justo, et vehicula urna dignissim nec. Suspendisse
-          quis ante non lorem dapibus dapibus et vel lectus. Donec sed dui sed
-          mi volutpat ultricies eget vitae nunc. Aenean vestibulum quam vel
-          euismod auctor. Sed tempus tellus a ex sodales mollis. Fusce erat leo,
-          hendrerit id augue ut, interdum lacinia leo. Fusce pellentesque ex
-          lectus, sit amet elementum libero dignissim sed. Pellentesque posuere
-          eros a orci volutpat egestas. Fusce eleifend sem vitae mi scelerisque
-          ultricies. Quisque a diam purus. Sed sit amet massa augue. Donec
-          tristique quis leo eu rutrum. Praesent consectetur luctus lorem ac
-          congue. Nam fermentum, lacus id fermentum placerat, ex magna mattis
-          velit, sit amet eleifend massa purus sed arcu. Donec pulvinar, nisl
-          non rhoncus facilisis, enim neque posuere felis, a mollis augue nisl
-          id est. Nunc pulvinar, felis ac tempus pretium, enim magna vestibulum
-          odio, ultricies molestie diam eros sed quam. Vestibulum non blandit
-          ipsum. Fusce condimentum orci quis ante rutrum malesuada. Vestibulum
-          ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-          curae; Vestibulum sit amet ipsum sit amet eros suscipit lobortis.
-          Vivamus quis massa et arcu commodo porttitor. Aliquam semper odio ac
-          varius faucibus. Nam at libero in libero suscipit maximus. Phasellus
-          at pharetra quam. Donec id placerat lorem, in blandit diam. Nunc
-          cursus massa nec nisi tempor, in ullamcorper urna tristique. Maecenas
-          risus ligula, semper non magna eget, malesuada varius dolor.
+          Georgia is a country located in the Caucasus region of Eurasia. It is
+          bordered by Russia to the north and northeast, Turkey and Armenia to
+          the south, and Azerbaijan to the east. The capital and largest city of
+          Georgia is Tbilisi. The official language is Georgian and the currency
+          is the Lari. Georgia has a rich cultural heritage, with a history that
+          dates back over 3,000 years. The country is known for its traditional
+          music, dance, and cuisine, as well as its ancient Christian churches
+          and monasteries. The country is also known for its wine-making
+          traditions which are ancient, and wine culture is an important part of
+          Georgian culture. Georgia has a semi-presidential representative
+          democratic republic form of government. The President of Georgia is
+          the head of state and the Prime Minister is the head of government.
+          The country has a unicameral parliament called the Sakartvelos
+          Parlamenti. Georgia has a diverse landscape that ranges from the snowy
+          peaks of the Greater Caucasus Mountains to the subtropical Black Sea
+          coast. The country has a diverse range of flora and fauna, including
+          many endemic species. It's also well-known for its mineral water
+          springs, and is a popular destination for tourists looking for hiking,
+          skiing, and other outdoor activities.
         </p>
       </section>
       <section className="flex flex-col sm:flex-row gap-1 p-8 ">
@@ -71,7 +66,7 @@ const About = () => {
         </section>
       </section>
     </article>
-  );
-};
+  )
+}
 
-export default About;
+export default About

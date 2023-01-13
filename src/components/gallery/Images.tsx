@@ -3,7 +3,7 @@ interface ImagesProp {
 }
 
 export type imagesToShow = {
-  srcMobile: string;
+  // srcMobile: string;
   src: string;
 };
 
@@ -13,9 +13,9 @@ const Images = ({ imagesToShow }: ImagesProp) => {
       {imagesToShow.map((img, index) => (
         <section className="card-zoom" key={index}>
           <img
-            src={img.srcMobile}
-            srcSet={`${img.srcMobile} 300w, ${img.src} 900w`}
-            sizes="(min-width: 660px) 300px, 100vw"
+            src={img.src}
+            // srcSet={`${img.srcMobile} 300w, ${img.src} 900w`}
+            // sizes="(min-width: 660px) 300px, 100vw"
             alt=""
             className="card-zoom-image"
           ></img>
