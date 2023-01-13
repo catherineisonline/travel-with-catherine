@@ -6,7 +6,7 @@ import ImgFour from '../../images/gallery-one/image-99.jpeg'
 const About = () => {
   return (
     <article className="flex flex-col min-h-screen col-span-2 items-center p-5">
-      <section className="flex flex-col items-center mt-20 text-2xl gap-5 text-slate-600">
+      <section className="flex flex-col items-center mt-10 text-2xl gap-5 text-slate-600">
         <h2 className="text-5xl text-center uppercase text-black">About</h2>
         <p className="text-base  sm:text-lg ">
           Georgia is a country located in the Caucasus region of Eurasia. It is

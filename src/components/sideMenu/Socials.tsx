@@ -1,6 +1,6 @@
-import Github from "../../images/socials/github.svg";
-import Linkedin from "../../images/socials/linkedin.svg";
-import Portfolio from "../../images/socials/portfolio.png";
+import Github from '../../images/socials/github.svg'
+import Linkedin from '../../images/socials/linkedin.svg'
+import Portfolio from '../../images/socials/portfolio.png'
 const Socials = () => {
   return (
     <section className="flex flex-row gap-3">
@@ -9,18 +9,14 @@ const Socials = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img className="w-6 h-6	max-w-full" src={Github} alt="Github icon"></img>
+        <img className="w-6 h-6	max-w-full" src={Github} alt="Github icon" />
       </a>
       <a
         href="https://www.linkedin.com/in/catherinemitagvaria/"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img
-          className="w-6 h-6	max-w-full"
-          src={Linkedin}
-          alt="Linkedin icon"
-        ></img>
+        <img className="w-6 h-6	max-w-full" src={Linkedin} alt="Linkedin icon" />
       </a>
       <a
         href="https://ekaterine-mitagvaria.vercel.app/"
@@ -31,10 +27,10 @@ const Socials = () => {
           className="w-6 h-6	max-w-full"
           src={Portfolio}
           alt="Portfolio icon"
-        ></img>
+        />
       </a>
     </section>
-  );
-};
+  )
+}
 
-export default Socials;
+export default Socials

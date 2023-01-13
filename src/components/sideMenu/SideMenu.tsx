@@ -1,24 +1,24 @@
-import { useRef, useState } from "react";
-import { NavLink } from "react-router-dom";
-import Burger from "../../images/burger-menu.png";
-import Socials from "./Socials";
-import CSS from "csstype";
+import { useRef, useState } from 'react'
+import { NavLink } from 'react-router-dom'
+import Burger from '../../images/burger-menu.png'
+import Socials from './Socials'
+import CSS from 'csstype'
 
 const activeMenuStyles: CSS.Properties = {
-  textDecoration: "none",
-  color: "rgb(37, 99, 235)",
-};
+  textDecoration: 'none',
+  color: 'rgb(37, 99, 235)',
+}
 
 const SideMenu = () => {
-  const [hiddenMenu, setHiddenMenu] = useState<boolean>(true);
-  const ref = useRef<HTMLImageElement>(null);
+  const [hiddenMenu, setHiddenMenu] = useState<boolean>(true)
+  const ref = useRef<HTMLImageElement>(null)
 
   function ToggleMenu() {
-    hiddenMenu ? setHiddenMenu(false) : setHiddenMenu(true);
+    hiddenMenu ? setHiddenMenu(false) : setHiddenMenu(true)
   }
   function RemoveMenu() {
-    setHiddenMenu(true);
-    window.scrollTo(0, 0);
+    setHiddenMenu(true)
+    window.scrollTo(0, 0)
   }
 
   return (
@@ -43,7 +43,7 @@ const SideMenu = () => {
           className="hover:text-blue-600 smooth-transition text-xl"
           to="/travel-with-catherine"
           onClick={() => {
-            RemoveMenu();
+            RemoveMenu()
           }}
         >
           Gallery
@@ -52,7 +52,7 @@ const SideMenu = () => {
           className="hover:text-blue-600 smooth-transition text-xl"
           to="/blog"
           onClick={() => {
-            RemoveMenu();
+            RemoveMenu()
           }}
           style={({ isActive }) => (isActive ? activeMenuStyles : {})}
         >
@@ -62,7 +62,7 @@ const SideMenu = () => {
           className="hover:text-blue-600 smooth-transition text-xl"
           to="/about"
           onClick={() => {
-            RemoveMenu();
+            RemoveMenu()
           }}
           style={({ isActive }) => (isActive ? activeMenuStyles : {})}
         >
@@ -72,7 +72,7 @@ const SideMenu = () => {
           className="hover:text-blue-600 smooth-transition text-xl"
           to="/contact"
           onClick={() => {
-            RemoveMenu();
+            RemoveMenu()
           }}
           style={({ isActive }) => (isActive ? activeMenuStyles : {})}
         >
@@ -85,11 +85,11 @@ const SideMenu = () => {
           target="_blank"
           rel="noreferrer"
         >
-          &copy; 2022 by Catherine
+          &copy; 2022-2023 by Catherine
         </a>
       </nav>
     </header>
-  );
-};
+  )
+}
 
-export default SideMenu;
+export default SideMenu
