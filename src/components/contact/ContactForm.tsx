@@ -1,4 +1,50 @@
+// import { useState } from 'react'
+
 const ContactForm = () => {
+  // const [formValue, setFormValue] = useState({
+  //   firstname: '',
+  //   lastname: '',
+  //   email: '',
+  //   message: '',
+  // })
+  // const [formError, setFormError] = useState({})
+  // const [submit, setSubmit] = useState(false)
+
+  // const handleSubmit = (e: React.SyntheticEvent) => {
+  //   e.preventDefault()
+  //   setFormError(validateForm(formValue))
+  // }
+  // const handleValidation = async (e: React.SyntheticEvent) => {
+  //   // const { name, value } = e.target
+  //   const target = e.target as typeof e.target & {
+  //     email: { value: string }
+  //     password: { value: string }
+  //   }
+  //   setFormValue({ ...formValue, [name]: value })
+  // }
+
+  // const validateForm = (value: Object) => {
+  //   let errors = {}
+  //   const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/
+  //   if (!value.firstname) {
+  //     errors.firstname = 'Please enter your firstname'
+  //   }
+  //   if (!value.lastname) {
+  //     errors.lastname = 'Please enter your lastname'
+  //   }
+
+  //   if (!value.email) {
+  //     errors.email = 'Please enter your email'
+  //   } else if (!emailRegex.test(value.email)) {
+  //     errors.email = 'Please enter valid email'
+  //   }
+  //   if (!value.message) {
+  //     errors.message = 'Please write a message'
+  //   }
+
+  //   return errors
+  // }
+
   return (
     <form className="w-full max-w-lg">
       <div className="flex flex-wrap -mx-3 mb-6">
@@ -61,7 +107,7 @@ const ContactForm = () => {
         <div className="md:w-1/3">
           <button
             className="shadow bg-blue-600 hover:bg-blue-400 smooth-transition focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
-            type="button"
+            type="submit"
           >
             Send
           </button>
@@ -69,7 +115,7 @@ const ContactForm = () => {
         <div className="md:w-2/3"></div>
       </div>
     </form>
-  );
-};
+  )
+}
 
-export default ContactForm;
+export default ContactForm

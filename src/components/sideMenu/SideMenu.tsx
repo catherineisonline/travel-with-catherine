@@ -29,7 +29,8 @@ const SideMenu = () => {
         ref={ref}
         src={Burger}
         alt=""
-      ></img>
+        aria-hidden="true"
+      />
       <nav
         className={`main-menu${
           hiddenMenu ? `` : ` show-menu`
