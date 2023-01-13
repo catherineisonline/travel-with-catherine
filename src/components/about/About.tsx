@@ -1,4 +1,3 @@
-import React from 'react'
 import ImgOne from '../../images/gallery-one/image-29.jpeg'
 import ImgTwo from '../../images/gallery-one/image-59.jpeg'
 import ImgThree from '../../images/gallery-one/image-79.jpeg'
@@ -9,7 +8,7 @@ const About = () => {
     <article className="flex flex-col min-h-screen col-span-2 items-center p-5">
       <section className="flex flex-col items-center mt-20 text-2xl gap-5 text-slate-600">
         <h2 className="text-5xl text-center uppercase text-black">About</h2>
-        <p className="text-base w-full sm:text-lg sm:w-9/12">
+        <p className="text-base  sm:text-lg ">
           Georgia is a country located in the Caucasus region of Eurasia. It is
           bordered by Russia to the north and northeast, Turkey and Armenia to
           the south, and Azerbaijan to the east. The capital and largest city of
@@ -36,33 +35,33 @@ const About = () => {
           <img
             className="max-w-full w-56 h-52 object-cover	"
             src={ImgOne}
-            alt=""
-          ></img>
-          <p className="font-bold">Gudauri, Kazbegi</p>
+            alt="Gudauri"
+          />
+          <p className="font-bold">Gudauri</p>
         </section>
         <section>
           <img
             className="max-w-full w-56 h-52 object-cover	"
             src={ImgTwo}
-            alt=""
-          ></img>
-          <p className="font-bold">Sighnaghi, Kakheti</p>
+            alt="Sighnaghi"
+          />
+          <p className="font-bold">Sighnaghi</p>
         </section>
         <section>
           <img
             className="max-w-full w-56 h-52 object-cover	"
             src={ImgThree}
-            alt=""
-          ></img>
-          <p className="font-bold">Stepantsminda, Kazbegi</p>
+            alt="Stepantsminda"
+          />
+          <p className="font-bold">Stepantsminda</p>
         </section>
         <section>
           <img
             className="max-w-full w-56 h-52 object-cover	"
             src={ImgFour}
-            alt=""
-          ></img>
-          <p className="font-bold">Batumi, Adjara</p>
+            alt="Batumi"
+          />
+          <p className="font-bold">Batumi</p>
         </section>
       </section>
     </article>
