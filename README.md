@@ -1,8 +1,7 @@
 <img src="https://github.com/catherineisonline/travel-with-catherine/blob/main/public/projectPreview.png?raw=true"></img>
 
 # About
-
-Travel with Catherine, a simple photography portfolio to show off some of my photography and code!
+Travel with Catherine: A photography portfolio that showcases my love for travel and code. Built using React and Tailwind, this project is a great example of my skills and eye for detail.
 
 ## Built with
 
