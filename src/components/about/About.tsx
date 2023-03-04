@@ -1,7 +1,7 @@
-import ImgOne from '../../images/gallery-one/image-29.jpeg'
-import ImgTwo from '../../images/gallery-one/image-59.jpeg'
-import ImgThree from '../../images/gallery-one/image-79.jpeg'
-import ImgFour from '../../images/gallery-one/image-99.jpeg'
+import ImgOne from '../../assets/images/gallery/image-29.jpeg'
+import ImgTwo from '../../assets/images/gallery/image-59.jpeg'
+import ImgThree from '../../assets/images/gallery/image-79.jpeg'
+import ImgFour from '../../assets/images/gallery/image-99.jpeg'
 
 const About = () => {
   return (
@@ -16,7 +16,8 @@ const About = () => {
           is the Lari. Georgia has a rich cultural heritage, with a history that
           dates back over 3,000 years. The country is known for its traditional
           music, dance, and cuisine, as well as its ancient Christian churches
-          and monasteries. The country is also known for its wine-making
+          and monasteries.
+          The country is also known for its wine-making
           traditions which are ancient, and wine culture is an important part of
           Georgian culture. Georgia has a semi-presidential representative
           democratic republic form of government. The President of Georgia is
@@ -24,7 +25,8 @@ const About = () => {
           The country has a unicameral parliament called the Sakartvelos
           Parlamenti. Georgia has a diverse landscape that ranges from the snowy
           peaks of the Greater Caucasus Mountains to the subtropical Black Sea
-          coast. The country has a diverse range of flora and fauna, including
+          coast. 
+          The country has a diverse range of flora and fauna, including
           many endemic species. It's also well-known for its mineral water
           springs, and is a popular destination for tourists looking for hiking,
           skiing, and other outdoor activities.

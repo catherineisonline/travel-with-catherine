@@ -1,13 +1,13 @@
-import ImgOne from '../images/gallery-one/image-1.jpeg'
-import ImgTwo from '../images/gallery-one/image-2.jpeg'
-import ImgThree from '../images/gallery-one/image-3.jpeg'
-import ImgFour from '../images/gallery-one/image-111.jpeg'
-import ImgFive from '../images/gallery-one/image-95.jpeg'
-import ImgSix from '../images/gallery-one/image-96.jpeg'
-import ImgSeven from '../images/gallery-one/image-77.jpeg'
-import ImgEight from '../images/gallery-one/image-78.jpeg'
-import ImgNine from '../images/gallery-one/image-39.jpeg'
-import ImgTen from '../images/gallery-one/image-10.jpeg'
+import ImgOne from '../assets/images/gallery/image-1.jpeg'
+import ImgTwo from '../assets/images/gallery/image-2.jpeg'
+import ImgThree from '../assets/images/gallery/image-3.jpeg'
+import ImgFour from '../assets/images/gallery/image-111.jpeg'
+import ImgFive from '../assets/images/gallery/image-95.jpeg'
+import ImgSix from '../assets/images/gallery/image-96.jpeg'
+import ImgSeven from '../assets/images/gallery/image-77.jpeg'
+import ImgEight from '../assets/images/gallery/image-78.jpeg'
+import ImgNine from '../assets/images/gallery/image-39.jpeg'
+import ImgTen from '../assets/images/gallery/image-10.jpeg'
 
 const BlogPostsData = [
   {

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import GalleryOne from '../../data/GalleryOne'
+import GalleryData from '../../data/GalleryData.js'
 import { imagesToShow } from './Images'
 import Images from './Images'
 
@@ -9,7 +9,7 @@ const Gallery = () => {
 
   const loopThroughImages = (count: number = 1) => {
     for (let i = 0; i < 10 * count; i++) {
-      setImageStrorage((prevArr: imagesToShow[]) => [...prevArr, GalleryOne[i]])
+      setImageStrorage((prevArr: imagesToShow[]) => [...prevArr, GalleryData[i]])
     }
   }
   const showMore = () => {

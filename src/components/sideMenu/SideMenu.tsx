@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import Burger from '../../images/burger-menu.png'
+import Burger from '../../assets/images/burger-menu.png'
 import Socials from './Socials'
 import CSS from 'csstype'
 
