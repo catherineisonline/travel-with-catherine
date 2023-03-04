@@ -1,35 +1,42 @@
 import { useState, useEffect } from 'react'
 import GalleryData from '../../data/GalleryData.js'
-import { imagesToShow } from './Images'
+import ReactPaginate from 'react-paginate';
 import Images from './Images'
+import ResetLocation from '../../helpers/ResetLocation';
 
 const Gallery = () => {
-  const [imageStorage, setImageStrorage] = useState<imagesToShow[]>([])
-  const [count, setCount] = useState<number>(1)
+  const [itemOffset, setItemOffset] = useState(0);
+  const [endOffset, setEndOffset] = useState(itemOffset + 12);
+  const [currentBlogPosts, setcurrentBlogPosts] = useState([...GalleryData].reverse().slice(itemOffset, endOffset));
+  const [pageCountPosts, setpageCountPosts] = useState(Math.ceil(GalleryData.length / 12));
 
-  const loopThroughImages = (count: number = 1) => {
-    for (let i = 0; i < 10 * count; i++) {
-      setImageStrorage((prevArr: imagesToShow[]) => [...prevArr, GalleryData[i]])
-    }
-  }
-  const showMore = () => {
-    setCount((prevCount) => prevCount + 1)
-    loopThroughImages(count)
-  }
+  const handlePageClick = (event: any) => {
+    const newOffset = (event.selected * 12) % GalleryData.length;
+    setItemOffset(newOffset);
+    ResetLocation();
+  };
+
   useEffect(() => {
-    loopThroughImages(count)
-  }, [count])
+    document.title = "Blog | Pizza Time";
+    setEndOffset(itemOffset + 12);
+    setcurrentBlogPosts([...GalleryData].slice(itemOffset, endOffset));
+    setpageCountPosts(Math.ceil(GalleryData.length / 12));
 
+  }, [setEndOffset, endOffset, itemOffset]);
+  
   return (
     <article className="col-span-2 min-h-screen scrollbar-hide">
-      <Images imagesToShow={imageStorage} />
+      <Images imagesToShow={currentBlogPosts} />
       <section className="flex flex-col items-center w-full">
-        <button
-          onClick={showMore}
-          className="my-5 shadow font-mainfont bg-transparent hover:text-white hover:bg-blue-400 smooth-transition focus:shadow-outline focus:outline-none text-black py-4 px-4 rounded text-lg uppercase w-12/12 md:w-6/12 smooth-transition"
-        >
-          Load More
-        </button>
+      <ReactPaginate
+        className="pagination"
+        breakLabel="..."
+        nextLabel=" &#62;"
+        onPageChange={handlePageClick}
+        pageRangeDisplayed={3}
+        pageCount={pageCountPosts}
+        previousLabel="&#60;"
+      />
       </section>
     </article>
   )
