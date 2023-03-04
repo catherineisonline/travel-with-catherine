@@ -1,57 +1,42 @@
 <img src="https://github.com/catherineisonline/travel-with-catherine/blob/main/public/projectPreview.png?raw=true"></img>
 
-# About
-Travel with Catherine: A photography portfolio that showcases my love for travel and code. Built using React and Tailwind, this project is a great example of my skills and eye for detail.
+# Travel With Catherine
 
-## Built with
+[![GitHub license](https://img.shields.io/github/license/catherineisonline/travel-with-catherine)](https://github.com/catherineisonline/travel-with-catherine/blob/main/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/catherineisonline/travel-with-catherine)](https://github.com/catherineisonline/travel-with-catherine/issues)
+[![GitHub stars](https://img.shields.io/github/stars/catherineisonline/travel-with-catherine)](https://github.com/catherineisonline/travel-with-catherine/stargazers)
 
-- Tailwind
-- React
-- Mobile first design
+## Table of Contents
 
-### Getting Started with Create React App
+- [Introduction](#introduction)
+- [Gallery](#gallery)
+- [Code](#code)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
 
-### Available Scripts
+"Travel With Catherine" is a project where I share my love for traveling and my photography portfolio. It contains images from various travel destinations around the world that I have captured during my travels. The project is built using [React](https://reactjs.org/)
 
-In the project directory, you can run:
+## Gallery
 
-#### `npm start`
+You can explore my photography portfolio by visiting the `Gallery` section of the project. The images are organized by destination, and you can view a larger version of each image by clicking on it.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Code
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+If you are interested in the code behind this project, you can find it in the `src` directory. The project uses [React Router](https://reactrouter.com/) for routing, and [Tailwind](https://tailwindcss.com/) for styling.
 
-#### `npm test`
+## Contributing
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This project serves as a personal portfolio website to show off my personal skills. I do not accept any contibutions for this project however if you have any suggestions or ideas feel free to message me or submit an idea in the [discussions](https://github.com/catherineisonline/travel-with-catherine/discussions)
 
-#### `npm run build`
+## License
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/catherineisonline/travel-with-catherine/blob/main/LICENSE) file for details.
+Please do not use my images as your own. You are free to use them as long as it doesn't say they belong to you and you captured the places you have not even seen. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Acknowledgements
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-#### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [React](https://reactjs.org/)
+- [React Router](https://reactrouter.com/)
