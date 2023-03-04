@@ -8,11 +8,9 @@ const Gallery = () => {
   const [itemOffset, setItemOffset] = useState(0);
   const [endOffset, setEndOffset] = useState(itemOffset + 12);
   const [currentBlogPosts, setcurrentBlogPosts] = useState([...GalleryData].reverse().slice(itemOffset, endOffset));
-  const [pageCountPosts, setpageCountPosts] = useState(Math.ceil(GalleryData.length / 12));
 
   const handlePageClick = (event: any) => {
-    const newOffset = (event.selected * 12) % GalleryData.length;
-    setItemOffset(newOffset);
+    setItemOffset((event.selected * 12) % GalleryData.length);
     ResetLocation();
   };
 
@@ -20,8 +18,6 @@ const Gallery = () => {
     document.title = "Blog | Pizza Time";
     setEndOffset(itemOffset + 12);
     setcurrentBlogPosts([...GalleryData].slice(itemOffset, endOffset));
-    setpageCountPosts(Math.ceil(GalleryData.length / 12));
-
   }, [setEndOffset, endOffset, itemOffset]);
   
   return (
@@ -33,8 +29,8 @@ const Gallery = () => {
         breakLabel="..."
         nextLabel=" &#62;"
         onPageChange={handlePageClick}
-        pageRangeDisplayed={3}
-        pageCount={pageCountPosts}
+        pageRangeDisplayed={5}
+        pageCount={Math.ceil(GalleryData.length / 12)}
         previousLabel="&#60;"
       />
       </section>

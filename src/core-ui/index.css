@@ -6,15 +6,68 @@
 @tailwind utilities;
 
 @layer utilities {
-  /* Chrome, Safari and Opera */
-  html::-webkit-scrollbar {
-    display: none;
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
   }
 
-  html {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  body {
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none; /* for Firefox */
     overflow-y: scroll;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  body::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
+
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+  img {
+    display: block;
+  }
+
+  ul,
+  ol,
+  li {
+    padding: 0;
+    margin: 0;
+  }
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-wrap: break-word;
+  }
+
+  #root,
+  #__next {
+    isolation: isolate;
   }
   .smooth-transition {
     transition: all ease-in-out 0.3s;
@@ -41,8 +94,13 @@
     position: relative;
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: 2rem;
+    font-weight: 500;
+    font-size: 1.2rem;
     padding: 2rem;
+  }
+  .selected a {
+    color: rgb(37, 99, 235);
   }
   .card-zoom {
     @apply relative flex items-center justify-center m-3 overflow-hidden w-60 h-60 rounded-2xl;

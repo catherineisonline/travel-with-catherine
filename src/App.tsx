@@ -7,7 +7,7 @@ import Blog from "./components/blog/Blog";
 import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
 //Styles
-import "./index.css";
+import "./core-ui/index.css";
 
 const App: FC = () => {
   return (

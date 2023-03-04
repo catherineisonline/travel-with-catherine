@@ -40,3 +40,4 @@ Please do not use my images as your own. You are free to use them as long as it 
 
 - [React](https://reactjs.org/)
 - [React Router](https://reactrouter.com/)
+- [React Paginate](https://www.npmjs.com/package/react-paginate)
