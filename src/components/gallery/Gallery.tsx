@@ -29,7 +29,7 @@ const Gallery = () => {
         breakLabel="..."
         nextLabel=" &#62;"
         onPageChange={handlePageClick}
-        pageRangeDisplayed={5}
+        pageRangeDisplayed={3}
         pageCount={Math.ceil(GalleryData.length / 12)}
         previousLabel="&#60;"
       />
