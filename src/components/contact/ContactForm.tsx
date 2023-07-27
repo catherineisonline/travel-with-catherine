@@ -1,84 +1,112 @@
-// import { useState } from 'react'
+import { useState } from 'react'
+
+export interface formValueI {
+  firstname: string;
+  lastname: string;
+  email: string;
+  message: string;
+}
+
+export interface errorObjI {
+  firstname?: string;
+  lastname?: string;
+  email?: string;
+  message?: string;
+}
 
 const ContactForm = () => {
-  // const [formValue, setFormValue] = useState({
-  //   firstname: '',
-  //   lastname: '',
-  //   email: '',
-  //   message: '',
-  // })
-  // const [formError, setFormError] = useState({})
-  // const [submit, setSubmit] = useState(false)
+  const [formValue, setFormValue] = useState<formValueI>({
+    firstname: '',
+    lastname: '',
+    email: '',
+    message: '',
+  })
+  const [formError, setFormError] = useState<errorObjI>({})
+  const [submit, setSubmit] = useState(false)
 
-  // const handleSubmit = (e: React.SyntheticEvent) => {
-  //   e.preventDefault()
-  //   setFormError(validateForm(formValue))
-  // }
-  // const handleValidation = async (e: React.SyntheticEvent) => {
-  //   // const { name, value } = e.target
-  //   const target = e.target as typeof e.target & {
-  //     email: { value: string }
-  //     password: { value: string }
-  //   }
-  //   setFormValue({ ...formValue, [name]: value })
-  // }
+  const handleSubmit = async (e: React.SyntheticEvent) => {
+    e.preventDefault();
+    setFormError(validateForm(formValue));
+    setSubmit(true);
+    let response = await fetch("/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json;charset=utf-8",
+      },
+      body: JSON.stringify(formValue),
+    });
+    console.log(response)
+    // let result = await response.json();
+    alert(response.status);
 
-  // const validateForm = (value: Object) => {
-  //   let errors = {}
-  //   const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/
-  //   if (!value.firstname) {
-  //     errors.firstname = 'Please enter your firstname'
-  //   }
-  //   if (!value.lastname) {
-  //     errors.lastname = 'Please enter your lastname'
-  //   }
+  }
+  const handleValidation = (e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>)  => {
+    setFormValue({ ...formValue, [e.currentTarget.id]: e.currentTarget.value });
+  }
 
-  //   if (!value.email) {
-  //     errors.email = 'Please enter your email'
-  //   } else if (!emailRegex.test(value.email)) {
-  //     errors.email = 'Please enter valid email'
-  //   }
-  //   if (!value.message) {
-  //     errors.message = 'Please write a message'
-  //   }
+  const validateForm = (value: formValueI) => {
+    let errors: errorObjI = {}
+    const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/
+    if (!value.firstname) {
+      errors.firstname = 'Please enter your firstname'
+    }
+    if (!value.lastname) {
+      errors.lastname = 'Please enter your lastname'
+    }
 
-  //   return errors
-  // }
+    if (!value.email) {
+      errors.email = 'Please enter your email'
+    } else if (!emailRegex.test(value.email)) {
+      errors.email = 'Please enter valid email'
+    }
+    if (!value.message) {
+      errors.message = 'Please write a message'
+    }
+
+    return errors
+  }
 
   return (
-    <form className="w-full max-w-lg">
+    <form className="w-full max-w-lg" onSubmit={handleSubmit}>
       <div className="flex flex-wrap -mx-3 mb-6">
         <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
           <label
             className="block uppercase tracking-wide text-gray-700 text-xs  mb-2"
-            htmlFor="grid-first-name"
+            htmlFor="firstname"
           >
             First Name
           </label>
           <input
             className="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
             type="text"
-          ></input>
+            id="firstname"
+            onChange={handleValidation}
+            value={formValue.firstname}
+          />
+          <span className="input-validation-error">{formError.firstname}</span>
         </div>
         <div className="w-full md:w-1/2 px-3">
           <label
             className="block uppercase tracking-wide text-gray-700 text-xs mb-2"
-            htmlFor="grid-last-name"
+            htmlFor="lastname"
           >
             Last Name
           </label>
           <input
             className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-            id="grid-last-name"
+            id="lastname"
             type="text"
-          ></input>
+            onChange={handleValidation}
+            value={formValue.lastname}
+          />
+          <span className="input-validation-error">{formError.lastname}</span>
         </div>
       </div>
       <div className="flex flex-wrap -mx-3 mb-6">
         <div className="w-full px-3">
           <label
             className="block uppercase tracking-wide text-gray-700 text-xs mb-2"
-            htmlFor="grid-password"
+            htmlFor="email"
           >
             E-mail
           </label>
@@ -86,21 +114,27 @@ const ContactForm = () => {
             className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
             id="email"
             type="email"
-          ></input>
+            onChange={handleValidation}
+            value={formValue.email}
+          />
+          <span className="input-validation-error">{formError.email}</span>
         </div>
       </div>
       <div className="flex flex-wrap -mx-3 mb-6">
         <div className="w-full px-3">
           <label
             className="block uppercase tracking-wide text-gray-700 text-xs  mb-2"
-            htmlFor="grid-password"
+            htmlFor="message"
           >
             Message
           </label>
           <textarea
             className=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
             id="message"
-          ></textarea>
+            onChange={handleValidation}
+            value={formValue.message}
+          />
+          <span className="input-validation-error">{formError.message}</span>
         </div>
       </div>
       <div className="md:flex md:items-center">

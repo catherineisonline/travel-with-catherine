@@ -10,8 +10,11 @@
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
     "gh-pages": "^3.2.3",
     "i": "^0.3.7",
+    "nodemailer": "^6.9.4",
     "npm": "^9.6.0",
     "postcss-flexbugs-fixes": "^5.0.2",
     "react": "^18.0.0",
@@ -23,7 +26,7 @@
     "tailwind-scrollbar-hide": "^1.1.7",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "/travel-with-catherine",
+  "homepage": "/",
   "scripts": {
     "start": "craco start && postcss src/index.css -o public/index.css",
     "build": "craco build",
