@@ -17,7 +17,7 @@
 
 ## Introduction
 
-"Travel With Catherine" is a project where I share my love for traveling and my photography portfolio. It contains images from various travel destinations around the world that I have captured during my travels. The project is built using [React](https://reactjs.org/)
+"Travel With Catherine" is a project where I share my love for traveling and my photography portfolio. It contains images from various travel destinations that I have captured during my travels. The project is built using [React](https://reactjs.org/)
 
 ## Gallery
 
@@ -29,15 +29,15 @@ If you are interested in the code behind this project, you can find it in the `s
 
 ## Contributing
 
-This project serves as a personal portfolio website to show off my personal skills. I do not accept any contibutions for this project however if you have any suggestions or ideas feel free to message me or submit an idea in the [discussions](https://github.com/catherineisonline/travel-with-catherine/discussions)
+This project serves as a personal portfolio website to show off my personal skills. I do not accept any contibutions for this project however if you have any suggestions or ideas feel free to message me, send me a message via a contact form on the website or submit an idea in the [discussions](https://github.com/catherineisonline/travel-with-catherine/discussions)
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](https://github.com/catherineisonline/travel-with-catherine/blob/main/LICENSE) file for details.
-Please do not use my images as your own. You are free to use them as long as it doesn't say they belong to you and you captured the places you have not even seen. 
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/catherineisonline/travel-with-catherine/blob/main/LICENSE) file for details. Youa free to use this project in ypur portofilio.
+Please do not use my images as your own or use them outside this project. You are free to use them as long as it doesn't say they belong to you and you captured the places you have not even seen. Thank you
 
-## Acknowledgements
-
-- [React](https://reactjs.org/)
+## Dependencies used
+- [Email.js](https://www.emailjs.com/)
 - [React Router](https://reactrouter.com/)
 - [React Paginate](https://www.npmjs.com/package/react-paginate)
+

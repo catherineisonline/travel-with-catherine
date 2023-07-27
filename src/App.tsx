@@ -8,7 +8,6 @@ import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
 //Styles
 import "./core-ui/index.css";
-// import "../ser"
 
 const App: FC = () => {
   return (
