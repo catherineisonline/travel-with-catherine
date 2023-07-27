@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { useState } from 'react'
 import emailjs from '@emailjs/browser';
 //images
@@ -84,7 +84,7 @@ const ContactForm = () => {
   return (
     <React.Fragment>
       {loading ?  <div className="loader-container">
-      	 <img className='spinner' src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2dzNDhuejZ1d2VhNnY1bmxrNjl2ZmZiaXM2dDVzZjMzb2hjN2ZieCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/Rd755PrtAEhZLLTt2N/giphy.gif" alt=''/>
+      	 <img className='spinner' src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2dzNDhuejZ1d2VhNnY1bmxrNjl2ZmZiaXM2dDVzZjMzb2hjN2ZieCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/Rd755PrtAEhZLLTt2N/giphy.gif" alt='' aria-hidden="true" />
         </div> : submit && Object.keys(formError).length === 0 ?
         <article className="flex flex-col gap-2  items-center  w-90 max-w-lg mt-20">
           <img max-w-full="true" src={OK} alt='' aria-hidden='true'/>

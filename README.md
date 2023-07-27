@@ -1,6 +1,6 @@
 <img src="https://github.com/catherineisonline/travel-with-catherine/blob/main/public/projectPreview.png?raw=true"></img>
 
-# Travel With Catherine
+# Travel With Catherine - [Live Preview](https://travel-with-catherine.vercel.app/)
 
 [![GitHub license](https://img.shields.io/github/license/catherineisonline/travel-with-catherine)](https://github.com/catherineisonline/travel-with-catherine/blob/main/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/catherineisonline/travel-with-catherine)](https://github.com/catherineisonline/travel-with-catherine/issues)
