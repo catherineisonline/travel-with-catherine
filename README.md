@@ -43,3 +43,16 @@ Please do not use my images as your own or use them outside this project. You ar
 - [Google ReCAPTCHA](https://www.google.com/recaptcha/about/)
 
 
+## Google ReCAPTCHA 
+
+If you do not have [Google ReCAPTCHA](https://www.google.com/recaptcha/about/) account yet and want to test it, you can use test credentials provided by Google.
+- With the following test keys, you will always get No CAPTCHA and all verification requests will pass.
+```
+Site key: 6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI
+
+Secret key: 6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe
+
+```
+
+The reCAPTCHA widget will show a warning message to claim that it's only for testing purpose. Please do not use these keys for your production traffic. You can read more about it [here](https://developers.google.com/recaptcha/docs/faq#id-like-to-run-automated-tests-with-recaptcha.-what-should-i-do).
+
