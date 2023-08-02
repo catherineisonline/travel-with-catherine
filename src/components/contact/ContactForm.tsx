@@ -47,8 +47,12 @@ const ContactForm = () => {
     e.preventDefault();
     setFormError(validateForm(formValue));
     setLoading(true);
+      //retrieve submission token
+    console.log(form.current);
     //retrieve submission token
     let token = captchaRef.current?.getValue();
+    let formVal = form.current;
+    formVal?.current?.reset();
     captchaRef.current?.reset();
     //wait till token is confirmed
     await verifyToken(token!);
@@ -57,7 +61,7 @@ const ContactForm = () => {
       return null;
     }
     else {
-      emailjs.sendForm(serviceId, templateId, form.current!, userId)
+      emailjs.sendForm(serviceId, templateId, formVal, userId)
       .then((result) => {
         if(result.text === 'OK') {
           setSubmit(true);
@@ -136,7 +140,7 @@ const ContactForm = () => {
         </article>
 
         :
-        <form id="recaptcha" ref={form} className="w-full max-w-lg" onSubmit={handleSubmit} >
+        <form  ref={form} id='recaptcha' className="w-full max-w-lg" onSubmit={handleSubmit} >
           <div className="flex flex-wrap -mx-3 mb-6">
             <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
               <label
