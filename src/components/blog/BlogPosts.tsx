@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import BlogPostsData from '../../data/BlogPostsData'
+import ResetLocation from '../../helpers/ResetLocation';
 
 const BlogPosts = () => {
   return (
@@ -12,7 +13,8 @@ const BlogPosts = () => {
             className="w-full sm:h-96 md:h-64 block object-cover object-center cursor-pointer smooth-transition hover:opacity-80 smooth-transition "
           />
           <Link
-          key={post.id} to={`/${post.title.toLowerCase().replace(/\s/g, "%20")}`} className="text-2xl capitalize text-black dno-underline hover:text-blue-600 smooth-transition">{post.title}</Link>
+          onClick={ResetLocation}
+          key={post.id} to={`/blog/${post.title.toLowerCase().replace(/\s/g, "%20")}`} className="text-2xl capitalize text-black dno-underline hover:text-blue-600 smooth-transition">{post.title}</Link>
           
           <p className="text-md">{post.snippet}</p>
         </section>

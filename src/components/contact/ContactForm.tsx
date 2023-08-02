@@ -126,10 +126,6 @@ const ContactForm = () => {
       return false;
     }
   };
-
-
-
-  
   return (
 
   <React.Fragment>
