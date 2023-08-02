@@ -17,7 +17,7 @@
 
 ## Introduction
 
-"Travel With Catherine" is a project where I share my love for traveling and my photography portfolio. It contains images from various travel destinations that I have captured during my travels. The project is built using [React](https://reactjs.org/)
+"Travel With Catherine" is a project where I share my love for traveling and my photography portfolio. It contains images from various travel destinations that I have captured during my travels. The project is built using [React](https://reactjs.org/) and [Node.js](https://nodejs.org/en)
 
 ## Gallery
 
