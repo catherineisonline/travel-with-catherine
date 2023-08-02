@@ -5,7 +5,7 @@ import ImgFour from '../../assets/images/personal-gallery/imgFour.jpeg'
 
 const About = () => {
   return (
-    <article className="flex flex-col min-h-screen col-span-2 items-center p-5">
+    <article className="flex flex-col min-h-screen sm:col-span-5 md:col-span-4 items-center p-5">
        <h2 className="text-4xl text-center uppercase text-black mt-6">About</h2>
       <section className="flex flex-col items-center mt-10 text-2xl gap-5 text-slate-600">
         <p className="text-base  sm:text-lg ">

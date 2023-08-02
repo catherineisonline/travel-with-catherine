@@ -21,7 +21,7 @@ const Gallery = () => {
   }, [setEndOffset, endOffset, itemOffset]);
   
   return (
-    <article className="col-span-2 min-h-screen scrollbar-hide">
+    <article className="sm:col-span-5 md:col-span-4 min-h-screen scrollbar-hide">
       <Images imagesToShow={currentBlogPosts} />
       <section className="flex flex-col items-center w-full">
       <ReactPaginate

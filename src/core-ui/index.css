@@ -103,7 +103,7 @@
     color: rgb(37, 99, 235);
   }
   .card-zoom {
-    @apply relative flex items-center justify-center m-3 overflow-hidden  h-60 rounded-2xl sm:w-52 md:w-80 lg:w-60;
+    @apply relative flex items-center justify-center m-3 overflow-hidden  h-60 rounded-2xl sm:w-screen sm:h-80 md:w-56 md:h-72 lg:w-96;
   }
   .card-zoom-image {
     @apply absolute w-full h-full transition-all duration-500 ease-in-out transform shadow-sm cursor-pointer object-cover object-center;

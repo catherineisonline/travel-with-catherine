@@ -22,14 +22,13 @@ const SideMenu = () => {
   }
 
   return (
-    <header className="sm:relative flex flex-col min-h-screen col-span-1 items-center absolute">
+    <header className="sm:relative flex flex-col min-h-screen sm:col-span-1 md:col-span-2 items-center absolute">
       <img
-        className="burger-icon w-10 fixed cursor-pointer md:hidden z-50 ml-6"
+        className="burger-icon w-10 fixed cursor-pointer md:hidden z-50 sm:ml-2 ml-12"
         onClick={ToggleMenu}
         ref={ref}
         src={Burger}
-        alt=""
-        aria-hidden="true"
+        alt="Menu icon"
       />
       <nav
         className={`main-menu${
