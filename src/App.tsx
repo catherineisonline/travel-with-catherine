@@ -8,6 +8,7 @@ import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
 //Styles
 import "./core-ui/index.css";
+import BlogPost from "./components/blog-post/BlogPost";
 
 const App: FC = () => {
   return (
@@ -18,6 +19,7 @@ const App: FC = () => {
         <Route path="/blog" element={<Blog />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/:title" element={<BlogPost />} />
       </Routes>
     </Router>
   );

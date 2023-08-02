@@ -1,16 +1,19 @@
+import { Link } from 'react-router-dom'
 import BlogPostsData from '../../data/BlogPostsData'
 
 const BlogPosts = () => {
   return (
-    <section className="grid sm:grid-cols-1 md:grid-cols-2  gap-2 mx-auto  justify-items-stretch overflow-hidden  w-10/12 mt-2">
+    <section className="grid sm:grid-cols-1 md:grid-cols-2  gap-2 mx-auto  justify-items-stretch overflow-hidden mt-2">
       {BlogPostsData.reverse().map((post) => (
         <section className="grid grid-cols-1 gap-2 h-1/5" key={post.id}>
           <img
             src={post.src}
             alt={post.alt}
-            className="w-full h-96 block object-cover cursor-pointer smooth-transition hover:opacity-80 smooth-transition"
+            className="w-full sm:h-96 md:h-64 block object-cover object-center cursor-pointer smooth-transition hover:opacity-80 smooth-transition "
           />
-          <h2 className="text-2xl uppercase text-black">{post.title}</h2>
+          <Link
+          key={post.id} to={`/${post.title.toLowerCase().replace(/\s/g, "%20")}`} className="text-2xl capitalize text-black dno-underline hover:text-blue-600 smooth-transition">{post.title}</Link>
+          
           <p className="text-md">{post.snippet}</p>
         </section>
       ))}

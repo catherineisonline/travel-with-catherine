@@ -85,7 +85,7 @@ const SideMenu = () => {
           target="_blank"
           rel="noreferrer"
         >
-          &copy; 2022-2023 by Catherine
+          &copy; 2022-2023
         </a>
       </nav>
     </header>
