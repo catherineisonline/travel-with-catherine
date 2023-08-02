@@ -7,7 +7,7 @@ import ResetLocation from '../../helpers/ResetLocation';
 const Gallery = () => {
   const [itemOffset, setItemOffset] = useState(0);
   const [endOffset, setEndOffset] = useState(itemOffset + 12);
-  const [currentBlogPosts, setcurrentBlogPosts] = useState([...GalleryData].reverse().slice(itemOffset, endOffset));
+  const [currentBlogPosts, setcurrentBlogPosts] = useState([...GalleryData].slice(itemOffset, endOffset));
 
   const handlePageClick = (event: any) => {
     setItemOffset((event.selected * 12) % GalleryData.length);

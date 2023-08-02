@@ -5,7 +5,7 @@ import ResetLocation from '../../helpers/ResetLocation';
 const BlogPosts = () => {
   return (
     <section className="grid sm:grid-cols-1 md:grid-cols-2  gap-2 mx-auto  justify-items-stretch overflow-hidden mt-2">
-      {BlogPostsData.reverse().map((post) => (
+      {BlogPostsData.map((post) => (
         <section className="grid grid-cols-1 gap-2 h-1/5" key={post.id}>
           <img
             src={post.src}
