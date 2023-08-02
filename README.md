@@ -18,7 +18,7 @@
 
 ## Introduction <a id="introduction"></a>
 
-"Travel With Catherine" is a project where I share my love for traveling and my photography portfolio. It contains images from various travel destinations that I have captured during my travels. The project is built using [React](https://reactjs.org/) and [Node.js](https://nodejs.org/en)
+"Travel With Catherine" is a project where I share my love for traveling and my photography portfolio. It contains images from various travel destinations that I have captured during my travels. The project is built using [React](https://reactjs.org/), [Node.js](https://nodejs.org/en), [TypeScript](https://www.typescriptlang.org/) and [Tailwind](https://tailwindcss.com/docs).
 
 ## Gallery  <a id="gallery"></a>
 
