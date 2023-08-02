@@ -9,7 +9,7 @@ const BlogPosts = () => {
             src={post.src}
             alt={post.alt}
             className="w-full h-96 block object-cover cursor-pointer smooth-transition hover:opacity-80 smooth-transition"
-          ></img>
+          />
           <h2 className="text-2xl uppercase text-black">{post.title}</h2>
           <p className="text-md">{post.snippet}</p>
         </section>
