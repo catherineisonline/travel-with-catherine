@@ -14,7 +14,7 @@
 - [Introduction](#introduction)
 - [Gallery](#gallery)
 - [Code](#code)
-- [Contributing](#contributing)
+- [Contribution](#contributiion)
 - [Dependencies | API | Services used](#dependencies)
 - [Google ReCAPTCHA](#recaptcha)
 - [License](#license)
@@ -31,9 +31,9 @@ You can explore my photography portfolio by visiting the `Gallery` section of th
 
 If you are interested in the code behind this project, you can find it in the `src` directory. The project uses [React Router](https://reactrouter.com/) for routing, and [Tailwind](https://tailwindcss.com/) for styling.
 
-## Contributing  <a id="contributing"></a>
+## Contribution <a id="contributiion"></a>
 
-This project serves as a personal portfolio website to show off my personal skills. I do not accept any contibutions for this project however if you have any suggestions or ideas feel free to message me, send me a message via a contact form on the website or submit an idea in the [discussions](https://github.com/catherineisonline/travel-with-catherine/discussions)
+This project serves as a personal portfolio website to show off my personal skills. I do not accept any contributions like pull requests to this project however if you have any suggestions or ideas feel free to message me, send me a message via a contact form on the website or submit an idea in the [discussions](https://github.com/catherineisonline/travel-with-catherine/discussions). Otherwise, you are free to fork this project and change it for your own purposes. 
 
 
 ## Dependencies | API | Services used  <a id="dependencies"></a>

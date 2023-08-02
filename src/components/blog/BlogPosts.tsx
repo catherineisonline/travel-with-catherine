@@ -10,7 +10,7 @@ const BlogPosts = () => {
           <img
             src={post.src}
             alt={post.alt}
-            className="w-full sm:h-96 md:h-64 block object-cover object-center cursor-pointer smooth-transition hover:opacity-80 smooth-transition "
+            className="rounded-md w-full sm:h-96 md:h-64 block object-cover object-center cursor-pointer smooth-transition hover:opacity-80 smooth-transition "
           />
           <Link
           onClick={ResetLocation}

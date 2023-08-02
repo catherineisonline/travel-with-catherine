@@ -34,7 +34,7 @@ const BlogPost = () => {
         <img
             src={post.src}
             alt={post.alt}
-            className="w-full sm:h-96 md:h-64 block object-cover object-center cursor-pointer smooth-transition hover:opacity-80 smooth-transition "
+            className=" w-full sm:h-96 md:h-64 block object-cover object-center cursor-pointer smooth-transition hover:opacity-80 smooth-transition "
           />
         <h2 className="text-4xl capitalize text-black dno-underline">{post.title}</h2>
         <p className="text-md">{post.article}</p>
