@@ -37,7 +37,7 @@ const SideMenu = () => {
       >
         <h1 className="sm:text-xl md:text-3xl text-center uppercase text-black font-light">
           Travel with<br></br>
-          <span className="font-semibold font-namefont">Catherine</span>
+          <span className="font-semibold font-namefont text-5xl">Catherine</span>
         </h1>
         <NavLink
           className="hover:text-blue-600 smooth-transition text-xl"

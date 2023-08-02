@@ -5,7 +5,7 @@ module.exports = {
     extend: {},
     fontFamily: {
       mainfont: ["Barlow", "sans-serif"],
-      namefont: ["Philosopher", "cursive"],
+      namefont: ['Anton', "sans-serif"],
     },
     screens: {
       'sm': '375px',
