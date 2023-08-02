@@ -1,4 +1,7 @@
-<img src="https://github.com/catherineisonline/travel-with-catherine/blob/main/public/projectPreview.png?raw=true"></img>
+![Project Preview](https://github.com/catherineisonline/travel-with-catherine/blob/main/public/project-preview-1.png?raw=true)
+![Project Preview](https://github.com/catherineisonline/travel-with-catherine/blob/main/public/project-preview-2.png?raw=true)
+![Project Preview](https://github.com/catherineisonline/travel-with-catherine/blob/main/public/project-preview-3.png?raw=true)
+![Project Preview](https://github.com/catherineisonline/travel-with-catherine/blob/main/public/project-preview-4.png?raw=true)
 
 # Travel With Catherine - [Live Preview](https://travel-with-catherine.vercel.app/)
 
