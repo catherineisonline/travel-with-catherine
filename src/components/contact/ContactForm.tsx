@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useState } from 'react'
 import emailjs from '@emailjs/browser';
 import ReCAPTCHA from "react-google-recaptcha";
@@ -61,7 +61,7 @@ const ContactForm = () => {
       return null;
     }
     else {
-      emailjs.sendForm(serviceId, templateId, formVal, userId)
+      emailjs.sendForm(serviceId, templateId, formVal!, userId)
       .then((result) => {
         if(result.text === 'OK') {
           setSubmit(true);
@@ -126,18 +126,24 @@ const ContactForm = () => {
       return false;
     }
   };
+
+
+
   
   return (
-    <React.Fragment>
+
+  <React.Fragment>
       {loading ?  <div className="loader-container">
       	 <img className='spinner' src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2dzNDhuejZ1d2VhNnY1bmxrNjl2ZmZiaXM2dDVzZjMzb2hjN2ZieCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/Rd755PrtAEhZLLTt2N/giphy.gif" alt='' aria-hidden="true" />
         </div> : submit && Object.keys(formError).length === 0 ?
-        <article className="flex flex-col gap-2  items-center  w-90 max-w-lg mt-20">
-          <img max-w-full="true" src={OK} alt='' aria-hidden='true'/>
-          <h2 className=' tracking-wide text-black uppercase text-2xl '>Thank you!</h2>
-          <p className="block tracking-wide text-black text-lg mb-2">Your message has been sent successfully</p>
-          <button onClick={() => setSubmit(false)} className="shadow bg-black hover:bg-blue-400 smooth-transition focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded">Send again</button>
-        </article>
+        <article className="flex flex-col gap-2  items-center w-90 max-w-lg mt-20">
+        <img max-w-full="true" src={OK} alt='' aria-hidden='true'/>
+        <h2 className=' tracking-wide text-black uppercase text-2xl '>Thank you!</h2>
+        <p className=' tracking-wide text-black '>Your message has been sent successfully</p>
+        <p className="block tracking-wide text-black mb-2 text-center">
+        In order for me to answer you back via email, please make sure to provide your real email. You can also contact me on socials which you can find in the side menu.</p>
+        <button onClick={() => setSubmit(false)} className="shadow bg-black hover:bg-blue-400 smooth-transition focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded">Send again</button>
+      </article>
 
         :
         <form  ref={form} id='recaptcha' className="w-full max-w-lg" onSubmit={handleSubmit} >
@@ -230,7 +236,8 @@ const ContactForm = () => {
           </div>
         </form>
       } 
-    </React.Fragment>
+    </React.Fragment> 
+    
   )
 }
 
