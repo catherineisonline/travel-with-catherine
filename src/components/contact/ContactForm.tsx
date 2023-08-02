@@ -1,12 +1,17 @@
 import React, { useRef } from 'react';
 import { useState } from 'react'
 import emailjs from '@emailjs/browser';
+import ReCAPTCHA from "react-google-recaptcha";
+
 //images
 import OK from "../../assets/images/ok.png";
 //keys
 const serviceId = process.env.REACT_APP_SERVICE_ID!;
 const templateId = process.env.REACT_APP_TEMPLATE_ID!;
 const userId = process.env.REACT_APP_USER_ID!;
+const serverUrl = process.env.REACT_APP_SERVER_URL!;
+const captchaSecret = process.env.REACT_APP_CAPTCHA_S!;
+const captchaKey = process.env.REACT_APP_CAPTCHA_K;
 
 export interface formValueI {
   firstname: string;
@@ -25,6 +30,7 @@ export interface errorObjI {
 
 const ContactForm = () => {
   const form = useRef<HTMLFormElement>(null);
+  const captchaRef = useRef<ReCAPTCHA>(null);
   const [loading, setLoading] = useState(false);
 
   const [formValue, setFormValue] = useState<formValueI>({
@@ -41,11 +47,22 @@ const ContactForm = () => {
     e.preventDefault();
     setFormError(validateForm(formValue));
     setLoading(true);
-    emailjs.sendForm(serviceId, templateId, form.current!, userId)
+    //retrieve submission token
+    let token = captchaRef.current?.getValue();
+    captchaRef.current?.reset();
+    //wait till token is confirmed
+    await verifyToken(token!);
+    if (Object.keys(validateForm(formValue)).length > 0 ) {
+      setLoading(false);
+      return null;
+    }
+    else {
+      emailjs.sendForm(serviceId, templateId, form.current!, userId)
       .then((result) => {
         if(result.text === 'OK') {
           setSubmit(true);
-          setFormValue({   firstname: '',
+          setFormValue({
+          firstname: '',
           lastname: '',
           email: '',
           message: '',})
@@ -54,16 +71,14 @@ const ContactForm = () => {
       }, (error) => {
         console.log(error.text);
       });
+    }
+ 
   }
-  const handleValidation = (e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormValue({ ...formValue, [e.currentTarget.id]: e.currentTarget.value });
-  }
-
   const validateForm = (value: formValueI) => {
     let errors: errorObjI = {}
     const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/
     if (!value.firstname) {
-      errors.firstname = 'Please enter your firstname'
+      errors.firstname = 'Please enter your name'
     }
     if (!value.lastname) {
       errors.lastname = 'Please enter your lastname'
@@ -80,7 +95,34 @@ const ContactForm = () => {
 
     return errors
   }
+  const handleValidation =  (e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormValue({ ...formValue, [e.currentTarget.id]: e.currentTarget.value });
+  }
 
+  const verifyToken = async (token: string) => {
+    try {
+      const response = await fetch(serverUrl, {
+        method: 'POST',
+        body: JSON.stringify({ 
+          secret: captchaSecret,
+          token
+        }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      const data = await response.json();
+      if (data.response === 'Successful') {
+        return true;
+      }
+      return false;
+      // Handle the response from the server here
+    } catch (error: any) {
+      console.error('Error while verifying reCAPTCHA:', error.message);
+      return false;
+    }
+  };
+  
   return (
     <React.Fragment>
       {loading ?  <div className="loader-container">
@@ -93,7 +135,8 @@ const ContactForm = () => {
           <button onClick={() => setSubmit(false)} className="shadow bg-black hover:bg-blue-400 smooth-transition focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded">Send again</button>
         </article>
 
-        :   <form ref={form} className="w-full max-w-lg" onSubmit={handleSubmit}>
+        :
+        <form id="recaptcha" ref={form} className="w-full max-w-lg" onSubmit={handleSubmit} >
           <div className="flex flex-wrap -mx-3 mb-6">
             <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
               <label
@@ -110,9 +153,9 @@ const ContactForm = () => {
                 value={formValue.firstname}
                 name="firstname"
               />
-              <span className="input-validation-error">{formError.firstname}</span>
+              <span className="input-validation-error text-red-600">{formError.firstname}</span>
             </div>
-            <div className="w-full md:w-1/2 px-3">
+            <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
               <label
                 className="block uppercase tracking-wide text-gray-700 text-xs mb-2"
                 htmlFor="lastname"
@@ -120,14 +163,14 @@ const ContactForm = () => {
                 Last Name
               </label>
               <input
-                className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                className="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                 id="lastname"
                 type="text"
                 onChange={handleValidation}
                 value={formValue.lastname}
                 name="lastname"
               />
-              <span className="input-validation-error">{formError.lastname}</span>
+              <span className="input-validation-error text-red-600">{formError.lastname}</span>
             </div>
           </div>
           <div className="flex flex-wrap -mx-3 mb-6">
@@ -146,7 +189,7 @@ const ContactForm = () => {
                 value={formValue.email}
                 name="email"
               />
-              <span className="input-validation-error">{formError.email}</span>
+              <span className="input-validation-error text-red-600">{formError.email}</span>
             </div>
           </div>
           <div className="flex flex-wrap -mx-3 mb-6">
@@ -164,9 +207,12 @@ const ContactForm = () => {
                 value={formValue.message}
                 name="message"
               />
-              <span className="input-validation-error">{formError.message}</span>
+              <span className="input-validation-error text-red-600">{formError.message}</span>
             </div>
           </div>
+
+          <ReCAPTCHA className="flex flex-wrap mb-6 g-recaptcha" sitekey={captchaKey} ref={captchaRef} />
+
           <div className="md:flex md:items-center">
             <div className="md:w-1/3">
               <button

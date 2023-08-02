@@ -7,29 +7,21 @@ const About = () => {
   return (
     <article className="flex flex-col min-h-screen col-span-2 items-center p-5">
       <section className="flex flex-col items-center mt-10 text-2xl gap-5 text-slate-600">
-        <h2 className="text-5xl text-center uppercase text-black">About</h2>
+        <h2 className="text-4xl text-center uppercase text-black">About</h2>
         <p className="text-base  sm:text-lg ">
-          Georgia is a country located in the Caucasus region of Eurasia. It is
-          bordered by Russia to the north and northeast, Turkey and Armenia to
-          the south, and Azerbaijan to the east. The capital and largest city of
-          Georgia is Tbilisi. The official language is Georgian and the currency
-          is the Lari. Georgia has a rich cultural heritage, with a history that
-          dates back over 3,000 years. The country is known for its traditional
-          music, dance, and cuisine, as well as its ancient Christian churches
-          and monasteries.
-          The country is also known for its wine-making
-          traditions which are ancient, and wine culture is an important part of
-          Georgian culture. Georgia has a semi-presidential representative
-          democratic republic form of government. The President of Georgia is
-          the head of state and the Prime Minister is the head of government.
-          The country has a unicameral parliament called the Sakartvelos
-          Parlamenti. Georgia has a diverse landscape that ranges from the snowy
-          peaks of the Greater Caucasus Mountains to the subtropical Black Sea
-          coast. 
-          The country has a diverse range of flora and fauna, including
-          many endemic species. It's also well-known for its mineral water
-          springs, and is a popular destination for tourists looking for hiking,
-          skiing, and other outdoor activities.
+          My name is Ekaterine Mitagvaria, and I come from the beautiful city of Tbilisi, Georgia. Programming is my passion, and I love every moment I spend immersed in it. The joy of creating something from scratch and bringing ideas to life is an absolute pleasure for me.    </p>
+        <p className="text-base  sm:text-lg ">
+          Besides programming, another great love of mine is photography. I don't carry any heavy cameras; instead, I rely on my trusty iPhone to capture the essence of every new place I visit. These photographs become precious memories, allowing me to cherish and relive those experiences whenever I want. Sharing these moments with others is equally fulfilling, as it lets me offer a unique perspective of the world to those around me.
+        </p>
+        <p className="text-base  sm:text-lg ">
+        My wanderlust has taken me to various places in Georgia, Turkey, Azerbaijan, Armenia, and even as far as Germany. Though I haven't traveled to many countries, whenever I do, I make it a point to explore every corner, even if it means focusing on just one city. I believe that every place has its own charm and hidden treasures waiting to be discovered.     </p>
+        <p className="text-base  sm:text-lg ">
+          The farthest I've journeyed is to the enchanting landscapes of South America, particularly Argentina, a trip that left me awe-inspired and hungry for more adventures. Exploring its diverse cities and natural wonders was an experience like no other, and it fueled my passion for capturing moments through my lens.
+        </p>
+        <p className="text-base  sm:text-lg ">
+          To express my passions and share my travel experiences, I've created a YouTube channel. It's not just a hobby; it's a way for me to connect with fellow travelers and enthusiasts, inspiring their curiosity and igniting their desire to explore. </p>
+        <p className="text-base  sm:text-lg ">
+          In my heart, I am both a programmer and a photographer, and these passions continue to drive me towards exciting opportunities and discoveries. Whether I'm immersed in code or capturing mesmerizing sceneries, I know that these pursuits will always be an essential part of who I am.
         </p>
       </section>
       <section className="flex flex-col sm:flex-row gap-1 p-8 ">

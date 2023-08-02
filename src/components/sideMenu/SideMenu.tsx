@@ -42,7 +42,7 @@ const SideMenu = () => {
         </h1>
         <NavLink
           className="hover:text-blue-600 smooth-transition text-xl"
-          to="/travel-with-catherine"
+          to="/"
           onClick={() => {
             RemoveMenu()
           }}

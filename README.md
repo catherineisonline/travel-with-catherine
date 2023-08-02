@@ -21,7 +21,7 @@
 
 ## Gallery
 
-You can explore my photography portfolio by visiting the `Gallery` section of the project. The images are organized by destination, and you can view a larger version of each image by clicking on it.
+You can explore my photography portfolio by visiting the `Gallery` section of the project. The images are organized by destination, and you can view a larger version of each image by clicking on it. You are free to use images in your own projects but do not claim them as yours. 
 
 ## Code
 
@@ -36,8 +36,10 @@ This project serves as a personal portfolio website to show off my personal skil
 This project is licensed under the MIT License. See the [LICENSE](https://github.com/catherineisonline/travel-with-catherine/blob/main/LICENSE) file for details. Youa free to use this project in ypur portofilio.
 Please do not use my images as your own or use them outside this project. You are free to use them as long as it doesn't say they belong to you and you captured the places you have not even seen. Thank you
 
-## Dependencies used
+## Dependencies/API used
 - [Email.js](https://www.emailjs.com/)
 - [React Router](https://reactrouter.com/)
 - [React Paginate](https://www.npmjs.com/package/react-paginate)
+- [Google ReCAPTCHA](https://www.google.com/recaptcha/about/)
+
 
