@@ -30,7 +30,9 @@ const BlogPost = () => {
     findPost(window.location.pathname.toString().substring(6).replaceAll('%20', ' '))
   },[])
     return (
-      <article className="flex flex-col min-h-screen sm:col-span-5 md:col-span-4 items-center gap-4 mb-8">
+      <article className="sm:col-span-5 md:col-span-4 min-h-screen scrollbar-hide p-2">
+         <h2 className="text-4xl text-center uppercase text-black mt-6">Blog</h2>
+      <section className="flex flex-col min-h-screen items-center gap-4">
         <img
             src={post.src}
             alt={post.alt}
@@ -38,7 +40,8 @@ const BlogPost = () => {
           />
         <h2 className="text-4xl capitalize text-black dno-underline">{post.title}</h2>
         <p className="text-md">{post.article}</p>
-      </article>
+      </section>
+         </article>
     )
   }
   
