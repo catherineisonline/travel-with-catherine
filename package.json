@@ -28,6 +28,7 @@
     "react-paginate": "^8.1.4",
     "react-router-dom": "^6.3.0",
     "react-scripts": "^5.0.1",
+    "react-slideshow-image": "^4.2.1",
     "tailwind-scrollbar-hide": "^1.1.7",
     "web-vitals": "^2.1.4"
   },

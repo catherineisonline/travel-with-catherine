@@ -42,6 +42,7 @@ This project serves as a personal portfolio website to show off my personal skil
 - [React Paginate](https://www.npmjs.com/package/react-paginate)
 - [Google ReCAPTCHA](https://www.google.com/recaptcha/about/)
 - [TinyPNG](https://tinypng.com/)
+- [Image Slider](https://www.npmjs.com/package/react-slideshow-image)
 
 
 ## Google ReCAPTCHA <a id="recaptcha"></a>
