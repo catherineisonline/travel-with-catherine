@@ -29,11 +29,11 @@ You can explore my photography portfolio by visiting the `Gallery` section of th
 
 ## Code  <a id="code"></a>
 
-If you are interested in the code behind this project, you can find it in the `src` directory. The project uses [React Router](https://reactrouter.com/) for routing, and [Tailwind](https://tailwindcss.com/) for styling.
+If you are interested in the code behind this project, you can find it in the `src` directory. The project uses [React Router](https://reactrouter.com/) for routing and [Tailwind](https://tailwindcss.com/) for styling.
 
 ## Contribution <a id="contributiion"></a>
 
-This project serves as a personal portfolio website to show off my personal skills. I do not accept any contributions like pull requests to this project however if you have any suggestions or ideas feel free to message me, send me a message via a contact form on the website or submit an idea in the [discussions](https://github.com/catherineisonline/travel-with-catherine/discussions). Otherwise, you are free to fork this project and change it for your own purposes. 
+This project serves as a personal portfolio website to show off my personal skills. I do not accept any contributions like pull requests to this project however if you have any suggestions or ideas feel free to message me, send me a message via a contact form on the website, or submit an idea in the [discussions](https://github.com/catherineisonline/travel-with-catherine/discussions). Otherwise, you are free to fork this project and change it for your own purposes. 
 
 
 ## Dependencies | API | Services used  <a id="dependencies"></a>
@@ -47,7 +47,7 @@ This project serves as a personal portfolio website to show off my personal skil
 
 ## Google ReCAPTCHA <a id="recaptcha"></a>
 
-If you do not have [Google ReCAPTCHA](https://www.google.com/recaptcha/about/) account yet and want to test it, you can use test credentials provided by Google.
+If you do not have [Google ReCAPTCHA](https://www.google.com/recaptcha/about/) account yet and want to test it, you can use the test credentials provided by Google.
 - With the following test keys, you will always get No CAPTCHA and all verification requests will pass.
 ```
 Site key: 6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI
@@ -56,9 +56,9 @@ Secret key: 6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe
 
 ```
 
-The reCAPTCHA widget will show a warning message to claim that it's only for testing purpose. Please do not use these keys for your production traffic. You can read more about it [here](https://developers.google.com/recaptcha/docs/faq#id-like-to-run-automated-tests-with-recaptcha.-what-should-i-do).
+The reCAPTCHA widget will show a warning message to claim that it's only for testing purposes. Please do not use these keys for your production traffic. You can read more about it [here](https://developers.google.com/recaptcha/docs/faq#id-like-to-run-automated-tests-with-recaptcha.-what-should-i-do).
 
 ## License  <a id="license"></a>
 
-This project is licensed under the MIT License. See the [LICENSE](https://github.com/catherineisonline/travel-with-catherine/blob/main/LICENSE) file for details. Youa free to use this project in ypur portofilio.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/catherineisonline/travel-with-catherine/blob/main/LICENSE) file for details. You are free to use this project in your portfolio.
 Please do not use my images as your own or use them outside this project. You are free to use them as long as it doesn't say they belong to you and you captured the places you have not even seen. Thank you
