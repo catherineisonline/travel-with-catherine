@@ -27,10 +27,11 @@ const BlogPost = () => {
   }
 
   useEffect(() => {
+    document.title = `${post.title} | Travel with Catherine`;
     findPost(window.location.pathname.toString().substring(6).replaceAll('%20', ' '))
-  },[])
+  },[post])
     return (
-      <article className="sm:col-span-5 md:col-span-4 min-h-screen scrollbar-hide p-2">
+      <article className="sm:col-span-5 md:col-span-4 min-h-screen scrollbar-hide p-2 mb-6">
          <h2 className="text-4xl text-center uppercase text-black mt-6">Blog</h2>
       <section className="flex flex-col min-h-screen items-center gap-4">
         <img

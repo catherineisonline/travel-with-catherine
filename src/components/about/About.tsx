@@ -1,9 +1,13 @@
+import { useEffect } from 'react';
 import ImgOne from '../../assets/images/personal-gallery/imgOne.jpeg'
 import ImgTwo from '../../assets/images/personal-gallery/imgTwo.jpeg'
 import ImgThree from '../../assets/images/personal-gallery/imgThree.jpeg'
 import ImgFour from '../../assets/images/personal-gallery/imgFour.jpeg'
 
 const About = () => {
+  useEffect(() => {
+    document.title = "Blog | Travel with Catherine";
+  })
   return (
     <article className="flex flex-col min-h-screen sm:col-span-5 md:col-span-4 items-center">
        <h2 className="text-4xl text-center uppercase text-black mt-6">About</h2>
