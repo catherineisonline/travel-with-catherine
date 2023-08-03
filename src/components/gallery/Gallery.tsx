@@ -1,5 +1,5 @@
 import  { useState, useEffect } from 'react'
-import GalleryData from '../../data/GalleryData.js'
+import GalleryData from '../../data/GalleryData';
 import ReactPaginate from 'react-paginate';
 import Images from './Images'
 import ResetLocation from '../../helpers/ResetLocation';
