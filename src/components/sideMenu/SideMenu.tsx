@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import Burger from '../../assets/images/burger-menu.png'
+import hiddenMenuIcon from '../../assets/images/burger-passive.png'
+import activeMenuIcon from '../../assets/images/burger-active.png'
 import Socials from './Socials'
 import CSS from 'csstype'
 
@@ -14,7 +15,7 @@ const SideMenu = () => {
   const ref = useRef<HTMLImageElement>(null)
 
   function ToggleMenu() {
-    hiddenMenu ? setHiddenMenu(false) : setHiddenMenu(true)
+    setHiddenMenu(!hiddenMenu);
   }
   function RemoveMenu() {
     setHiddenMenu(true)
@@ -27,8 +28,8 @@ const SideMenu = () => {
         className="burger-icon w-10 fixed cursor-pointer md:hidden z-50 sm:ml-2 ml-12"
         onClick={ToggleMenu}
         ref={ref}
-        src={Burger}
-        alt="Menu icon"
+        src={hiddenMenu ? hiddenMenuIcon : activeMenuIcon}
+        alt="Toggle menu"
       />
       <nav
         className={`main-menu${
@@ -79,14 +80,7 @@ const SideMenu = () => {
           Contact
         </NavLink>
         <Socials />
-        <a
-          className="text-sm"
-          href="https://github.com/catherineisonline/travel-with-catherine"
-          target="_blank"
-          rel="noreferrer"
-        >
-          &copy; 2022-2023
-        </a>
+        <p className="text-sm">&copy; 2022-2023</p>
       </nav>
     </header>
   )
