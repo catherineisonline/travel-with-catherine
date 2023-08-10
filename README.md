@@ -12,7 +12,8 @@
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [Gallery](#gallery)
+- [Features](#features)
+- [Technologies used](#technologiesused)
 - [Code](#code)
 - [Contribution](#contributiion)
 - [Dependencies | API | Services used](#dependencies)
@@ -23,9 +24,21 @@
 
 "Travel With Catherine" is a project where I share my love for traveling and my photography portfolio. It contains images from various travel destinations that I have captured during my travels. The project is built using [React](https://reactjs.org/), [Node.js](https://nodejs.org/en), [TypeScript](https://www.typescriptlang.org/) and [Tailwind](https://tailwindcss.com/docs).
 
-## Gallery  <a id="gallery"></a>
+## Features  <a id="features"></a>
 
-You can explore my photography portfolio by visiting the `Gallery` section of the project. The images are organized by destination, and you can view a larger version of each image by clicking on it. You are free to use images in your own projects but do not claim them as yours. 
+- Gallery Section: The heart of the project is the Gallery section, where you can explore my photography portfolio. The images are thoughtfully organized by destination, allowing you to browse through the distinct beauty of each location.
+
+- Image Viewing: Clicking on an image in the Gallery will present you with a larger version, offering an up-close view of the stunning landscapes, vibrant cultures, and captivating moments captured in the photographs.
+
+- Usage of Images: You are welcome to utilize the images from this portfolio in your own projects. However, kindly refrain from claiming them as your own creations. Proper attribution to the project is appreciated.
+
+- Contact Form: The project incorporates a fully functional contact form that includes form validations and captcha protection. This ensures the security and accuracy of the information you provide. The contact form is powered by the email.js API, allowing you to send emails directly from the website. 
+
+## Technologies used <a id="technologiesused"></a>
+- Frontend: React
+- Backend: Node.js
+- Language: TypeScript
+- Styling: Tailwind CSS
 
 ## Code  <a id="code"></a>
 
@@ -58,7 +71,11 @@ Secret key: 6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe
 
 The reCAPTCHA widget will show a warning message to claim that it's only for testing purposes. Please do not use these keys for your production traffic. You can read more about it [here](https://developers.google.com/recaptcha/docs/faq#id-like-to-run-automated-tests-with-recaptcha.-what-should-i-do).
 
-## License  <a id="license"></a>
 
-This project is licensed under the MIT License. See the [LICENSE](https://github.com/catherineisonline/travel-with-catherine/blob/main/LICENSE) file for details. You are free to use this project in your portfolio.
-Please do not use my images as your own or use them outside this project. You are free to use them as long as it doesn't say they belong to you and you captured the places you have not even seen. Thank you
+## License  <a id="license"></a>
+This project is released under the MIT [LICENSE](https://github.com/catherineisonline/travel-with-catherine/blob/main/LICENSE). You can find the specific terms and conditions outlined in the LICENSE file. This means you're free to utilize, modify, and distribute the project according to the terms of the MIT License.
+
+#### Build Your Portfolio:
+Feel free to incorporate this project into your personal portfolio! Showcase your skills and creativity by featuring your adaptations or implementations of this project. Just make sure to follow the guidelines of the MIT License while doing so.
+
+Happy coding!
