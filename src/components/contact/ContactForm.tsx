@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, {  useRef } from 'react';
 import { useState } from 'react'
 import emailjs from '@emailjs/browser';
 import ReCAPTCHA from "react-google-recaptcha";
@@ -11,7 +11,7 @@ const templateId = process.env.REACT_APP_TEMPLATE_ID!;
 const userId = process.env.REACT_APP_USER_ID!;
 const serverUrl = process.env.REACT_APP_SERVER_URL!;
 const captchaSecret = process.env.REACT_APP_CAPTCHA_S!;
-const captchaKey = process.env.REACT_APP_CAPTCHA_K;
+const captchaKey = process.env.REACT_APP_CAPTCHA_K!;
 
 export interface formValueI {
   firstname: string;
@@ -47,8 +47,6 @@ const ContactForm = () => {
     e.preventDefault();
     setFormError(validateForm(formValue));
     setLoading(true);
-      //retrieve submission token
-    console.log(form.current);
     //retrieve submission token
     let token = captchaRef.current?.getValue();
     let formVal = form.current;
@@ -84,10 +82,15 @@ const ContactForm = () => {
     if (!value.firstname) {
       errors.firstname = 'Please enter your name'
     }
+    else if (value.firstname.length < 3) {
+      errors.firstname = 'Please enter a valid name'
+    }
     if (!value.lastname) {
       errors.lastname = 'Please enter your lastname'
     }
-
+     else if (value.lastname.length < 4) {
+      errors.lastname = 'Please enter a valid lastname'
+    }
     if (!value.email) {
       errors.email = 'Please enter your email'
     } else if (!emailRegex.test(value.email)) {
@@ -95,6 +98,9 @@ const ContactForm = () => {
     }
     if (!value.message) {
       errors.message = 'Please write a message'
+    }
+    else if (value.message.length < 5) {
+      errors.message = 'Please enter at least 5 characters'
     }
 
     return errors
@@ -119,7 +125,7 @@ const ContactForm = () => {
       if (data.response === 'Successful') {
         return true;
       }
-      return false;
+      else return false;
       // Handle the response from the server here
     } catch (error: any) {
       console.error('Error while verifying reCAPTCHA:', error.message);
