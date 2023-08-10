@@ -108,7 +108,7 @@ const Gallery = () => {
           {currentBlogPosts.map((image, index) => (
             <img
               key={image.id}
-              className={`slider-slide ${targetImg === index ? 'active' : 'hidden'} object-cover object-center w-full h-3/4`}
+              className={`slider-slide ${targetImg === index ? 'active' : 'hidden'} object-cover object-center w-full sm:h-2/3 md:h-3/4`}
               src={image.src}
               alt=''
             />
