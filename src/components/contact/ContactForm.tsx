@@ -109,7 +109,7 @@ const ContactForm = () => {
     setFormValue({ ...formValue, [e.currentTarget.id]: e.currentTarget.value });
   }
 
-  const verifyToken = async (token: string) => {
+  const verifyToken = async (token: string): Promise<boolean> => {
     try {
       const response = await fetch(serverUrl, {
         method: 'POST',
@@ -126,9 +126,14 @@ const ContactForm = () => {
         return true;
       }
       else return false;
-      // Handle the response from the server here
-    } catch (error: any) {
-      console.error('Error while verifying reCAPTCHA:', error.message);
+      // Handle the response from the server 
+    } catch (error) {
+      if (error instanceof Error) {
+        console.error('Error while verifying reCAPTCHA:', error.message);
+      } else {
+        // Handle other types of errors 
+        console.error('An unknown error occurred:', error);
+      }
       return false;
     }
   };
