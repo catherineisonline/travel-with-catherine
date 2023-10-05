@@ -18,6 +18,10 @@ export interface ImagesProp {
 
 }
 
+interface paginationEvent {
+  selected: number;
+}
+
 const Gallery = () => {
   
   const [itemOffset, setItemOffset] = useState(0);
@@ -34,10 +38,14 @@ const Gallery = () => {
     setTargetImg((prevImg) => (prevImg - 1 + currentBlogPosts.length) % currentBlogPosts.length);
   }, [currentBlogPosts.length]);
 
+  const handlePageClick = (event: paginationEvent) => {
+    console.log(event)
+    const selected = event.selected;
+    if(selected) {
+      setItemOffset((selected * 12) % GalleryData.length);
+      ResetLocation();
+    }
 
-  const handlePageClick = (event: any) => {
-    setItemOffset((event.selected * 12) % GalleryData.length);
-    ResetLocation();
   };
 
   const toggle = () => {
