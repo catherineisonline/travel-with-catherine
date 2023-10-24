@@ -1,15 +1,8 @@
 import React, { useEffect } from "react";
 //Data
 import BlogPostsData from "../../data/BlogPostsData";
+import { postObj } from "../../types/interfaces";
 
-export interface postObj {
-  id: number;
-  src: string;
-  title: string;
-  alt: string;
-  snippet: string;
-  article: string;
-}
 
 
 const BlogPost = () => {

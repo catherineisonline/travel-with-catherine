@@ -622,4 +622,7 @@ const GalleryData = [
 
   },
 ]
-export default GalleryData
+
+
+
+export default GalleryData;
