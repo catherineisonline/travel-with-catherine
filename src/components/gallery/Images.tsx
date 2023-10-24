@@ -1,4 +1,4 @@
-import {ImagesProp } from './Gallery';
+import { ImagesProp } from "../../types/interfaces";
 
 
 const Images = ({ imagesToShow, toggle, setModalImg }: ImagesProp) => {

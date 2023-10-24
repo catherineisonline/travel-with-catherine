@@ -4,23 +4,8 @@ import ReactPaginate from 'react-paginate';
 import Images from './Images'
 import ResetLocation from '../../helpers/ResetLocation';
 import 'react-slideshow-image/dist/styles.css'
+import { paginationEvent } from '../../types/interfaces';
 
-export type imagesToShow = {
-  id: number
-  src: string
-  alt: string
-}
-
-export interface ImagesProp {
-  imagesToShow: imagesToShow[]
-  toggle: () => void;
-  setModalImg: (imgIndex: number) => void;
-
-}
-
-interface paginationEvent {
-  selected: number;
-}
 
 const Gallery = () => {
   

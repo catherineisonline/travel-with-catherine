@@ -2,9 +2,9 @@ import React, {  useRef } from 'react';
 import { useState } from 'react'
 import emailjs from '@emailjs/browser';
 import ReCAPTCHA from "react-google-recaptcha";
-
 //images
 import OK from "../../assets/images/ok.png";
+import { errorObjI, formValueI } from '../../types/interfaces';
 //keys
 const serviceId = process.env.REACT_APP_SERVICE_ID!;
 const templateId = process.env.REACT_APP_TEMPLATE_ID!;
@@ -13,19 +13,6 @@ const serverUrl = process.env.REACT_APP_SERVER_URL!;
 const captchaSecret = process.env.REACT_APP_CAPTCHA_S!;
 const captchaKey = process.env.REACT_APP_CAPTCHA_K!;
 
-export interface formValueI {
-  firstname: string;
-  lastname: string;
-  email: string;
-  message: string;
-}
-
-export interface errorObjI {
-  firstname?: string;
-  lastname?: string;
-  email?: string;
-  message?: string;
-}
 
 
 const ContactForm = () => {
