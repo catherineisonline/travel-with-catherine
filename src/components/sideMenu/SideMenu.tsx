@@ -80,7 +80,7 @@ const SideMenu = () => {
           Contact
         </NavLink>
         <Socials />
-        <p className="text-sm">&copy; 2022-2023</p>
+        <p className="text-sm">&copy; 2022-<span>{new Date().getFullYear()}</span></p>
       </nav>
     </header>
   )
