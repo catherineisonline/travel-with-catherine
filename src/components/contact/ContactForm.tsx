@@ -71,11 +71,16 @@ const ContactForm = () => {
     }
     else if (value.firstname.length < 3) {
       errors.firstname = 'Please enter a valid name'
+    } else if (Number(value.firstname)) {
+      errors.firstname = 'Please enter a valid name'
     }
     if (!value.lastname) {
       errors.lastname = 'Please enter your lastname'
     }
      else if (value.lastname.length < 4) {
+      errors.lastname = 'Please enter a valid lastname'
+    }
+    else if (Number(value.lastname)) {
       errors.lastname = 'Please enter a valid lastname'
     }
     if (!value.email) {
