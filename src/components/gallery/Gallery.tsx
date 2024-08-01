@@ -8,7 +8,6 @@ import { paginationEvent } from '../../types/interfaces';
 
 
 const Gallery = () => {
-  
   const [itemOffset, setItemOffset] = useState(0);
   const [endOffset, setEndOffset] = useState(itemOffset + 12);
   const [currentBlogPosts, setcurrentBlogPosts] = useState([...GalleryData].slice(itemOffset, endOffset));
@@ -24,7 +23,6 @@ const Gallery = () => {
   }, [currentBlogPosts.length]);
 
   const handlePageClick = (event: paginationEvent) => {
-    console.log(event)
     const selected = event.selected;
     if(selected) {
       setItemOffset((selected * 12) % GalleryData.length);
@@ -74,6 +72,7 @@ const Gallery = () => {
     <article className="sm:col-span-5 md:col-span-4 min-h-screen scrollbar-hide">
       <Images imagesToShow={currentBlogPosts} toggle={toggle} setModalImg={setModalImg} />
       <section className="flex flex-col items-center w-full">
+        
         <ReactPaginate
           className="pagination"
           breakLabel="..."

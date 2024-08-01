@@ -10,14 +10,14 @@ const Socials = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img className="w-6 h-6	max-w-full" src={Github} alt="Github icon" />
+        <img className="w-6 h-6	max-w-full" src={Github} alt="Github icon" loading='lazy'/>
       </a>
       <a
         href="https://www.linkedin.com/in/catherinemitagvaria/"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img className="w-6 h-6	max-w-full" src={Linkedin} alt="Linkedin icon" />
+        <img className="w-6 h-6	max-w-full" src={Linkedin} alt="Linkedin icon" loading='lazy'/>
       </a>
       <a
         href="https://ekaterine-mitagvaria.vercel.app/"
@@ -28,6 +28,7 @@ const Socials = () => {
           className="w-6 h-6	max-w-full"
           src={Portfolio}
           alt="Portfolio icon"
+         loading='lazy'
         />
       </a>
     </section>

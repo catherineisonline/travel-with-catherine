@@ -9,6 +9,7 @@ import Contact from "./components/contact/Contact";
 //Styles
 import "./core-ui/index.css";
 import BlogPost from "./components/blog-post/BlogPost";
+import NotFound from "./components/not-found/NotFound";
 
 
 const App: FC = () => {
@@ -21,6 +22,7 @@ const App: FC = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/blog/:title" element={<BlogPost/>} />
+        <Route path="*" element={<NotFound/>} />
       </Routes>
     </Router>
   );

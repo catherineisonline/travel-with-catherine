@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
-import ImgOne from '../../assets/images/personal-gallery/imgOne.jpeg'
-import ImgTwo from '../../assets/images/personal-gallery/imgTwo.jpeg'
-import ImgThree from '../../assets/images/personal-gallery/imgThree.jpeg'
-import ImgFour from '../../assets/images/personal-gallery/imgFour.jpeg'
+import ImgOne from '../../assets/images/personal-gallery/imgOne.webp'
+import ImgTwo from '../../assets/images/personal-gallery/imgTwo.webp'
+import ImgThree from '../../assets/images/personal-gallery/imgThree.webp'
+import ImgFour from '../../assets/images/personal-gallery/imgFour.webp'
 
 const About = () => {
   useEffect(() => {
@@ -10,7 +10,7 @@ const About = () => {
   })
   return (
     <article className="flex flex-col min-h-screen sm:col-span-5 md:col-span-4 items-center">
-       <h2 className="text-4xl text-center uppercase text-black mt-6">About</h2>
+      
       <section className="flex flex-col items-center mt-10 text-2xl gap-5 text-slate-600 p-2">
         <p className="text-base  sm:text-lg ">
           My name is Ekaterine Mitagvaria, and I come from the beautiful city of Tbilisi, Georgia. Programming is my passion, and I love every moment I spend immersed in it. The joy of creating something from scratch and bringing ideas to life is an absolute pleasure for me.    </p>
@@ -25,7 +25,7 @@ const About = () => {
         <p className="text-base  sm:text-lg ">
           To express my passions and share my travel experiences, I've created a YouTube channel. It's not just a hobby; it's a way for me to connect with fellow travelers and enthusiasts, inspiring their curiosity and igniting their desire to explore. </p>
         <p className="text-base  sm:text-lg ">
-          In my heart, I am both a programmer and a photographer, and these passions continue to drive me towards exciting opportunities and discoveries. Whether I'm immersed in code or capturing mesmerizing sceneries, I know that these pursuits will always be an essential part of who I am.
+          In my heart, I am both a programmer and a photographer, and these passions continue to drive me toward exciting opportunities and discoveries. Whether I'm immersed in code or capturing mesmerizing sceneries, I know that these pursuits will always be an essential part of who I am.
         </p>
       </section>
       <section className="grid grid-cols-2 sm:flex-row gap-1 p-2 ">
