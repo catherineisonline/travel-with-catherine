@@ -57,6 +57,13 @@ This project serves as a personal portfolio website to show off my personal skil
 - [TinyPNG](https://tinypng.com/)
 - [Image Slider](https://www.npmjs.com/package/react-slideshow-image)
 
+### Installing Dependencies with `pnpm`
+
+To install the project dependencies using `pnpm`, run the following command in the project directory:
+
+```
+pnpm install
+```
 
 ## Google ReCAPTCHA <a id="recaptcha"></a>
 
