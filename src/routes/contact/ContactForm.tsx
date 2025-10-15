@@ -4,12 +4,12 @@ import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
 import OK from "../../assets/images/ok.png";
 import { errorObjI, formValueI } from "../../types/interfaces";
-const serviceId = process.env.REACT_APP_SERVICE_ID!;
-const templateId = process.env.REACT_APP_TEMPLATE_ID!;
-const userId = process.env.REACT_APP_USER_ID!;
-const serverUrl = process.env.REACT_APP_SERVER_URL!;
-const captchaSecret = process.env.REACT_APP_CAPTCHA_S!;
-const captchaKey = process.env.REACT_APP_CAPTCHA_K!;
+const serviceId = import.meta.env.VITE_SERVICE_ID;
+const templateId = import.meta.env.VITE_TEMPLATE_ID;
+const userId = import.meta.env.VITE_USER_ID;
+const serverUrl = import.meta.env.VITE_SERVER_URL;
+const captchaSecret = import.meta.env.VITE_CAPTCHA_S;
+const captchaKey = import.meta.env.VITE_CAPTCHA_K;
 
 const ContactForm = () => {
   const form = useRef<HTMLFormElement>(null);
