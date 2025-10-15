@@ -2,9 +2,9 @@ import { ImagesProp } from "../../types/interfaces";
 
 const Images = ({ imagesToShow, toggle, setModalImg }: ImagesProp) => {
   return (
-    <section className="gap-1 grid sm:grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 mx-auto w-full overflow-hidden image-list">
+    <section className="gap-1 grid grid-cols-2 2xl:grid-cols-3 mx-auto w-full overflow-hidden image-list">
       {imagesToShow.map((img, index) => (
-        <section className="card-zoom" key={index}>
+        <section className="group relative flex rounded-md w-full h-60 overflow-hidden" key={index}>
           <img
             onClick={() => {
               toggle();
@@ -12,7 +12,7 @@ const Images = ({ imagesToShow, toggle, setModalImg }: ImagesProp) => {
             }}
             src={img.src}
             alt={img.alt}
-            className="card-zoom-image"
+            className="absolute shadow-sm w-full h-full object-center object-cover group-hover:scale-150 transition-all duration-500 ease-in-out cursor-pointer transform"
           />
         </section>
       ))}

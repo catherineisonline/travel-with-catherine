@@ -65,7 +65,7 @@ const HomePage = () => {
   }, [handleNextClick, handlePrevClick]);
 
   return (
-    <article className="sm:col-span-5 md:col-span-4 min-h-screen scrollbar-hide">
+    <article className="col-span-5 md:col-span-4 min-h-screen scrollbar-hide">
       <Images imagesToShow={currentBlogPosts} toggle={toggle} setModalImg={setModalImg} />
       <section className="flex flex-col items-center w-full">
         <ReactPaginate

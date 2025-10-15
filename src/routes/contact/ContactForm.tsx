@@ -150,7 +150,7 @@ const ContactForm = () => {
                 First Name
               </label>
               <input
-                className="block bg-gray-200 focus:bg-white mb-3 px-4 py-3 border rounded focus:outline-none w-full text-gray-700 leading-tight appearance-none"
+                className="block bg-gray-200 focus:bg-white mb-3 px-4 py-3 border border-gray-200 focus:border-gray-500 rounded focus:outline-none w-full text-gray-700 leading-tight appearance-none"
                 type="text"
                 id="firstname"
                 onChange={handleValidation}
@@ -164,7 +164,7 @@ const ContactForm = () => {
                 Last Name
               </label>
               <input
-                className="block bg-gray-200 focus:bg-white mb-3 px-4 py-3 border rounded focus:outline-none w-full text-gray-700 leading-tight appearance-none"
+                className="block bg-gray-200 focus:bg-white mb-3 px-4 py-3 border border-gray-200 focus:border-gray-500 rounded focus:outline-none w-full text-gray-700 leading-tight appearance-none"
                 id="lastname"
                 type="text"
                 onChange={handleValidation}
@@ -211,7 +211,7 @@ const ContactForm = () => {
           <div className="md:flex md:items-center">
             <div className="md:w-1/3">
               <button
-                className="bg-blue-600 hover:bg-blue-400 shadow px-4 py-2 rounded focus:shadow-outline focus:outline-none font-bold text-white smooth-transition"
+                className="bg-blue-600 hover:bg-blue-400 shadow px-4 py-2 rounded focus:shadow-outline focus:outline-none font-bold text-white smooth-transition cursor-pointer"
                 type="submit">
                 Send
               </button>
