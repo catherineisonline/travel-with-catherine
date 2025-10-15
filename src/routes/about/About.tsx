@@ -9,7 +9,7 @@ const About = () => {
     document.title = "Blog | Travel with Catherine";
   });
   return (
-    <article className="flex flex-col items-center sm:col-span-5 md:col-span-4 min-h-screen">
+    <article className="flex flex-col items-center col-span-5 md:col-span-4 min-h-screen">
       <section className="flex flex-col items-center gap-5 mt-10 p-2 text-slate-600 text-2xl">
         <p className="text-base sm:text-lg">
           My name is Ekaterine Mitagvaria, and I come from the beautiful city of Tbilisi, Georgia. Programming is my

@@ -4,7 +4,7 @@ import { resetLocation } from "../../helpers/resetLocation";
 
 const BlogPosts = () => {
   return (
-    <section className="justify-items-stretch gap-2 grid sm:grid-cols-1 md:grid-cols-2 mx-auto mt-2 overflow-hidden">
+    <section className="justify-items-stretch gap-2 grid grid-cols-1 md:grid-cols-2 mx-auto mt-2 overflow-hidden">
       {BlogPostsData.map((post) => (
         <section className="gap-2 grid grid-cols-1 h-1/5" key={post.id}>
           <img

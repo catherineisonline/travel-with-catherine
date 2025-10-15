@@ -21,7 +21,7 @@ const BlogPostPage = () => {
     findPost(window.location.pathname.toString().substring(6).replaceAll("%20", " "));
   }, [post]);
   return (
-    <article className="sm:col-span-5 md:col-span-4 mb-6 p-2 min-h-screen scrollbar-hide">
+    <article className="col-span-5 md:col-span-4 mb-6 p-2 min-h-screen scrollbar-hide">
       <h2 className="mt-6 text-black text-4xl text-center uppercase">Blog</h2>
       <section className="flex flex-col items-center gap-4 min-h-screen">
         <img
