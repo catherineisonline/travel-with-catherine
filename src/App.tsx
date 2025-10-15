@@ -2,7 +2,7 @@ import "./core-ui/index.css";
 import { FC } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./routes/homepage/HomePage";
-import SideMenu from "./components/renameTemp/SideMenu";
+import SideMenu from "./components/sidemenu/SideMenu";
 import Blog from "./routes/blog/BlogPage";
 import About from "./routes/about/About";
 import Contact from "./routes/contact/ContactPage";
