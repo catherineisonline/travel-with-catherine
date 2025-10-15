@@ -102,15 +102,6 @@
   .selected a {
     color: rgb(37, 99, 235);
   }
-  .card-zoom {
-    @apply relative flex justify-center items-center m-3 rounded-md sm:w-screen md:w-56 lg:w-72 h-60 sm:h-80 md:h-72 overflow-hidden;
-  }
-  .card-zoom-image {
-    @apply absolute shadow-sm w-full h-full object-center object-cover transition-all duration-500 ease-in-out cursor-pointer transform;
-  }
-  .card-zoom:hover .card-zoom-image {
-    @apply scale-150;
-  }
 }
 
 .img-modal div {
