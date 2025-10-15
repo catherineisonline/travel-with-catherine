@@ -20,14 +20,14 @@
     height: 100%;
   }
   body {
-    -ms-overflow-style: none; /* for Internet Explorer, Edge */
-    scrollbar-width: none; /* for Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     overflow-y: scroll;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
   }
   body::-webkit-scrollbar {
-    display: none; /* for Chrome, Safari, and Opera */
+    display: none;
   }
 
   img,
@@ -103,10 +103,10 @@
     color: rgb(37, 99, 235);
   }
   .card-zoom {
-    @apply relative flex items-center justify-center m-3 overflow-hidden  h-60 rounded-md sm:w-screen sm:h-80 md:w-56 md:h-72 lg:w-72;
+    @apply relative flex justify-center items-center m-3 rounded-md sm:w-screen md:w-56 lg:w-72 h-60 sm:h-80 md:h-72 overflow-hidden;
   }
   .card-zoom-image {
-    @apply absolute w-full h-full transition-all duration-500 ease-in-out transform shadow-sm cursor-pointer object-cover object-center;
+    @apply absolute shadow-sm w-full h-full object-center object-cover transition-all duration-500 ease-in-out cursor-pointer transform;
   }
   .card-zoom:hover .card-zoom-image {
     @apply scale-150;

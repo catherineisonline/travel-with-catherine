@@ -1,40 +1,36 @@
-import express, { json } from 'express';
-import fetch from 'node-fetch';
-import cors from 'cors'; // Import the cors middleware
+import express, { json } from "express";
+import fetch from "node-fetch";
+import cors from "cors";
 const captchaSecret = process.env.REACT_APP_CAPTCHA_S;
 
 const app = express();
-const port = 3000; // Choose a port for your server
+const port = 3000;
 
 app.use(json());
-app.use(cors()); // Enable CORS for all routes
+app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 
-app.post('/verify-recaptcha', async (req, res) => {
-    const { token } = req.body;
-    const secret = captchaSecret; // Replace with your own reCAPTCHA secret key
-    const uri = `https://www.google.com/recaptcha/api/siteverify?secret=${secret}&response=${token}`;
+app.post("/verify-recaptcha", async (req, res) => {
+  const { token } = req.body;
+  const secret = captchaSecret;
+  const uri = `https://www.google.com/recaptcha/api/siteverify?secret=${secret}&response=${token}`;
 
-    fetch(uri, {
-        method: "post",
+  fetch(uri, {
+    method: "post",
+  })
+    .then((response) => response.json())
+    .then((google_response) => {
+      if (google_response.success === true) {
+        return res.send({ response: "Successful" });
+      } else {
+        return res.send({ response: "Failed" });
+      }
     })
-        .then((response) => response.json())
-        .then((google_response) => {
-            // google as a response
-            if (google_response.success === true) {
-                //   if captcha is verified
-                return res.send({ response: "Successful" });
-            } else {
-                // if captcha is not verified
-                return res.send({ response: "Failed" });
-            }
-        })
-        .catch((error) => {
-            // Some error while verify captcha
-            return res.json({ error });
-        });
+    .catch((error) => {
+      return res.json({ error });
+    });
 });
 
 app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
+  console.log(`Server is running on http://localhost:${port}`);
 });

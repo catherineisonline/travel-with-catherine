@@ -2,10 +2,8 @@ import React, { useRef } from "react";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
-//images
 import OK from "../../assets/images/ok.png";
 import { errorObjI, formValueI } from "../../types/interfaces";
-//keys
 const serviceId = process.env.REACT_APP_SERVICE_ID!;
 const templateId = process.env.REACT_APP_TEMPLATE_ID!;
 const userId = process.env.REACT_APP_USER_ID!;
@@ -31,7 +29,6 @@ const ContactForm = () => {
     e.preventDefault();
     setFormError(validateForm(formValue));
     setLoading(true);
-    //retrieve submission token
     let token = captchaRef.current?.getValue();
     let formVal = form.current;
     formVal?.current?.reset();
@@ -40,7 +37,6 @@ const ContactForm = () => {
       setLoading(false);
       return null;
     } else {
-      //wait till token is confirmed
       await verifyToken(token!);
       emailjs.sendForm(serviceId, templateId, formVal!, userId).then(
         (result) => {
@@ -111,12 +107,10 @@ const ContactForm = () => {
       if (data.response === "Successful") {
         return true;
       } else return false;
-      // Handle the response from the server
     } catch (error) {
       if (error instanceof Error) {
         console.error("Error while verifying reCAPTCHA:", error.message);
       } else {
-        // Handle other types of errors
         console.error("An unknown error occurred:", error);
       }
       return false;

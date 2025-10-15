@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import BlogPostsData from "../../data/BlogPostsData";
-import ResetLocation from "../../helpers/ResetLocation";
+import BlogPostsData from "../../data/blog-posts";
+import { resetLocation } from "../../helpers/resetLocation";
 
 const BlogPosts = () => {
   return (
@@ -13,7 +13,7 @@ const BlogPosts = () => {
             className="block hover:opacity-80 rounded-md w-full sm:h-96 md:h-64 object-center object-cover smooth-transition smooth-transition cursor-pointer"
           />
           <Link
-            onClick={ResetLocation}
+            onClick={resetLocation}
             key={post.id}
             to={`/blog/${post.title.toLowerCase().replace(/\s/g, "%20")}`}
             className="text-black hover:text-blue-600 text-2xl dno-underline capitalize smooth-transition">

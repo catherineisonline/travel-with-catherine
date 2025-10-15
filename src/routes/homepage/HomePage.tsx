@@ -1,12 +1,12 @@
 import { useState, useEffect, useCallback } from "react";
-import GalleryData from "../../data/GalleryData";
+import GalleryData from "../../data/gallery";
 import ReactPaginate from "react-paginate";
 import Images from "./Images";
-import ResetLocation from "../../helpers/ResetLocation";
 import "react-slideshow-image/dist/styles.css";
 import { paginationEvent } from "../../types/interfaces";
+import { resetLocation } from "../../helpers/resetLocation";
 
-const Gallery = () => {
+const HomePage = () => {
   const [itemOffset, setItemOffset] = useState(0);
   const [endOffset, setEndOffset] = useState(itemOffset + 12);
   const [currentBlogPosts, setcurrentBlogPosts] = useState([...GalleryData].slice(itemOffset, endOffset));
@@ -25,7 +25,7 @@ const Gallery = () => {
     const selected = event.selected;
     if (selected) {
       setItemOffset((selected * 12) % GalleryData.length);
-      ResetLocation();
+      resetLocation();
     }
   };
 
@@ -60,7 +60,6 @@ const Gallery = () => {
     window.addEventListener("click", handleClick);
 
     return () => {
-      // Clean up the event listener when the component unmounts
       window.removeEventListener("click", handleClick);
     };
   }, [handleNextClick, handlePrevClick]);
@@ -80,7 +79,6 @@ const Gallery = () => {
         />
       </section>
       {isOpen ? (
-        //Modal
         <section
           className={`img-modal w-screen h-screen fixed z-30 top-0 left-0 flex  justify-center bg-rgba(255, 255, 255, .15) backdrop-blur-sm ${
             isOpen ? "flex" : "hidden"
@@ -120,4 +118,4 @@ const Gallery = () => {
   );
 };
 
-export default Gallery;
+export default HomePage;
