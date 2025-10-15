@@ -3,44 +3,42 @@ import React, { useEffect } from "react";
 import BlogPostsData from "../../data/BlogPostsData";
 import { postObj } from "../../types/interfaces";
 
-
-
 const BlogPost = () => {
   const [post, setPost] = React.useState<postObj>({
     id: 0,
-    src: '',
-    title: '',
-    alt: '',
-    snippet: '',
-    article: '',
-  })
+    src: "",
+    title: "",
+    alt: "",
+    snippet: "",
+    article: "",
+  });
 
-  const findPost = (pathId: string) =>{
-  setPost(BlogPostsData.filter((post) => post.title.toLowerCase() === pathId)[0]);
-  }
+  const findPost = (pathId: string) => {
+    setPost(BlogPostsData.filter((post) => post.title.toLowerCase() === pathId)[0]);
+  };
 
   useEffect(() => {
     document.title = `${post.title} | Travel with Catherine`;
-    findPost(window.location.pathname.toString().substring(6).replaceAll('%20', ' '))
-  },[post])
-    return (
-      <article className="sm:col-span-5 md:col-span-4 min-h-screen scrollbar-hide p-2 mb-6">
-         <h2 className="text-4xl text-center uppercase text-black mt-6">Blog</h2>
-      <section className="flex flex-col min-h-screen items-center gap-4">
+    findPost(window.location.pathname.toString().substring(6).replaceAll("%20", " "));
+  }, [post]);
+  return (
+    <article className="sm:col-span-5 md:col-span-4 mb-6 p-2 min-h-screen scrollbar-hide">
+      <h2 className="mt-6 text-black text-4xl text-center uppercase">Blog</h2>
+      <section className="flex flex-col items-center gap-4 min-h-screen">
         <img
-            src={post.src}
-            alt={post.alt}
-            className=" w-full sm:h-96 md:h-64 block object-cover object-center cursor-pointer smooth-transition hover:opacity-80 smooth-transition "
-          />
-        <h2 className="text-4xl capitalize text-black dno-underline">{post.title}</h2>
+          src={post.src}
+          alt={post.alt}
+          className="block hover:opacity-80 w-full sm:h-96 md:h-64 object-center object-cover smooth-transition smooth-transition cursor-pointer"
+        />
+        <h2 className="text-black text-4xl dno-underline capitalize">{post.title}</h2>
         <section>
-        {post.article.split("<br>").map((text,key) => {
+          {post.article.split("<br>").map((text, key) => {
             return <p key={key}>{text}</p>;
-        })}
+          })}
         </section>
       </section>
-         </article>
-    )
-  }
-  
-  export default BlogPost
+    </article>
+  );
+};
+
+export default BlogPost;
