@@ -6,7 +6,7 @@ import SideMenu from "./components/sidemenu/SideMenu";
 import Blog from "./routes/blog/BlogPage";
 import About from "./routes/about/About";
 import Contact from "./routes/contact/ContactPage";
-import BlogPost from "./routes/blog-post/BlogPost";
+import BlogPost from "./routes/blog-post/BlogPostPage";
 import NotFound from "./routes/not-found/NotFound";
 
 const App: FC = () => {

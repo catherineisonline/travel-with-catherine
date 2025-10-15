@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import ContactForm from "./ContactForm";
 
-const Contact = () => {
+const ContactPage = () => {
   useEffect(() => {
     document.title = "Blog | Travel with Catherine";
   });
@@ -13,4 +13,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactPage;

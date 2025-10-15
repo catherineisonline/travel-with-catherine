@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import BlogPostsData from "../../data/blog-posts";
 import { postObj } from "../../types/interfaces";
 
-const BlogPost = () => {
+const BlogPostPage = () => {
   const [post, setPost] = React.useState<postObj>({
     id: 0,
     src: "",
@@ -40,4 +40,4 @@ const BlogPost = () => {
   );
 };
 
-export default BlogPost;
+export default BlogPostPage;

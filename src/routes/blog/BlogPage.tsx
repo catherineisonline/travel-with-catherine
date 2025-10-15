@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import BlogPosts from "./BlogPosts";
 
-const Blog = () => {
+const BlogPage = () => {
   useEffect(() => {
     document.title = "Blog | Travel with Catherine";
   });
@@ -13,4 +13,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default BlogPage;
