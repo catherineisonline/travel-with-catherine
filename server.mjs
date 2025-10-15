@@ -1,7 +1,7 @@
 import express, { json } from "express";
 import fetch from "node-fetch";
 import cors from "cors";
-const captchaSecret = process.env.REACT_APP_CAPTCHA_S;
+const captchaSecret = import.meta.env.VITE_CAPTCHA_S;
 
 const app = express();
 const port = 3000;
