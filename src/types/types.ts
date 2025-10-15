@@ -1,5 +1,5 @@
 export type imagesToShow = {
-    id: number
-    src: string
-    alt: string
-  }
+  id: number;
+  src: string;
+  alt: string;
+};

@@ -1,28 +1,25 @@
+import "./core-ui/index.css";
 import { FC } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-//Components
-import Gallery from "./components/gallery/Gallery";
-import SideMenu from "./components/sideMenu/SideMenu";
-import Blog from "./components/blog/Blog";
-import About from "./components/about/About";
-import Contact from "./components/contact/Contact";
-//Styles
-import "./core-ui/index.css";
-import BlogPost from "./components/blog-post/BlogPost";
-import NotFound from "./components/not-found/NotFound";
-
+import HomePage from "./routes/homepage/HomePage";
+import SideMenu from "./components/sidemenu/SideMenu";
+import Blog from "./routes/blog/BlogPage";
+import About from "./routes/about/About";
+import Contact from "./routes/contact/ContactPage";
+import BlogPost from "./routes/blog-post/BlogPost";
+import NotFound from "./routes/not-found/NotFound";
 
 const App: FC = () => {
   return (
     <Router>
       <SideMenu />
       <Routes>
-        <Route path="/" element={<Gallery />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/blog/:title" element={<BlogPost/>} />
-        <Route path="*" element={<NotFound/>} />
+        <Route path="/blog/:title" element={<BlogPost />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );

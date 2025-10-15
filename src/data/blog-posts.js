@@ -1,13 +1,13 @@
-import ImgOne from '../assets/images/gallery/image-1.webp';
-import ImgTwo from '../assets/images/gallery/image-2.webp';
-import ImgThree from '../assets/images/gallery/image-3.webp';
-import ImgFour from '../assets/images/gallery/image-4.webp';
-import ImgFive from '../assets/images/gallery/image-5.webp';
-import ImgSix from '../assets/images/gallery/image-6.webp';
-import ImgSeven from '../assets/images/gallery/image-7.webp';
-import ImgEight from '../assets/images/gallery/image-8.webp';
-import ImgNine from '../assets/images/gallery/image-9.webp';
-import ImgTen from '../assets/images/gallery/image-10.webp';
+import ImgOne from "../assets/images/gallery/image-1.webp";
+import ImgTwo from "../assets/images/gallery/image-2.webp";
+import ImgThree from "../assets/images/gallery/image-3.webp";
+import ImgFour from "../assets/images/gallery/image-4.webp";
+import ImgFive from "../assets/images/gallery/image-5.webp";
+import ImgSix from "../assets/images/gallery/image-6.webp";
+import ImgSeven from "../assets/images/gallery/image-7.webp";
+import ImgEight from "../assets/images/gallery/image-8.webp";
+import ImgNine from "../assets/images/gallery/image-9.webp";
+import ImgTen from "../assets/images/gallery/image-10.webp";
 
 const BlogPostsData = [
   {
@@ -15,18 +15,17 @@ const BlogPostsData = [
     src: ImgOne,
     title: "Architectural Heritage of Georgia: Preserving the Soul of a Nation",
     alt: "Cultural building",
-    snippet: "Georgia has a rich architectural heritage that reflects its diverse cultural and historical influences. Georgian architecture is a melting pot of styles, it's a blend of different cultural and historical influences, which makes it unique",
+    snippet:
+      "Georgia has a rich architectural heritage that reflects its diverse cultural and historical influences. Georgian architecture is a melting pot of styles, it's a blend of different cultural and historical influences, which makes it unique",
     article: `Nestled between the soaring Caucasus Mountains and the inviting Black Sea, Georgia boasts a rich history and a diverse cultural heritage. From ancient fortresses and medieval churches to charming traditional houses, the architectural wonders of Georgia are a testament to the nation's vibrant past and its enduring legacy.<br><br>Ancient Fortresses and Cave Cities<br>Georgia's architectural heritage can be traced back to ancient times, where fortresses and cave cities served as essential defense mechanisms against invaders. The Vardzia cave monastery, carved into the cliffs of the Erusheti Mountain, is a prime example of the country's architectural prowess. Built in the 12th century, Vardzia's labyrinthine network of caves, tunnels, and churches captivates visitors with its historical and cultural significance.<br><br>Historic Religious Monuments<br>Georgia is a land of faith, and its religious monuments showcase a stunning blend of architectural styles. The Svetitskhoveli Cathedral in Mtskheta, a UNESCO World Heritage site, is an outstanding example of Georgian medieval architecture. Its breathtaking exterior and elaborate interior frescoes reflect the nation's religious devotion and artistic mastery.<br><br>Traditional Georgian Houses<br>The distinctive architecture of traditional Georgian houses reflects the country's close connection with nature and community values. Wooden balconies, ornate carvings, and colorful facades adorn these charming homes. The famous Svaneti towers, nestled in the mountainous region of Svaneti, stand tall as symbols of strength, unity, and hospitality.<br><br>Art Nouveau and Soviet Influence<br>As Georgia went through periods of cultural exchange and political changes, architectural styles evolved accordingly. In Tbilisi, the capital city, you can witness the blend of Art Nouveau and Soviet-era architecture. The captivating facades, wrought-iron balconies, and grandiose buildings showcase the city's eclectic architectural identity.<br><br>Preservation Efforts<br>While Georgia's architectural heritage is a source of immense pride, these treasures face numerous challenges. Weathering, urbanization, and inadequate maintenance threaten the integrity of historical buildings. However, there is a growing awareness of the need for preservation efforts.<br><br>Government Initiatives: The Georgian government has taken significant steps to protect and restore architectural landmarks. Preservation laws and incentives aim to encourage responsible restoration and conservation practices.<br><br>Community Involvement: Local communities play a crucial role in preserving architectural heritage. By promoting cultural tourism, organizing events, and raising awareness, they ensure that these valuable assets remain an integral part of Georgia's identity.<br><br>International Recognition: UNESCO has recognized several Georgian sites as World Heritage, such as Bagrati Cathedral and Gelati Monastery. This global recognition highlights the significance of Georgia's architectural heritage on the world stage.<br><br>Conclusion<br>The architectural heritage of Georgia is a tapestry woven with the threads of history, culture, and art. From ancient cave cities to medieval churches and traditional houses, these architectural wonders narrate the story of a resilient and culturally rich nation. Preserving this heritage is not just a duty but a commitment to safeguard the soul of Georgia. Through collective efforts and appreciation for the past, we can ensure that these architectural treasures continue to inspire and delight generations to come. Let us cherish and protect the architectural heritage of Georgia as a legacy to be cherished for centuries ahead.`,
-
   },
   {
     id: 2,
     src: ImgTwo,
-    title:
-      'Unveiling the Allure of Georgian Hotels: Where Tradition Meets Hospitality',
-    alt: 'Georgian hotel building',
+    title: "Unveiling the Allure of Georgian Hotels: Where Tradition Meets Hospitality",
+    alt: "Georgian hotel building",
     snippet:
-      'Georgia is a popular tourist destination known for its natural beauty, rich culture and history, and delicious cuisine. There are many hotels in Georgia that cater to a range of budgets and preferences. ',
+      "Georgia is a popular tourist destination known for its natural beauty, rich culture and history, and delicious cuisine. There are many hotels in Georgia that cater to a range of budgets and preferences. ",
     article: `Georgia, with its stunning landscapes and rich cultural heritage, has emerged as a captivating destination for travelers seeking an unforgettable experience. Beyond its picturesque mountains and ancient monuments, the country offers a wide array of charming hotels that blend modern amenities with Georgian traditions. In this blog post, we will explore the allure of hotels in Georgia, where warm hospitality and cultural nuances create an enchanting stay for visitors.<br><br>
 
     Traditional Guesthouses<br>
@@ -53,10 +52,10 @@ const BlogPostsData = [
   {
     id: 3,
     src: ImgThree,
-    title: 'A Tapestry of Riches: Exploring the Arts and Culture of Georgia',
-    alt: 'Cultural art building',
+    title: "A Tapestry of Riches: Exploring the Arts and Culture of Georgia",
+    alt: "Cultural art building",
     snippet:
-      'Georgia has a rich and diverse artistic tradition that reflects its cultural and historical heritage - Iconography, Frescoes, Metalwork, Enamel, Textile art and much more.  The use of intricate details and bright colors are common characteristics in many of the forms of art in Georgia.',
+      "Georgia has a rich and diverse artistic tradition that reflects its cultural and historical heritage - Iconography, Frescoes, Metalwork, Enamel, Textile art and much more.  The use of intricate details and bright colors are common characteristics in many of the forms of art in Georgia.",
     article: `Nestled in the crossroads of Europe and Asia, Georgia boasts a vibrant and diverse cultural heritage that dates back millennia. From ancient traditions to contemporary expressions, the arts and culture of Georgia offer a captivating journey through history and creativity. In this blog post, we will delve into the kaleidoscope of Georgian arts and culture, celebrating the traditions that have withstood the test of time and embracing the modern innovations that shape the nation's identity.<br><br>
 
     Traditional Georgian Music and Dance<br>
@@ -83,11 +82,9 @@ const BlogPostsData = [
   {
     id: 4,
     src: ImgFour,
-    title:
-      'Ancient Wine of Georgia: Unveiling the Elixir of History and Tradition',
-    alt: 'White wine glass',
-    snippet:
-      `Georgia is a country with an ancient tradition of winemaking, dating back over 8,000 years.Georgian wine is known for its unique flavor and aroma, as well as its use of traditional winemaking methods, such as the use of clay vessels called 'qvevri' for fermentation and aging.`,
+    title: "Ancient Wine of Georgia: Unveiling the Elixir of History and Tradition",
+    alt: "White wine glass",
+    snippet: `Georgia is a country with an ancient tradition of winemaking, dating back over 8,000 years.Georgian wine is known for its unique flavor and aroma, as well as its use of traditional winemaking methods, such as the use of clay vessels called 'qvevri' for fermentation and aging.`,
     article: `Georgia, the cradle of wine, has a winemaking tradition that dates back over 8,000 years. Situated in the fertile valleys of the South Caucasus, the country's ancient wine culture is a true testament to the bond between humans and nature. In this blog post, we will explore the intriguing history and unique winemaking techniques of Georgia, revealing the secrets of this elixir that has withstood the test of time.<br><br>
 
     The Origins of Winemaking<br>
@@ -115,10 +112,10 @@ const BlogPostsData = [
   {
     id: 5,
     src: ImgFive,
-    title: 'Graffiti in Georgia: A Canvas of Expression and Social Commentary',
-    alt: 'Graffiti on the building',
+    title: "Graffiti in Georgia: A Canvas of Expression and Social Commentary",
+    alt: "Graffiti on the building",
     snippet:
-      'Georgia, like many other countries, has a graffiti culture that has developed in recent years. Graffiti in Georgia can be found in cities such as Tbilisi, Batumi, and Kutaisi, among others. Street art, murals, and graffiti are becoming increasingly popular in the country',
+      "Georgia, like many other countries, has a graffiti culture that has developed in recent years. Graffiti in Georgia can be found in cities such as Tbilisi, Batumi, and Kutaisi, among others. Street art, murals, and graffiti are becoming increasingly popular in the country",
     article: `Georgia, the cradle of wine, has a winemaking tradition that dates back over 8,000 years. Situated in the fertile valleys of the South Caucasus, the country's ancient wine culture is a true testament to the bond between humans and nature. In this blog post, we will explore the intriguing history and unique winemaking techniques of Georgia, revealing the secrets of this elixir that has withstood the test of time.<br><br>
 
     The Origins of Winemaking<br>
@@ -146,11 +143,10 @@ const BlogPostsData = [
   {
     id: 6,
     src: ImgSix,
-    title:
-      'Business in Georgia: Nurturing Growth and Entrepreneurship in the Caucasus',
-    alt: 'Buisness center in Tbilisi',
+    title: "Business in Georgia: Nurturing Growth and Entrepreneurship in the Caucasus",
+    alt: "Buisness center in Tbilisi",
     snippet:
-      'Georgia is a country with a rapidly developing economy and a growing business environment. The country has a diverse range of industries and sectors, and there are many opportunities for businesses to succeed.',
+      "Georgia is a country with a rapidly developing economy and a growing business environment. The country has a diverse range of industries and sectors, and there are many opportunities for businesses to succeed.",
     article: `Georgia, with its strategic location at the crossroads of Europe and Asia, is a country that embraces economic opportunities and fosters a pro-business environment. From its dynamic capital city, Tbilisi, to the lush regions of agriculture and tourism, Georgia has become an attractive destination for entrepreneurs and investors. In this blog post, we will explore the vibrant landscape of business in Georgia, highlighting the factors that have contributed to its growth and the entrepreneurial spirit that defines the nation's economic landscape.<br><br>
 
     Simplified Business Regulations<br>
@@ -178,10 +174,10 @@ const BlogPostsData = [
   {
     id: 7,
     src: ImgSeven,
-    title: 'Kazbegi: A Majestic Alpine Retreat in the Heart of Georgia',
-    alt: 'Home in Kazbegi',
+    title: "Kazbegi: A Majestic Alpine Retreat in the Heart of Georgia",
+    alt: "Home in Kazbegi",
     snippet:
-      'Kazbegi is a small town located in the Kazbegi Municipality in the Mtskheta-Mtianeti region of Georgia. It is situated on the banks of the Tergi River and is surrounded by the Kazbegi Mountains, which are part of the Greater Caucasus Mountain range.',
+      "Kazbegi is a small town located in the Kazbegi Municipality in the Mtskheta-Mtianeti region of Georgia. It is situated on the banks of the Tergi River and is surrounded by the Kazbegi Mountains, which are part of the Greater Caucasus Mountain range.",
     article: `Nestled amidst the towering peaks of the Greater Caucasus Mountains, Kazbegi, also known as Stepantsminda, is a picturesque mountain town in Georgia that beckons adventurers and nature enthusiasts alike. This alpine retreat offers a serene escape from the bustling urban life and provides a gateway to some of the most breathtaking natural landscapes in the region. In this blog post, we will explore the allure of Kazbegi, delving into its awe-inspiring beauty, rich cultural heritage, and the wealth of outdoor activities it offers.<br><br>
 
     Mesmerizing Natural Beauty<br>
@@ -209,11 +205,10 @@ const BlogPostsData = [
   {
     id: 8,
     src: ImgEight,
-    title:
-      'The Majestic Beauty of Kazbegi Mountains: A Paradise for Adventure and Serenity',
-    alt: 'Mountain view',
+    title: "The Majestic Beauty of Kazbegi Mountains: A Paradise for Adventure and Serenity",
+    alt: "Mountain view",
     snippet:
-      'Kazbegi is surrounded by the Kazbegi Mountains, which are part of the Greater Caucasus Mountain range. Some of the most notable mountains in the Kazbegi region include Kazbek, Shani, Lebaiskari, Tetnuldi and others.',
+      "Kazbegi is surrounded by the Kazbegi Mountains, which are part of the Greater Caucasus Mountain range. Some of the most notable mountains in the Kazbegi region include Kazbek, Shani, Lebaiskari, Tetnuldi and others.",
     article: `Nestled in the heart of the Greater Caucasus Mountains, Kazbegi is a region of Georgia blessed with a dramatic and awe-inspiring landscape. With its towering peaks, alpine meadows, and glacial rivers, the mountains of Kazbegi are a paradise for adventurers and nature enthusiasts seeking solace amidst breathtaking vistas. In this blog post, we will explore the unparalleled beauty of the Kazbegi mountains, the wealth of outdoor activities they offer, and the profound sense of tranquility they bestow upon visitors.<br><br>
 
     Towering Peaks and Snow-Capped Wonders<br>
@@ -241,10 +236,10 @@ const BlogPostsData = [
   {
     id: 9,
     src: ImgNine,
-    title: 'Georgian Nature: A Breathtaking Tapestry of Diversity and Beauty',
-    alt: 'Birds graffiti art among leaves',
+    title: "Georgian Nature: A Breathtaking Tapestry of Diversity and Beauty",
+    alt: "Birds graffiti art among leaves",
     snippet:
-      'Georgia is a country known for its diverse and beautiful landscapes. The country has a wide range of natural features, including mountains, forests, rivers, and lakes.',
+      "Georgia is a country known for its diverse and beautiful landscapes. The country has a wide range of natural features, including mountains, forests, rivers, and lakes.",
     article: `Georgia's natural landscapes are a symphony of beauty, encompassing a diverse range of terrains, from lush valleys to soaring mountains and pristine coastlines. With its unique geographical location and varied ecosystems, Georgia is a treasure trove for nature enthusiasts and adventurers alike. In this blog post, we will embark on a journey to explore the breathtaking beauty of Georgian nature, the remarkable biodiversity it harbors, and the profound connection between the people and the land.<br><br>
 
     Majestic Mountains and Enchanting Valleys<br>
@@ -272,11 +267,10 @@ const BlogPostsData = [
   {
     id: 10,
     src: ImgTen,
-    title:
-      'Gastronomic Delights: Exploring the Richness of Traditional Cuisine in Georgia',
-    alt: 'Georgian food',
+    title: "Gastronomic Delights: Exploring the Richness of Traditional Cuisine in Georgia",
+    alt: "Georgian food",
     snippet:
-      'Georgian cuisine is known for its unique and diverse flavors, as well as its use of fresh, locally-sourced ingredients. The dishes taste like no other especially the ones which include different kinds of spices you have never seen.',
+      "Georgian cuisine is known for its unique and diverse flavors, as well as its use of fresh, locally-sourced ingredients. The dishes taste like no other especially the ones which include different kinds of spices you have never seen.",
     article: `Traditional cuisine in Georgia is a harmonious fusion of flavors, reflecting the country's diverse cultural heritage and the bountiful offerings of its fertile land. Georgian cuisine is renowned for its vibrant colors, aromatic spices, and a wide array of dishes that delight the senses. In this blog post, we will embark on a culinary journey through the traditional cuisine of Georgia, uncovering the essence of its flavors and the cultural significance of its gastronomic delights.
 
     The Art of the Supra: A Feast of Togetherness<br>

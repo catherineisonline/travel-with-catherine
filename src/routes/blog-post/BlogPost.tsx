@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-//Data
-import BlogPostsData from "../../data/BlogPostsData";
+import BlogPostsData from "../../data/blog-posts";
 import { postObj } from "../../types/interfaces";
 
 const BlogPost = () => {
