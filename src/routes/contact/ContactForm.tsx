@@ -119,10 +119,10 @@ const ContactForm = () => {
   return (
     <React.Fragment>
       {loading ? (
-        <div className="loader-container">
+        <div className="flex flex-col items-center align-middle">
           <img
-            className="spinner"
-            src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2dzNDhuejZ1d2VhNnY1bmxrNjl2ZmZiaXM2dDVzZjMzb2hjN2ZieCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/Rd755PrtAEhZLLTt2N/giphy.gif"
+            className="w-50 h-50"
+            src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExY29xOWJiZ2FhMXgxeGR4Nmh2MG1lNjFmMzN5NTB0ZWJmOG41dnEwdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/FAgpqNvSeUQSmrOewI/giphy.gif"
             alt=""
             aria-hidden="true"
           />
