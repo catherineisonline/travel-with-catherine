@@ -32,9 +32,11 @@ const SideMenu = () => {
         alt="Toggle menu"
       />
       <nav
-        className={`main-menu${
-          hiddenMenu ? `` : ` show-menu`
-        } flex-col items-center fixed mt-60 text-2xl gap-5 text-slate-600 hidden md:flex`}>
+        className={`fixed flex-col text-black ${
+          hiddenMenu
+            ? "hidden md:flex items-center gap-5 mt-60 text-slate-600 text-2xl"
+            : "left-0 z-40 flex justify-center items-center content-center gap-8 bg-white/15 backdrop-blur-sm m-0 p-4 w-screen h-screen overflow-x-hidden font-semibold"
+        }`}>
         <h1 className="font-light text-black sm:text-xl md:text-3xl text-center uppercase">
           Travel with<br></br>
           <span className="font-namefont font-semibold text-5xl">Catherine</span>
