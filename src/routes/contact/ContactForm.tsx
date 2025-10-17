@@ -8,14 +8,12 @@ const serviceId = import.meta.env.VITE_SERVICE_ID;
 const templateId = import.meta.env.VITE_TEMPLATE_ID;
 const userId = import.meta.env.VITE_USER_ID;
 const serverUrl = import.meta.env.VITE_SERVER_URL;
-const captchaSecret = import.meta.env.VITE_CAPTCHA_S;
 const captchaKey = import.meta.env.VITE_CAPTCHA_K;
 
 const ContactForm = () => {
   const form = useRef<HTMLFormElement>(null);
   const captchaRef = useRef<ReCAPTCHA>(null);
   const [loading, setLoading] = useState(false);
-
   const [formValue, setFormValue] = useState<formValueI>({
     firstname: "",
     lastname: "",
@@ -25,36 +23,44 @@ const ContactForm = () => {
   const [formError, setFormError] = useState<errorObjI>({});
   const [submit, setSubmit] = useState(false);
 
-  const handleSubmit = async (e: React.SyntheticEvent) => {
-    e.preventDefault();
-    setFormError(validateForm(formValue));
+  const handleSubmit = async () => {
     setLoading(true);
-    let token = captchaRef.current?.getValue();
-    let formVal = form.current;
-    formVal?.current?.reset();
-    captchaRef.current?.reset();
+    setFormError(validateForm(formValue));
+
     if (Object.keys(validateForm(formValue)).length > 0) {
       setLoading(false);
       return null;
     } else {
-      await verifyToken(token!);
-      emailjs.sendForm(serviceId, templateId, formVal!, userId).then(
-        (result) => {
-          if (result.text === "OK") {
-            setSubmit(true);
-            setFormValue({
-              firstname: "",
-              lastname: "",
-              email: "",
-              message: "",
-            });
-          }
-          setLoading(false);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+      const verified = await verifyCaptcha();
+      if (!verified) {
+        setLoading(false);
+        return;
+      }
+      const isEmailSent = await handleEmail();
+      if (isEmailSent) {
+        setSubmit(true);
+        setFormValue({
+          firstname: "",
+          lastname: "",
+          email: "",
+          message: "",
+        });
+      }
+    }
+  };
+  const handleEmail = async (): Promise<boolean> => {
+    let formVal = form.current;
+    formVal?.current?.reset();
+    try {
+      const response = await emailjs.sendForm(serviceId, templateId, formVal!, userId);
+
+      if (response.text !== "OK") {
+        throw new Error(response.text);
+      }
+      return true;
+    } catch (error) {
+      console.log(error);
+      return false;
     }
   };
   const validateForm = (value: formValueI) => {
@@ -91,29 +97,34 @@ const ContactForm = () => {
     setFormValue({ ...formValue, [e.currentTarget.id]: e.currentTarget.value });
   };
 
-  const verifyToken = async (token: string): Promise<boolean> => {
+  const verifyCaptcha = async (): Promise<boolean> => {
+    const token = captchaRef.current?.getValue();
+
     try {
       const response = await fetch(serverUrl, {
         method: "POST",
-        body: JSON.stringify({
-          secret: captchaSecret,
-          token,
-        }),
         headers: {
           "Content-Type": "application/json",
         },
+        body: JSON.stringify({
+          token,
+        }),
       });
-      const data = await response.json();
-      if (data.response === "Successful") {
-        return true;
-      } else return false;
+
+      const result = await response.json();
+      if (!response.ok) {
+        throw new Error(result.message);
+      }
+      return true;
     } catch (error) {
       if (error instanceof Error) {
-        console.error("Error while verifying reCAPTCHA:", error.message);
+        console.error(error.message);
       } else {
-        console.error("An unknown error occurred:", error);
+        console.error("Unknown error in Captcha:", error);
       }
       return false;
+    } finally {
+      captchaRef.current?.reset();
     }
   };
   return (
@@ -143,7 +154,7 @@ const ContactForm = () => {
           </button>
         </article>
       ) : (
-        <form ref={form} id="recaptcha" className="w-full max-w-lg" onSubmit={handleSubmit}>
+        <form ref={form} id="recaptcha" className="w-full max-w-lg">
           <div className="flex flex-wrap -mx-3 mb-6">
             <div className="mb-6 md:mb-0 px-3 w-full md:w-1/2">
               <label className="block mb-2 text-gray-700 text-xs uppercase tracking-wide" htmlFor="firstname">
@@ -211,8 +222,9 @@ const ContactForm = () => {
           <div className="md:flex md:items-center">
             <div className="md:w-1/3">
               <button
+                onClick={handleSubmit}
                 className="bg-blue-600 hover:bg-blue-400 shadow px-4 py-2 rounded focus:shadow-outline focus:outline-none font-bold text-white smooth-transition cursor-pointer"
-                type="submit">
+                type="button">
                 Send
               </button>
             </div>
