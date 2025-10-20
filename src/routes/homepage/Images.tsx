@@ -1,14 +1,14 @@
 import { ImagesProp } from "../../types/interfaces";
 
-const Images = ({ imagesToShow, toggle, setModalImg }: ImagesProp) => {
+const Images = ({ currentImages, toggle, handleSliderImg }: ImagesProp) => {
   return (
     <section className="gap-1 grid grid-cols-2 2xl:grid-cols-3 mx-auto w-full overflow-hidden image-list">
-      {imagesToShow.map((img, index) => (
+      {currentImages.map((img, index) => (
         <section className="group relative flex rounded-md w-full h-60 overflow-hidden" key={index}>
           <img
             onClick={() => {
               toggle();
-              setModalImg(index);
+              handleSliderImg(img.id);
             }}
             src={img.src}
             alt={img.alt}
