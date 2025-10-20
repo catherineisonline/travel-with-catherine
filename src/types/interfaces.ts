@@ -25,9 +25,9 @@ export interface errorObjI {
 }
 
 export interface ImagesProp {
-  imagesToShow: imagesToShow[];
+  currentImages: imagesToShow[];
   toggle: () => void;
-  setModalImg: (imgIndex: number) => void;
+  handleSliderImg: (id: number) => void;
 }
 
 export interface paginationEvent {
