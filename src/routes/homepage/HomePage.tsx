@@ -78,14 +78,14 @@ const HomePage = () => {
             data-type="prev">
             &lt;
           </button>
-          <section className="relative flex items-center w-4/5 slider-container">
+          <section className="relative flex items-center aspect-square slider-container">
             <img
               key={sliderImage.id}
-              className={`slider-slide ${
-                sliderImage ? "active" : "hidden"
-              } object-cover object-center w-full sm:h-2/3 md:h-3/4`}
+              className={`slider-slide ${sliderImage ? "active" : "hidden"} object-cover object-center w-full h-full `}
               src={sliderImage.src}
               alt={sliderImage.alt}
+              width="900"
+              height="900"
             />
           </section>
           <button
