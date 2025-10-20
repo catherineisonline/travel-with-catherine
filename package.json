@@ -9,12 +9,13 @@
     "build": "vite build",
     "preview": "vite preview",
     "check-deps": "npm-check",
-    "server": "node server.mjs"
+    "server": "node backend/server.mjs"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@tailwindcss/vite": "^4.1.14",
     "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
     "express": "^4.18.2",
     "node-fetch": "^3.3.2",
     "react": "^19.2.0",
