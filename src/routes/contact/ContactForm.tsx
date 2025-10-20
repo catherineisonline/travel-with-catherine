@@ -119,6 +119,7 @@ const ContactForm = () => {
             contact me on socials which you can find in the side menu.
           </p>
           <button
+            type="button"
             onClick={() => setSubmit(false)}
             className="bg-black hover:bg-blue-400 shadow px-4 py-2 rounded focus:shadow-outline focus:outline-none font-bold text-white smooth-transition">
             Send again
@@ -126,68 +127,65 @@ const ContactForm = () => {
         </article>
       ) : (
         <form onSubmit={handleSubmit} ref={form} id="recaptcha" className="w-full max-w-lg">
-          <div className="flex flex-wrap -mx-3 mb-6">
-            <div className="mb-6 md:mb-0 px-3 w-full md:w-1/2">
-              <label className="block mb-2 text-gray-700 text-xs uppercase tracking-wide" htmlFor="firstname">
-                First Name
-              </label>
-              <input
-                className="block bg-gray-200 focus:bg-white mb-3 px-4 py-3 border border-gray-200 focus:border-gray-500 rounded focus:outline-none w-full text-gray-700 leading-tight appearance-none"
-                type="text"
-                id="firstname"
-                onChange={handleChange}
-                value={formValue.firstname}
-                name="firstname"
-              />
-              {formError.firstname && (
-                <span className="text-red-600 input-validation-error">{formError.firstname}</span>
-              )}
-            </div>
-            <div className="mb-6 md:mb-0 px-3 w-full md:w-1/2">
-              <label className="block mb-2 text-gray-700 text-xs uppercase tracking-wide" htmlFor="lastname">
-                Last Name
-              </label>
-              <input
-                className="block bg-gray-200 focus:bg-white mb-3 px-4 py-3 border border-gray-200 focus:border-gray-500 rounded focus:outline-none w-full text-gray-700 leading-tight appearance-none"
-                id="lastname"
-                type="text"
-                onChange={handleChange}
-                value={formValue.lastname}
-                name="lastname"
-              />
-              {formError.lastname && <span className="text-red-600 input-validation-error">{formError.lastname}</span>}
-            </div>
+          <div className="flex flex-wrap -mx-3 mb-6 px-3 w-full">
+            <label className="block mb-2 text-gray-700 text-xs uppercase tracking-wide" htmlFor="firstname">
+              First Name
+            </label>
+            <input
+              className="block bg-gray-200 focus:bg-white mb-3 px-4 py-3 border border-gray-200 focus:border-gray-500 rounded focus:outline-none w-full text-gray-700 leading-tight appearance-none"
+              type="text"
+              id="firstname"
+              onChange={handleChange}
+              value={formValue.firstname}
+              name="firstname"
+              placeholder="Your name"
+            />
+            {formError.firstname && <span className="text-red-600 input-validation-error">{formError.firstname}</span>}
           </div>
-          <div className="flex flex-wrap -mx-3 mb-6">
-            <div className="px-3 w-full">
-              <label className="block mb-2 text-gray-700 text-xs uppercase tracking-wide" htmlFor="email">
-                E-mail
-              </label>
-              <input
-                className="block bg-gray-200 focus:bg-white mb-3 px-4 py-3 border border-gray-200 focus:border-gray-500 rounded focus:outline-none w-full text-gray-700 leading-tight appearance-none"
-                id="email"
-                type="email"
-                onChange={handleChange}
-                value={formValue.email}
-                name="email"
-              />
-              {formError.email && <span className="text-red-600 input-validation-error">{formError.email}</span>}
-            </div>
+          <div className="flex flex-wrap -mx-3 mb-6 px-3 w-full">
+            <label className="block mb-2 text-gray-700 text-xs uppercase tracking-wide" htmlFor="lastname">
+              Last Name
+            </label>
+            <input
+              className="block bg-gray-200 focus:bg-white mb-3 px-4 py-3 border border-gray-200 focus:border-gray-500 rounded focus:outline-none w-full text-gray-700 leading-tight appearance-none"
+              id="lastname"
+              type="text"
+              onChange={handleChange}
+              value={formValue.lastname}
+              name="lastname"
+              placeholder="Your last name"
+            />
+            {formError.lastname && <span className="text-red-600 input-validation-error">{formError.lastname}</span>}
           </div>
-          <div className="flex flex-wrap -mx-3 mb-6">
-            <div className="px-3 w-full">
-              <label className="block mb-2 text-gray-700 text-xs uppercase tracking-wide" htmlFor="message">
-                Message
-              </label>
-              <textarea
-                className="block bg-gray-200 focus:bg-white mb-3 px-4 py-3 border border-gray-200 focus:border-gray-500 rounded focus:outline-none w-full h-48 text-gray-700 leading-tight appearance-none no-resize resize-none"
-                id="message"
-                onChange={handleChange}
-                value={formValue.message}
-                name="message"
-              />
-              {formError.message && <span className="text-red-600 input-validation-error">{formError.message}</span>}
-            </div>
+
+          <div className="flex flex-wrap -mx-3 mb-6 px-3 w-full">
+            <label className="block mb-2 text-gray-700 text-xs uppercase tracking-wide" htmlFor="email">
+              E-mail
+            </label>
+            <input
+              className="block bg-gray-200 focus:bg-white mb-3 px-4 py-3 border border-gray-200 focus:border-gray-500 rounded focus:outline-none w-full text-gray-700 leading-tight appearance-none"
+              id="email"
+              type="email"
+              onChange={handleChange}
+              value={formValue.email}
+              name="email"
+              placeholder="Email address"
+            />
+            {formError.email && <span className="text-red-600 input-validation-error">{formError.email}</span>}
+          </div>
+          <div className="flex flex-wrap -mx-3 mb-6 px-3 w-full">
+            <label className="block mb-2 text-gray-700 text-xs uppercase tracking-wide" htmlFor="message">
+              Message
+            </label>
+            <textarea
+              className="block bg-gray-200 focus:bg-white mb-3 px-4 py-3 border border-gray-200 focus:border-gray-500 rounded focus:outline-none w-full h-48 text-gray-700 leading-tight appearance-none no-resize resize-none"
+              id="message"
+              onChange={handleChange}
+              value={formValue.message}
+              name="message"
+              placeholder="A message with at least 5 characters"
+            />
+            {formError.message && <span className="text-red-600 input-validation-error">{formError.message}</span>}
           </div>
 
           <ReCAPTCHA
