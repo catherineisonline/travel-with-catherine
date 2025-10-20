@@ -1,10 +1,10 @@
-import React, { SyntheticEvent, useRef } from "react";
-import { useState } from "react";
+import React, { SyntheticEvent, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
 import OK from "../../assets/images/ok.png";
 import { errorObjI, formValueI } from "../../types/interfaces";
 import { validateForm } from "../../helpers/validateForm";
+
 const serviceId = import.meta.env.VITE_SERVICE_ID;
 const templateId = import.meta.env.VITE_TEMPLATE_ID;
 const userId = import.meta.env.VITE_USER_ID;
@@ -13,7 +13,7 @@ const captchaKey = import.meta.env.VITE_CAPTCHA_K;
 
 const ContactForm = () => {
   const form = useRef<HTMLFormElement>(null);
-  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState<"loading" | "idle" | "sent">("idle");
   const [formValue, setFormValue] = useState<formValueI>({
     firstname: "",
     lastname: "",
@@ -21,12 +21,12 @@ const ContactForm = () => {
     message: "",
   });
   const [formError, setFormError] = useState<errorObjI>({});
-  const [submit, setSubmit] = useState(false);
   const [token, setToken] = useState<string | null>(null);
 
   const handleEmail = async (formVal: HTMLFormElement | null): Promise<boolean> => {
+    if (!formVal || !serviceId || !templateId || !userId) return false;
     try {
-      const response = await emailjs.sendForm(serviceId, templateId, formVal!, userId);
+      const response = await emailjs.sendForm(serviceId, templateId, formVal, userId);
       if (response.text !== "OK") {
         throw new Error(response.text);
       }
@@ -34,13 +34,11 @@ const ContactForm = () => {
     } catch (error) {
       console.log(error);
       return false;
-    } finally {
-      form.current?.reset();
     }
   };
 
-  const handleChange = (e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormValue({ ...formValue, [e.currentTarget.id]: e.currentTarget.value });
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormValue((prev) => ({ ...prev, [e.target.id]: e.target.value }));
   };
 
   const verifyCaptcha = async (): Promise<boolean> => {
@@ -72,35 +70,38 @@ const ContactForm = () => {
   const handleSubmit = async (e: SyntheticEvent) => {
     e.preventDefault();
 
-    const errors = await validateForm(formValue);
+    const errors = validateForm(formValue);
     if (Object.keys(errors).length > 0) {
       setFormError(errors);
-      setLoading(false);
+
+      setStatus("idle");
       return;
     }
     setFormError({});
 
-    if (!token) return setLoading(false);
+    if (!token) {
+      setFormError((prev) => ({ ...prev, captcha: "Please verify the captcha" }));
+      return setStatus("idle");
+    }
     const isVerified = await verifyCaptcha();
-    if (!isVerified) return setLoading(false);
+    if (!isVerified) return setStatus("idle");
     let formVal = form?.current;
-    setLoading(true);
+    setStatus("loading");
     const isEmailSent = await handleEmail(formVal);
-    if (!isEmailSent) return setLoading(false);
+    if (!isEmailSent) return setStatus("idle");
 
-    setSubmit(true);
+    setStatus("sent");
     setFormValue({
       firstname: "",
       lastname: "",
       email: "",
       message: "",
     });
-    setLoading(false);
   };
 
   return (
     <React.Fragment>
-      {loading ? (
+      {status === "loading" ? (
         <div className="flex flex-col items-center align-middle">
           <img
             className="w-50 h-50"
@@ -109,9 +110,9 @@ const ContactForm = () => {
             aria-hidden="true"
           />
         </div>
-      ) : submit ? (
+      ) : status === "sent" ? (
         <article className="flex flex-col items-center gap-2 mt-20 w-90 max-w-lg">
-          <img max-w-full="true" src={OK} alt="" aria-hidden="true" />
+          <img className="max-w-full" src={OK} alt="" aria-hidden="true" />
           <h2 className="text-black text-2xl uppercase tracking-wide">Thank you!</h2>
           <p className="text-black tracking-wide">Your message has been sent successfully</p>
           <p className="block mb-2 text-black text-center tracking-wide">
@@ -120,8 +121,8 @@ const ContactForm = () => {
           </p>
           <button
             type="button"
-            onClick={() => setSubmit(false)}
-            className="bg-black hover:bg-blue-400 shadow px-4 py-2 rounded focus:shadow-outline focus:outline-none font-bold text-white smooth-transition">
+            onClick={() => setStatus("idle")}
+            className="bg-black hover:bg-blue-400 shadow px-4 py-2 rounded focus:shadow-outline focus:outline-none font-bold text-white smooth-transition cursor-pointer">
             Send again
           </button>
         </article>
@@ -187,13 +188,14 @@ const ContactForm = () => {
             />
             {formError.message && <span className="text-red-600 input-validation-error">{formError.message}</span>}
           </div>
-
-          <ReCAPTCHA
-            onChange={(token) => setToken(token)}
-            className="flex flex-wrap mb-6 g-recaptcha"
-            sitekey={captchaKey}
-          />
-
+          <div className="flex flex-col flex-wrap -mx-3 mb-6 px-3 w-full">
+            <ReCAPTCHA
+              onChange={(token) => setToken(token)}
+              className="flex flex-wrap mb-6 g-recaptcha"
+              sitekey={captchaKey}
+            />
+            {formError.captcha && <span className="text-red-600 input-validation-error">{formError.captcha}</span>}
+          </div>
           <div className="md:flex md:items-center">
             <div className="md:w-1/3">
               <button

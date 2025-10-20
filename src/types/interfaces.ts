@@ -21,6 +21,7 @@ export interface errorObjI {
   lastname?: string;
   email?: string;
   message?: string;
+  captcha?: string;
 }
 
 export interface ImagesProp {

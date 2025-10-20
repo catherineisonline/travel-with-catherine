@@ -1,6 +1,6 @@
 import { errorObjI, formValueI } from "../types/interfaces";
 
-export const validateForm = async (value: formValueI) => {
+export const validateForm = (value: formValueI) => {
   let errors: errorObjI = {};
   const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
   if (!value.firstname) {
