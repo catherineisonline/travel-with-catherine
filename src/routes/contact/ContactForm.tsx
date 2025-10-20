@@ -4,6 +4,7 @@ import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
 import OK from "../../assets/images/ok.png";
 import { errorObjI, formValueI } from "../../types/interfaces";
+import { validateForm } from "../../helpers/validateForm";
 const serviceId = import.meta.env.VITE_SERVICE_ID;
 const templateId = import.meta.env.VITE_TEMPLATE_ID;
 const userId = import.meta.env.VITE_USER_ID;
@@ -22,32 +23,6 @@ const ContactForm = () => {
   });
   const [formError, setFormError] = useState<errorObjI>({});
   const [submit, setSubmit] = useState(false);
-
-  const handleSubmit = async () => {
-    setLoading(true);
-    setFormError(validateForm(formValue));
-
-    if (Object.keys(validateForm(formValue)).length > 0) {
-      setLoading(false);
-      return null;
-    } else {
-      const verified = await verifyCaptcha();
-      if (!verified) {
-        setLoading(false);
-        return;
-      }
-      const isEmailSent = await handleEmail();
-      if (isEmailSent) {
-        setSubmit(true);
-        setFormValue({
-          firstname: "",
-          lastname: "",
-          email: "",
-          message: "",
-        });
-      }
-    }
-  };
   const handleEmail = async (): Promise<boolean> => {
     let formVal = form.current;
     formVal?.current?.reset();
@@ -63,37 +38,8 @@ const ContactForm = () => {
       return false;
     }
   };
-  const validateForm = (value: formValueI) => {
-    let errors: errorObjI = {};
-    const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
-    if (!value.firstname) {
-      errors.firstname = "Please enter your name";
-    } else if (value.firstname.length < 3) {
-      errors.firstname = "Please enter a valid name";
-    } else if (Number(value.firstname)) {
-      errors.firstname = "Please enter a valid name";
-    }
-    if (!value.lastname) {
-      errors.lastname = "Please enter your lastname";
-    } else if (value.lastname.length < 4) {
-      errors.lastname = "Please enter a valid lastname";
-    } else if (Number(value.lastname)) {
-      errors.lastname = "Please enter a valid lastname";
-    }
-    if (!value.email) {
-      errors.email = "Please enter your email";
-    } else if (!emailRegex.test(value.email)) {
-      errors.email = "Please enter valid email";
-    }
-    if (!value.message) {
-      errors.message = "Please write a message";
-    } else if (value.message.length < 5) {
-      errors.message = "Please enter at least 5 characters";
-    }
 
-    return errors;
-  };
-  const handleValidation = (e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormValue({ ...formValue, [e.currentTarget.id]: e.currentTarget.value });
   };
 
@@ -127,6 +73,30 @@ const ContactForm = () => {
       captchaRef.current?.reset();
     }
   };
+  const handleSubmit = async () => {
+    setLoading(true);
+    const errors = await validateForm(formValue);
+    if (Object.keys(errors).length > 0) {
+      setFormError(errors);
+      setLoading(false);
+      return;
+    }
+    setFormError({});
+    const isVerified = await verifyCaptcha();
+    if (!isVerified) return setLoading(false);
+    const isEmailSent = await handleEmail();
+    if (!isEmailSent) return setLoading(false);
+
+    setSubmit(true);
+    setFormValue({
+      firstname: "",
+      lastname: "",
+      email: "",
+      message: "",
+    });
+    setLoading(false);
+  };
+
   return (
     <React.Fragment>
       {loading ? (
@@ -138,7 +108,7 @@ const ContactForm = () => {
             aria-hidden="true"
           />
         </div>
-      ) : submit && Object.keys(formError).length === 0 ? (
+      ) : submit ? (
         <article className="flex flex-col items-center gap-2 mt-20 w-90 max-w-lg">
           <img max-w-full="true" src={OK} alt="" aria-hidden="true" />
           <h2 className="text-black text-2xl uppercase tracking-wide">Thank you!</h2>
@@ -164,11 +134,13 @@ const ContactForm = () => {
                 className="block bg-gray-200 focus:bg-white mb-3 px-4 py-3 border border-gray-200 focus:border-gray-500 rounded focus:outline-none w-full text-gray-700 leading-tight appearance-none"
                 type="text"
                 id="firstname"
-                onChange={handleValidation}
+                onChange={handleChange}
                 value={formValue.firstname}
                 name="firstname"
               />
-              <span className="text-red-600 input-validation-error">{formError.firstname}</span>
+              {formError.firstname && (
+                <span className="text-red-600 input-validation-error">{formError.firstname}</span>
+              )}
             </div>
             <div className="mb-6 md:mb-0 px-3 w-full md:w-1/2">
               <label className="block mb-2 text-gray-700 text-xs uppercase tracking-wide" htmlFor="lastname">
@@ -178,11 +150,11 @@ const ContactForm = () => {
                 className="block bg-gray-200 focus:bg-white mb-3 px-4 py-3 border border-gray-200 focus:border-gray-500 rounded focus:outline-none w-full text-gray-700 leading-tight appearance-none"
                 id="lastname"
                 type="text"
-                onChange={handleValidation}
+                onChange={handleChange}
                 value={formValue.lastname}
                 name="lastname"
               />
-              <span className="text-red-600 input-validation-error">{formError.lastname}</span>
+              {formError.lastname && <span className="text-red-600 input-validation-error">{formError.lastname}</span>}
             </div>
           </div>
           <div className="flex flex-wrap -mx-3 mb-6">
@@ -194,11 +166,11 @@ const ContactForm = () => {
                 className="block bg-gray-200 focus:bg-white mb-3 px-4 py-3 border border-gray-200 focus:border-gray-500 rounded focus:outline-none w-full text-gray-700 leading-tight appearance-none"
                 id="email"
                 type="email"
-                onChange={handleValidation}
+                onChange={handleChange}
                 value={formValue.email}
                 name="email"
               />
-              <span className="text-red-600 input-validation-error">{formError.email}</span>
+              {formError.email && <span className="text-red-600 input-validation-error">{formError.email}</span>}
             </div>
           </div>
           <div className="flex flex-wrap -mx-3 mb-6">
@@ -209,11 +181,11 @@ const ContactForm = () => {
               <textarea
                 className="block bg-gray-200 focus:bg-white mb-3 px-4 py-3 border border-gray-200 focus:border-gray-500 rounded focus:outline-none w-full h-48 text-gray-700 leading-tight appearance-none no-resize resize-none"
                 id="message"
-                onChange={handleValidation}
+                onChange={handleChange}
                 value={formValue.message}
                 name="message"
               />
-              <span className="text-red-600 input-validation-error">{formError.message}</span>
+              {formError.message && <span className="text-red-600 input-validation-error">{formError.message}</span>}
             </div>
           </div>
 
@@ -228,7 +200,6 @@ const ContactForm = () => {
                 Send
               </button>
             </div>
-            <div className="md:w-2/3"></div>
           </div>
         </form>
       )}
